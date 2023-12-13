@@ -13,10 +13,10 @@ import logbook
 class XThingspeak:
     def __init__(self):
         #public weather station at Matlab
-        self.channel_key = 'U'
-        self.channel_id = 12397
-        self.field = 4
-        self.num_of_values = 100
+        self.channel_id = 1114974
+        self.channel_key = "USI884Q84ANQ0HBX"
+        self.field = 1
+        self.num_of_values = 10
         
         self.log = logbook.Logger("Thingspeak")
         self.log.debug("Hello From Below")

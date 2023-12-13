@@ -7,7 +7,7 @@
 
 import logbook
 
-agent_name = "PowerMan-1-0-0"
+agent_name = "GridLoadMan-1-0-0"
 # MQTT Broker settings
 MQTT_BROKER = "localhost"
 MQTT_PORT = 1883

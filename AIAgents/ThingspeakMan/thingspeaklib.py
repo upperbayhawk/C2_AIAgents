@@ -16,7 +16,7 @@ class XThingspeak:
         self.channel_key = 'U'
         self.channel_id = 12397
         self.field = 4
-        self.num_of_values = 100
+        self.num_of_values = 10
         
         self.log = logbook.Logger("Thingspeak")
         self.log.debug("Hello From Below")

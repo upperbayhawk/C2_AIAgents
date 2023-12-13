@@ -16,14 +16,14 @@ import config
 agent_name = config.agent_name
 # These files are uploaded when agent is born
 agent_base_file = "./data/AgentBase.txt"
-agent_data_file = "./data/AgentData.csv"
+agent_data_file = "./data/LMP_LOAD.csv"
 agent_instructions_file = "./data/AgentInstructions.txt"
 agent_model="gpt-4-1106-preview"
 #agent_tools=[{"type": "code_interpreter"},{"type":"retrieval"}],
 #agent_tools=[{"type": "retrieval"}]
 #agent_tools=[{"type": "code_interpreter"}]
 # code_interpreter with function callbacks
-agent_tools=[{"type": "code_interpreter"},{
+agent_tools=[{"type": "code_interpreter"},{"type":"retrieval"},{
       "type": "function",
     "function": {
       "name": "sendAlarmSignalToNetworkNode",
@@ -164,15 +164,15 @@ client = OpenAI()
 # Must add file ids to create below
 #-----------------------------------------------------
 
-#AgentBase = client.files.create(
- #   file=open(agent_base_file, "rb"),
- #   purpose='assistants'
-#)
+AgentBase = client.files.create(
+   file=open(agent_base_file, "rb"),
+   purpose='assistants'
+)
 
-#AgentData = client.files.create(
-#    file=open(agent_data_file, "rb"),
-#    purpose='assistants'
-#)
+AgentData = client.files.create(
+    file=open(agent_data_file, "rb"),
+    purpose='assistants'
+)
 
 
 #-----------------------------------------------------
@@ -189,12 +189,12 @@ my_assistant = client.beta.assistants.create(
     #model="gpt-4-1106-preview",
     model=agent_model,
     #model="gpt-4",
-    tools=agent_tools
+    tools=agent_tools,
     #tools=[{"type": "code_interpreter"},{"type":"retrieval"}],
     #tools=[{"type": "retrieval"}]
     #tools=[{"type": "code_interpreter"}],
     # File IDS here
-    #file_ids=[AgentBase.id,AgentData.id]
+    file_ids=[AgentBase.id,AgentData.id]
 )
 
 #my_assistants = client.beta.assistants.list(
