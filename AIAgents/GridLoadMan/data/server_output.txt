@@ -161,3 +161,200 @@ The price was over 250 on the following dates and times:
 These are the instances where the electricity price exceeded 250 in the dataset.
 when was the load the highest?
 The load was the highest on July 28, 2023, at 16:00, with a load value of 152,040.
+when was the price over 200 and what was the load at those times?
+The price was over 200 on the following dates and times, with the corresponding loads:
+
+- July 27, 2023, at 15:00 - Load: 148,793
+- July 27, 2023, at 16:00 - Load: 150,170
+- July 27, 2023, at 17:00 - Load: 150,381
+- July 27, 2023, at 18:00 - Load: 148,267
+- July 27, 2023, at 19:00 - Load: 143,619
+- July 28, 2023, at 15:00 - Load: 151,251
+- July 28, 2023, at 16:00 - Load: 152,040 (highest load)
+- July 28, 2023, at 17:00 - Load: 151,643
+- July 28, 2023, at 18:00 - Load: 148,904
+
+These entries indicate the times when the price was above 200, along with the electrical load recorded at those moments.
+when was the price over 150 and what was the load at that time. Give both price and load.
+The price was over 150 on the following dates and times, with the corresponding price and load:
+
+| Date & Time       | Price     | Load   |
+|-------------------|-----------|--------|
+| 7/27/2023 14:00 | ~195.54 | 146,618 |
+| 7/27/2023 15:00 | ~235.76 | 148,793 |
+| 7/27/2023 16:00 | ~285.03 | 150,170 |
+| 7/27/2023 17:00 | ~304.68 | 150,381 |
+| 7/27/2023 18:00 | ~288.92 | 148,267 |
+| 7/27/2023 19:00 | ~202.37 | 143,619 |
+| 7/28/2023 14:00 | ~198.41 | 149,675 |
+| 7/28/2023 15:00 | ~273.82 | 151,251 |
+| 7/28/2023 16:00 | ~327.25 | 152,040 |
+| 7/28/2023 17:00 | ~334.13 | 151,643 |
+| 7/28/2023 18:00 | ~284.68 | 148,904 |
+| 7/28/2023 19:00 | ~184.64 | 143,781 |
+
+These entries indicate the times when the price was above 150, along with the corresponding electrical price and load at those instances.
+when was the price over 100 and what was the load at that time. Give both price and load.
+The price was over 100 on the following dates and times, with the corresponding price and load:
+
+| Date & Time       | Price     | Load   |
+|-------------------|-----------|--------|
+| 7/13/2023 16:00 | ~101.21 | 138,560 |
+| 7/13/2023 17:00 | ~107.20 | 138,772 |
+| 7/27/2023 13:00 | ~140.88 | 143,128 |
+| 7/27/2023 14:00 | ~195.54 | 146,618 |
+| 7/27/2023 15:00 | ~235.76 | 148,793 |
+| 7/27/2023 16:00 | ~285.03 | 150,170 |
+| 7/27/2023 17:00 | ~304.68 | 150,381 |
+| 7/27/2023 18:00 | ~288.92 | 148,267 |
+| 7/27/2023 19:00 | ~202.37 | 143,619 |
+| 7/27/2023 20:00 | ~122.84 | 137,680 |
+| 7/28/2023 13:00 | ~122.78 | 146,303 |
+| 7/28/2023 14:00 | ~198.41 | 149,675 |
+| 7/28/2023 15:00 | ~273.82 | 151,251 |
+| 7/28/2023 16:00 | ~327.25 | 152,040 |
+| 7/28/2023 17:00 | ~334.13 | 151,643 |
+| 7/28/2023 18:00 | ~284.68 | 148,904 |
+| 7/28/2023 19:00 | ~184.64 | 143,781 |
+| 8/21/2023 17:00 | ~103.08 | 137,961 |
+| 9/5/2023 16:00 | ~105.70 | 152,035 |
+| 9/5/2023 17:00 | ~120.37 | 151,518 |
+| 9/5/2023 18:00 | ~104.82 | 148,108 |
+| 9/6/2023 16:00 | ~113.96 | 146,399 |
+| 9/6/2023 17:00 | ~127.82 | 146,013 |
+| 9/6/2023 18:00 | ~107.08 | 143,221 |
+| 9/7/2023 17:00 | ~103.81 | 133,718 |
+
+These are the instances where the price exceeded 100, with the specific price values and electrical loads recorded at those times.
+when was the price over 50 and what was the load at that time. Give both price and load.
+The price was over 50 on several occasions, and due to the potentially large number of such occurrences, here are the first 5 instances as a sample:
+
+| Date & Time       | Price   | Load   |
+|-------------------|---------|--------|
+| 6/1/2023 14:00 | ~56.40 | 109,072 |
+| 6/1/2023 15:00 | ~62.24 | 112,128 |
+| 6/1/2023 16:00 | ~73.78 | 114,991 |
+| 6/1/2023 17:00 | ~82.36 | 116,221 |
+| 6/1/2023 18:00 | ~67.35 | 115,060 |
+
+These entries indicate just the beginnings of the time periods when the price was above 50, along with the corresponding electrical price and load at those instances. If you need more entries or the complete list, please let me know, and I'll provide the data accordingly.
+when was the price over 90 and what was the load at that time. Give both price and load.
+The price was over 90 on the following dates and times, with the corresponding price and load:
+
+| Date & Time       | Price     | Load   |
+|-------------------|-----------|--------|
+|...                | ...       | ...    |
+| 7/12/2023 16:00 | ~91.78 | 134,131 |
+| 7/12/2023 17:00 | ~94.68 | 134,617 |
+| 7/13/2023 16:00 | ~101.21 | 138,560 |
+| 7/13/2023 17:00 | ~107.20 | 138,772 |
+| 7/13/2023 18:00 | ~93.05 | 136,695 |
+| 7/17/2023 17:00 | ~90.38 | 134,024 |
+|...                | ...       | ...    |
+| 9/7/2023 18:00 | ~92.90 | 130,375 |
+
+The output provided above contains only a subset of the entries due to the large amount of data. For the full list, please let me know and I can extract the complete information based on your requirements.
+What is the average, minimum and maximum prices and loads?
+The summary statistics for prices and loads are as follows:
+
+- **Average Price:** Approximately 32.36
+- **Minimum Price:** Approximately 9.14
+- **Maximum Price:** Approximately 334.13
+
+- **Average Load:** Approximately 95,032
+- **Minimum Load:** 62,765
+- **Maximum Load:** 152,040
+
+These values represent the average, minimum, and maximum for the price and load data within the dataset.
+I want to determine when the load is going to reach a peak using price data and load data. What kind of analysis would give the most accurate results.
+To determine when the load is likely to reach a peak using both price data and load data, you should seek methods that can model the relationship between these variables while accounting for temporal patterns. Several analytical approaches could be leveraged:
+
+1. **Time Series Analysis**: Use statistical methods like Autoregressive Integrated Moving Average (ARIMA) or Seasonal Decomposition of Time Series (STL) to model load data as a time series and forecast future peaks.
+
+2. **Regression Analysis**: Employ regression techniques, specifically multiple regression, to model the relationship between load and other variables such as price and potentially time or other exogenous variables. 
+
+3. **Causal Impact Analysis**: To understand the causal effect of price on load, Causal Impact Analysis can be performed, especially if there's a known intervention or event affecting price.
+
+4. **Machine Learning Models**: Advanced machine learning models like Random Forests, Gradient Boosting Machines, Support Vector Machines, or Neural Networks can capture complex nonlinear relationships between price and load, as well as interactions with other variables.
+
+5. **Deep Learning**: RNNs (Recurrent Neural Networks) like LSTM (Long Short-Term Memory) networks are powerful in modeling sequence data and can be trained on historical load to predict future values.
+
+6. **Prophet**: A procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. It works well with daily period data with strong multiple seasonalities.
+
+7. **Peak Demand Forecasting Models**: Specific peak demand forecasting models that can consider a variety of input features, historical load patterns, price data, weather data, and time features to predict peak loads.
+
+8. **Hybrid Models**: Combine different models and techniques to capitalize on their strengths. For example, use ARIMA to forecast based on time patterns and incorporate machine learning models to adjust predictions based on additional features like price.
+
+To achieve the most accurate results, you may need to perform exploratory data analysis to understand the characteristics of your time series data, determine trends, seasonality, and external factors that influence demand. Additionally, it would help to use cross-validation techniques to tune model parameters and select the model that best predicts future loads.
+
+Considering the nature of the load and price data as time series with potential complex behaviors and external influences, models that are capable of handling time series data, considering seasonality, and incorporating various external variables would be the most appropriate. These might include machine learning methods or hybrid models that can utilize the given price data as an input feature to forecast load peaks.
+
+======================
+
+
+=======================
+
+What are the best algorithms to determine  how much and how fast time-series data is changing?
+When dealing with time-series data and trying to determine how much and how fast the data is changing, some widely-used algorithms and techniques include:
+
+1. **Moving Average**: Computes the average of the data over a fixed window and can help identify trends by smoothing out short-term fluctuations. Variants such as Exponential Moving Average (EMA) give more weight to recent data.
+
+2. **Autoregressive Integrated Moving Average (ARIMA)**: Combines autoregression, differencing (to make the time series stationary), and moving averages. Useful for both analyzing and forecasting time series.
+
+3. **Seasonal Decomposition**: Decomposes a time series into trend, seasonality, and residual components, helping to understand the underlying patterns.
+
+4. **Change Point Detection**:
+   - **CUSUM (Cumulative Sum Control Chart)**: Identifies sudden shifts in the mean level of the time series.
+   - **Bayesian Online Changepoint Detection**: Detects points in time where the statistical properties of a sequence of observations change.
+
+5. **Derivative Estimation**: By computing the first derivative of your time series data numerically, you can estimate the rate of change at each point in time.
+
+6. **Fourier Transforms**: Breaks down the time series into periodic components and can help identify dominant cycles. Useful for understanding frequency and amplitude of changes in the time series.
+
+7. **Kalman Filters**: Dynamically estimates the underlying state of the time series, accounting for noise. It can be used to predict the next state of the series and is particularly effective for time-varying data.
+
+8. **Detrending**: Involves removing the trend component of a time series to analyze the fluctuation around the trend.
+
+9. **Holt-Winters Method**: An extension of exponential smoothing for time series that exhibit trend and seasonality. It predicts both level and trend.
+
+10. **Dynamic Time Warping (DTW)**: An algorithm to measure similarity between two temporal sequences, which may vary in speed. Useful for analyzing sequences that vary in speed of change over time.
+
+11. **LSTM/GRU Neural Networks**: Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU) networks are types of Recurrent Neural Networks (RNN) that can capture complex temporal dynamics and long-term dependencies in time-series data.
+
+12. **Time Series Clustering**: Groups similar time series based on the changes they exhibit. It may use methods such as k-means or hierarchical clustering adapted to time series data.
+
+13. **Statistical Process Control (SPC)**: Monitors and controls a process to ensure that it operates at its fullest potential, detecting significant changes.
+
+14. **Hidden Markov Models (HMMs)**: Models time-series data as a Markov process with hidden states, which can be useful for detecting changes in underlying regimes.
+
+The best algorithm to use depends on the specific characteristics of the data, the nature of changes, whether the focus is on real-time detection or post-hoc analysis, and the specific application requirements. Often, a combination of these methods will provide the most insight, and experimentation may be necessary to find the most effective approach for a given dataset.
+I want to focus on real-time detection of peak load conditions.
+For real-time detection of peak load conditions in time-series data, some pertinent algorithms and techniques to consider would include:
+
+1. **Threshold-based Alerts**: By setting a predefined value based on historical data or domain knowledge, you can trigger alerts when the load exceeds this threshold.
+
+2. **Rolling or Moving Window Statistics**: Calculate statistical measures such as the moving average, variance, or maximum within a rolling window to identify peaks and sudden increases in the load.
+
+3. **Exponential Smoothing**: This method gives more weight to recent observations and can be tuned to respond more quickly to changes. It's effective for tracking the level of series in real-time.
+
+4. **Control Charts**:
+   - **EWMA (Exponentially Weighted Moving Average) Chart**: Suitable for detecting small shifts in the process mean.
+   - **CUSUM Chart**: Particularly useful for detecting a shift in the mean of a process.
+
+5. **Time Series Anomaly Detection**:
+   - Algorithms such as ARIMA and Seasonal Decomposition can model normal behavior, and deviations from predicted values can indicate peak conditions.
+   - Machine learning models, like Isolation Forest or One-Class SVM, can learn the pattern of typical load and detect anomalies in real time.
+
+6. **Reactive Control Strategies**: They monitor the operation of systems and react when indicators of peak load approach critical values, which are set by understanding system limitations.
+
+7. **Real-time Data Stream Mining**: Techniques such as windowed aggregation or sketching can summarize streams of data in real-time, allowing for detection of high loads as they occur.
+
+8. **Deep Learning Models**:
+   - LSTM networks can predict the time series values and identify peaks with high precision.
+   - Convolutional Neural Networks (CNNs) can be applied to time-series data, and patterns indicating a peak load condition can be learned and identified.
+
+9. **Dynamic Threshold Adaptation**: Adjust thresholds in real-time based on recent trends or cyclic patterns to account for changes in normal load conditions.
+
+When implementing any of these techniques for real-time detection, it’s essential to minimize latency between data acquisition and analysis. It’s also crucial to account for data noise and false positives/negatives by tuning the detection algorithm to be sensitive yet specific enough for your use case. The system should also be scalable to handle high volumes of data and robust against temporary data loss or corruption. 
+
+To facilitate peak load condition detection, the alert mechanism needs to be integrated into your real-time monitoring system, which could entail leveraging high-throughput messaging systems or real-time dashboard updates, depending on the application context.
