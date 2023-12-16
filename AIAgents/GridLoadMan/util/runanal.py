@@ -7,11 +7,13 @@ def is_float(str_val):
         return True
     except ValueError:
         return False
-# Calibrate the game level and duration
+# Calibrate the game level and duration to max the value proposition for homes
+# algol 
 
 # Read the CSV file
 # Assuming the CSV file has columns: 'datetime', 'price', 'load'
 df_stats = pd.read_csv('..\\data\\LMP_LOAD_STATS.csv', parse_dates=['datetime'])
+df_stats_all = pd.read_csv('..\\data\\LMP_LOAD_STATS.csv', parse_dates=['datetime'])
 df_data = pd.read_csv('..\\data\\LMP_LOAD_META.csv', parse_dates=['datetime'])
 #df = pd.read_csv('stats.csv', parse_dates=['datetime'])
 
@@ -19,7 +21,10 @@ df_data = pd.read_csv('..\\data\\LMP_LOAD_META.csv', parse_dates=['datetime'])
 df_stats.set_index('datetime', inplace=True)
 df_stats.index = df_stats.index.date
 
+df_stats_all.set_index('datetime', inplace=True)
+
 df_data.set_index('datetime', inplace=True)
+df_data.index = df_data.index.date
 # Iterating over rows using iterrows()
 bronze_games = 0
 bronze_price = 200
@@ -53,7 +58,6 @@ for index, row in df_stats.iterrows():
     #print(f"Row Index: {index}")
     my_datetime = index
      # Iterating through columns in the row
-    do_std = False
     for column_name, value in row.items():
         #print(f"Column: {column_name}, Value: {value}")
 
@@ -81,8 +85,13 @@ for index, row in df_stats.iterrows():
                         print("alert gold_price at " + str(my_datetime))
                         std = row["price_std"]
                         mean = row["price_mean"]
+                        load_max = row["load_max"]
+                        load_std = row["load_std"]
                         print("alert gold_price std " + str(std) + " " + str(mean))
-                        do_std = True
+                        #
+                        my_row =df_data.loc[my_datetime]
+                        my_row_price = my_row["price"]
+                        print("real price " + str(my_row_price))
                     else:
                         pass
                 elif (float(value) > silver_price):
@@ -118,7 +127,6 @@ for index, row in df_stats.iterrows():
      #print(f"Row Index: {index}")
     # Iterating through columns in the row
 
-    do_std = False
     for column_name, value in row.items():
        # print(f"Column: {column_name}, Value: {value}")
         """
@@ -139,10 +147,16 @@ for index, row in df_stats.iterrows():
                         my_lastday = my_datetime
                         gold_games_load = gold_games_load + 1
                         print("alert gold_load at " + str(my_datetime))
-                        std = row["price_std"]
-                        mean = row["price_mean"]
-                        print("alert gold_load std " + str(std) + " " + str(mean))
-                        do_std = True
+                        load_std = row["load_std"]
+                        load_mean = row["load_mean"]
+                        price_std = row["price_std"]
+                        price_max = row["price_max"]
+                        print("alert gold_load std " + str(load_std) + " " + str(load_mean))
+                        print("alert gold_load price " + str(price_max))
+
+                        my_row =df_data.loc[my_datetime]
+                        my_row_price = my_row["price"]
+                        print("real price " + str(my_row_price))
             elif (float(value) > silver_load):
                 silver_games = silver_games + 1
                 #print("silver_load at " + str(my_datetime))
