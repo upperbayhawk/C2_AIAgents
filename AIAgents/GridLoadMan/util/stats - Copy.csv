@@ -1,5 +1,5 @@
-datetime,price_mean,price_min,price_max,price_std,load_mean,load_min,load_max,load_std
-,,,,,,,,
+datetime,price,price,price,price,load,load,load,load
+,mean,min,max,std,mean,min,max,std
 ,,,,,,,,
 6/1/2023 0:00,19.831099,19.831099,19.831099,,78288,78288,78288,
 6/1/2023 1:00,18.7715975,17.712096,19.831099,1.498361391,76376,74464,78288,2703.976331
