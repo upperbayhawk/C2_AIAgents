@@ -9,7 +9,7 @@ from openai import OpenAI
 import logbook
 
 FileHandler(agent_log_file).push_application()
-log = Logger("runclient")
+log = Logger("listagent")
 log.info("Hello From Below")
 
 client = OpenAI()
