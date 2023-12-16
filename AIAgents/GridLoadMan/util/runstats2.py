@@ -18,7 +18,7 @@ rolling_df = df.rolling('7D')
 # Mean, min, max, and standard deviation
 stats = rolling_df.agg(['mean', 'min', 'max', 'std'])
 
-print(stats)
+#print(stats)
 
 # Your previous code to create the 'stats' DataFrame
 # ...
@@ -29,3 +29,10 @@ pd.set_option('display.max_rows', None)  # None means no truncation
 # Now print the DataFrame
 #print(stats)
 stats.to_csv('stats.csv', index=True)
+
+
+# Iterate through columns and then through each element in the column
+for column_name, column_data in stats.iteritems():
+    for element in column_data:
+        print(f"Column: {column_name}, Element: {element}")
+
