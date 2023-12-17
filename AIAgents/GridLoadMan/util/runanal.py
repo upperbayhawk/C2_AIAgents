@@ -30,12 +30,12 @@ df_data_all.set_index('datetime', inplace=True)
 # Iterating over rows using iterrows()
 bronze_games_price = 0
 bronze_games_load = 0
-bronze_price = 100
+bronze_price = 75
 bronze_price_std = 50
 
 silver_games_price = 0
 silver_games_load = 0
-silver_price = 150
+silver_price = 125
 silver_price_std = 25
 
 gold_games_price = 0
@@ -45,13 +45,13 @@ gold_price = 200
 gold_price_std = 10
 
 
-bronze_load = 100000
+bronze_load = 80000
 bronze_load_std = 15000
 
-silver_load = 120000
+silver_load = 110000
 silver_load_std = 18000
 
-gold_load=150000
+gold_load=140000
 gold_load_std = 20000
 
 #my_datetime = ""
