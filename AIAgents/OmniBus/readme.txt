@@ -1,3 +1,15 @@
+
+
+Create openAI API account
+https://platform.openai.com/
+
+Set the environment variable
+setx OPENAI_API_KEY sk-NG9XUhS4hONCH0ZkW9Y3Txxxxxxxxxxxxxxxxxxxxxxxx
+
+Download mosquitto for windows 64bit
+https://mosquitto.org/download/
+
+
 Packages needed
 
 install python3
