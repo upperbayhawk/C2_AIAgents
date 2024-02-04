@@ -1559,3 +1559,47 @@ Data values are time,load
 [2024-01-13 19:34:30.725064] DEBUG: runclient: =========================
 [2024-01-13 19:34:30.725064] DEBUG: runclient: Connected to MQTT
 [2024-01-13 19:34:30.725064] DEBUG: runclient: Connected with result code 0
+[2024-01-31 18:54:19.512195] DEBUG: runclient: Hello From Below: GridLoadMan-1-0-0
+[2024-01-31 18:54:19.543472] DEBUG: runclient: =========================
+[2024-01-31 18:54:19.543472] DEBUG: runclient: Connected to MQTT
+[2024-01-31 18:54:19.559093] DEBUG: runclient: Connected with result code 0
+[2024-01-31 19:20:10.530749] DEBUG: runclient: Hello From Below: GridLoadMan-1-0-0
+[2024-01-31 19:20:10.546455] DEBUG: runclient: =========================
+[2024-01-31 19:20:10.546455] DEBUG: runclient: Connected to MQTT
+[2024-01-31 19:20:10.546455] DEBUG: runclient: Connected with result code 0
+[2024-01-31 19:20:28.665915] DEBUG: runclient: Why is the sky blue?
+[2024-01-31 19:21:00.112117] DEBUG: runclient: The sky appears blue to the human eye because of the way Earth's atmosphere scatters sunlight. This phenomenon is known as Rayleigh scattering, named after the British physicist Lord Rayleigh who first explained it.
+
+Here is a simplified explanation of why the sky is blue:
+
+1. **Sunlight Composition**: The light from the sun looks white but is actually made up of various colors, which can be seen in a rainbow. These colors are part of the spectrum of electromagnetic radiation and each color has a different wavelength.
+
+2. **Atmospheric Scattering**: When sunlight passes through Earth's atmosphere, it collides with molecules of air (nitrogen, oxygen, and others) along with small particles.
+
+3. **Wavelength Dependence**: Rayleigh scattering is more effective at shorter wavelengths of light (the blue end of the visible spectrum) than at longer wavelengths (the red end of the spectrum). Since blue light has a shorter wavelength, it is scattered in all directions much more than the other colors when sunlight encounters the atmosphere.
+
+4. **Sky Appearances**: As the scattered blue light reaches our eyes from every direction, the sky looks blue most of the time. During sunrise and sunset, the sun's light passes through a greater thickness of Earth's atmosphere, which scatters the shorter wavelengths and allows more of the red and orange tones to pass through, making the sky appear more reddish-orange.
+
+In essence, the sky is blue because molecules in the atmosphere are more effective at scattering the shorter (blue) wavelengths of visible light than the longer (red) wavelengths.
+[2024-02-02 18:48:36.588101] DEBUG: runclient: Hello From Below: GridLoadMan-1-0-0
+[2024-02-02 18:48:36.619481] DEBUG: runclient: =========================
+[2024-02-02 18:48:36.619481] DEBUG: runclient: Connected to MQTT
+[2024-02-02 18:48:36.619481] DEBUG: runclient: Connected with result code 0
+[2024-02-02 18:59:02.364660] DEBUG: runclient: Hello From Below: GridLoadMan-1-0-0
+[2024-02-02 18:59:02.388904] DEBUG: runclient: =========================
+[2024-02-02 18:59:02.388904] DEBUG: runclient: Connected to MQTT
+[2024-02-02 18:59:02.388904] DEBUG: runclient: Connected with result code 0
+[2024-02-02 18:59:22.936191] DEBUG: runclient: why is the sky blue?
+[2024-02-02 18:59:38.790313] DEBUG: runclient: The sky appears blue due to a phenomenon called Rayleigh scattering. The Earth's atmosphere is made up of various gases and tiny particles which are more effective at scattering shorter (blue) wavelengths of light than the longer (red) wavelengths.
+
+When sunlight enters the Earth's atmosphere, it collides with the gases and particles and scatters in all directions. Blue light, having a shorter wavelength, is scattered more than other colors because it travels as shorter, smaller waves. This is why we see a blue sky most of the time.
+
+Moreover, when we look towards the horizon, the sky can appear paler or even white. This is because we are looking through more atmosphere, which scatters the blue light so much that it blends with the other colors.
+
+At sunrise and sunset, the sky can appear red or orange because the light has to travel through a greater thickness of the atmosphere, and the shorter blue wavelengths are scattered out and away from our line of sight, leaving the longer red wavelengths. This is also a form of Rayleigh scattering known as the Tyndall effect.
+[2024-02-02 19:55:57.511510] DEBUG: runclient: Hello From Below: GridLoadMan-1-0-0
+[2024-02-02 19:55:57.521126] DEBUG: runclient: =========================
+[2024-02-02 19:55:57.521126] DEBUG: runclient: Connected to MQTT
+[2024-02-02 19:55:57.521126] DEBUG: runclient: Connected with result code 0
+[2024-02-02 20:01:40.806115] DEBUG: runclient: You have detected a peak at PJM. Please send a GridPeakDetected massage to C2Agent.
+[2024-02-02 20:06:34.618170] DEBUG: runclient: You have detected a peak at PJM. Please send a GridPeakDetected massage to C2Agent. The LMP $10 and the startime is "1o/5/2023 10:00  AM" and the duration is 60 mins.

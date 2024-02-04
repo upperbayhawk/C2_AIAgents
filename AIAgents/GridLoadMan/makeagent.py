@@ -135,6 +135,24 @@ agent_tools=[{"type": "code_interpreter"},{"type":"retrieval"},{
   },{
     "type": "function",
     "function": {
+      "name": "sendGridPeakDetected",
+      "description": "Send a grid peak detected to a destination network node.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "network_node": {"type": "string", "description": "The name of a node on the network. Network node names include C2Agent, AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter."},
+          "message": {"type": "string", "description": "The description of the peak detected."},
+          "start_date_time": {"type": "string", "description": "The datetime of the peak detected."},
+          "duration_mins": {"type": "string", "description": "The duration in minutes of the peak detected."},
+          "peak_lmp": {"type": "string", "description": "The LMP for a megawatt-hour during the peak detected."},
+          "grid_node": {"type": "string", "description": "The grid pricing node for the peak detected ."},
+        },
+        "required": ["network_node", "message","start_date_time","duration_mins","peak_lmp","grid_node"]
+      }
+    } 
+  },{
+    "type": "function",
+    "function": {
       "name": "getNickname3",
       "description": "Get the nickname of a city",
       "parameters": {
@@ -164,7 +182,7 @@ client = OpenAI()
 # Must add file ids to create below
 #-----------------------------------------------------
 
-AgentBase = client.files.create(
+""" AgentBase = client.files.create(
    file=open(agent_base_file, "rb"),
    purpose='assistants'
 )
@@ -172,7 +190,7 @@ AgentBase = client.files.create(
 AgentData = client.files.create(
     file=open(agent_data_file, "rb"),
     purpose='assistants'
-)
+) """
 
 
 #-----------------------------------------------------
@@ -194,7 +212,7 @@ my_assistant = client.beta.assistants.create(
     #tools=[{"type": "retrieval"}]
     #tools=[{"type": "code_interpreter"}],
     # File IDS here
-    file_ids=[AgentBase.id,AgentData.id]
+    #file_ids=[AgentBase.id,AgentData.id]
 )
 
 #my_assistants = client.beta.assistants.list(
