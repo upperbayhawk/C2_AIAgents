@@ -545,17 +545,17 @@ class OpenAILib:
                                 self.log.error("FUNCTION WRAPPER ERROR: {e}:" + function_name)
                         #////////////////////////////////////////////////////////
                             
-                        run = self.client.beta.threads.runs.submit_tool_outputs(
-                            thread_id=self.my_thread.id,
-                            run_id=my_run.id,
-                            tool_outputs= tool_returns
-                            #[
-                            #    {
-                            #        "tool_call_id": tool_call.id,
-                            #        "output": return_value
-                            #    }
-                            #    ]
-                            )
+                    run = self.client.beta.threads.runs.submit_tool_outputs(
+                        thread_id=self.my_thread.id,
+                        run_id=my_run.id,
+                        tool_outputs= tool_returns
+                        #[
+                        #    {
+                        #        "tool_call_id": tool_call.id,
+                        #        "output": return_value
+                        #    }
+                        #    ]
+                        )
             
             if self.gpt_run_status == "completed":
 

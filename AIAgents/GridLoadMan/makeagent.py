@@ -23,7 +23,7 @@ agent_model="gpt-4-1106-preview"
 #agent_tools=[{"type": "retrieval"}]
 #agent_tools=[{"type": "code_interpreter"}]
 # code_interpreter with function callbacks
-agent_tools=[{"type": "code_interpreter"},{"type":"retrieval"},{
+agent_tools=[{"type": "code_interpreter"},{
       "type": "function",
     "function": {
       "name": "sendAlarmSignalToNetworkNode",
