@@ -156,7 +156,8 @@ class OpenAILib:
             # Process Function Callbacks           
             internal_function = False
             self.gpt_run_status = "started"
-            while self.gpt_run_status == "started":
+            #while self.gpt_run_status != "completed" or self.gpt_run_status == "queued":
+            while self.gpt_run_status != "completed":
                 keep_retrieving_run = self.client.beta.threads.runs.retrieve(
                     thread_id=self.my_thread.id,
                     run_id=my_run.id
@@ -556,7 +557,7 @@ class OpenAILib:
                         #    }
                         #    ]
                         )
-            
+           
             if self.gpt_run_status == "completed":
 
                 print("------------------------------------------------------------ \n")
