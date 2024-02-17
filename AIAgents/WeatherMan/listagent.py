@@ -6,11 +6,6 @@
 # Written by Dave Hardin <dave@upperbay.com>, 2023
 
 from openai import OpenAI
-import logbook
-
-FileHandler(agent_log_file).push_application()
-log = Logger("runclient")
-log.info("Hello From Below")
 
 client = OpenAI()
 

@@ -1,8 +1,7 @@
  
- #remove!
  #private power data
             self.channel_id = 1114974
-            self.channel_key = "USI884Q84ANQ0HBX"
+            self.channel_key = "US???????????????"
             self.field = 1
             self.num_of_values = 100
 
