@@ -12,7 +12,7 @@ pip install logbook
 pip install smartthings
 pip install arrow
 
-pip install playsound==1.2.2
+pip install pygame
 pip install cachetools
 ---------------------------------------------
 

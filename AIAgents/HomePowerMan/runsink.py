@@ -22,7 +22,7 @@ from thingspeaklib import XThingspeak
 
 from openai import OpenAI
 from pathlib import Path
-from playsound import playsound
+from pygame import mixer
 
 import config
 
@@ -268,10 +268,13 @@ def speak_message(message):
     voice="nova",
     input=message
     )
-    response.stream_to_file(speech_file_path)
-    playsound(speech_file_path)
+    #response.stream_to_file(speech_file_path)
+    response.with_streaming_response.method(speech_file_path)
+    mixer.init()
+    mixer.music.load(speech_file_path)
+    mixer.music.play()
     os.remove(speech_file_path)
-
+    
 #=============================================
 
 #Main app thread
