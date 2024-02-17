@@ -22,7 +22,7 @@ MQTT_TOPIC_CONTROL = mqtt_base_topic + agent_name + "/ControlPanel"
 MQTT_TOPIC_ALARM = mqtt_base_topic + agent_name + "/AlarmPanel"
 MQTT_TOPIC_NOTICE = mqtt_base_topic + agent_name + "/NoticePanel"
 MQTT_TOPIC_ALERT = mqtt_base_topic + agent_name + "/AlertPanel"
-#MQTT_TOPIC_C2AGENT = mqtt_base_topic_c2agent + agent_name + "/GridPeakDetected"
+MQTT_TOPIC_C2AGENT = mqtt_base_topic_c2agent
 #
 MQTT_TOPIC_DATAFEED = mqtt_base_topic + agent_name + "/DataFeed"
 # Logger level

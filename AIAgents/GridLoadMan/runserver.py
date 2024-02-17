@@ -168,8 +168,8 @@ async def main():
     try:
         openailib_instance.initialize(agent_name,agent_init_prompt_file,agent_init_instructions_file,agent_output_file)
     except Exception as ex:
-        log.error("Exception: " + str(ex))
-        print ("Exception: " + str(ex))
+        log.error("Exception openailib_instance.initialize: " + str(ex))
+        print ("Exception openailib_instance.initialize: " + str(ex))
    
     try:
         while True:

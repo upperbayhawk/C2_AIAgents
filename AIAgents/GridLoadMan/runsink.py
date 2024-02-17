@@ -49,6 +49,7 @@ MQTT_TOPIC_CONTROL = config.MQTT_TOPIC_CONTROL
 MQTT_TOPIC_ALARM = config.MQTT_TOPIC_ALARM
 MQTT_TOPIC_NOTICE = config.MQTT_TOPIC_NOTICE
 MQTT_TOPIC_ALERT = config.MQTT_TOPIC_ALERT
+MQTT_TOPIC_C2AGENT = config.MQTT_TOPIC_C2AGENT
 SEPARATOR = "========================="
 
 #-----------------------------------------------------
@@ -64,6 +65,7 @@ control_queue = queue.Queue()
 alarm_queue = queue.Queue()
 notice_queue = queue.Queue()
 alert_queue = queue.Queue()
+c2agent_queue = queue.Queue()
 
 clientMQ = mqtt.Client()
 
@@ -106,6 +108,10 @@ def on_message(client, userdata, msg):
         log.trace("To Alert: " + msg.topic + " " + pipe_input)
         print("To Alert: " + msg.topic + " " + pipe_input)
         process_alert_message(pipe_input)
+    elif msg.topic == MQTT_TOPIC_C2AGENT:
+        log.trace("To C2Agent: " + msg.topic + " " + pipe_input)
+        print("To C2Agent: " + msg.topic + " " + pipe_input)
+        process_c2agent_message(pipe_input)
 
 # Message Processors
 def process_incoming_message(message):
@@ -135,6 +141,10 @@ def process_notice_message(message):
 def process_alert_message(message):
     log.trace("Processing Alert: " + message)
     alert_queue.put(message)  
+
+def process_c2agent_message(message):
+    log.trace("Processing C2Agent: " + message)
+    c2agent_queue.put(message)  
 
 def process_local_message(message):
     log.trace("Processing Local: " + message)
@@ -204,6 +214,14 @@ def alert_worker_thread():
         print("Alert: " + message)
         dispatch_alert_message(message)
 
+def c2agent_worker_thread():
+    while True:
+        message = c2agent_queue.get()
+        if message is None:
+            break
+        log.debug(message)
+        print("C2Agent: " + message)
+        dispatch_c2agent_message(message)
 #=============================================
 #Application functions
 def dispatch_incoming_message(message):
@@ -259,6 +277,14 @@ def dispatch_alert_message(message):
     else:
         pass
 
+def dispatch_c2agent_message(message):
+    if enable_command_speech == True:
+        my_message = "C2Agent message " + message
+        print (my_message)
+        speak_message(my_message)
+    else:
+        pass
+
 #=============================================
 # voices = alloy,echo,fable,onyx,nova,shimmer
 def speak_message(message):
@@ -268,12 +294,12 @@ def speak_message(message):
     voice="nova",
     input=message
     )
-    #response.stream_to_file(speech_file_path)
-    response.with_streaming_response.method(speech_file_path)
+    response.stream_to_file(speech_file_path)
+    #response.with_streaming_response.method(speech_file_path)
     mixer.init()
     mixer.music.load(speech_file_path)
     mixer.music.play()
-    os.remove(speech_file_path)
+    #os.remove(speech_file_path)
 
 #=============================================
 
@@ -312,6 +338,7 @@ async def main():
     clientMQ.subscribe(MQTT_TOPIC_ALARM)
     clientMQ.subscribe(MQTT_TOPIC_NOTICE)
     clientMQ.subscribe(MQTT_TOPIC_ALERT)
+    clientMQ.subscribe(MQTT_TOPIC_C2AGENT)
     log.debug(SEPARATOR)
     log.debug("Connected to MQTT")
       
@@ -352,6 +379,11 @@ async def main():
 
     # Start worker in separate thread
     my_alert_thread = threading.Thread(target=alert_worker_thread)
+    my_alert_thread.daemon = True
+    my_alert_thread.start()
+
+    # Start worker in separate thread
+    my_alert_thread = threading.Thread(target=c2agent_worker_thread)
     my_alert_thread.daemon = True
     my_alert_thread.start()
 
