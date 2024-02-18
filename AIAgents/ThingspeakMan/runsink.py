@@ -323,7 +323,7 @@ async def main():
     log.debug("Connected to MQTT")
       
     # Start the MQTT client loop in a separate thread
-    executer2 = ThreadPoolExecutor(max_workers=3)
+    executer2 = ThreadPoolExecutor(max_workers=10)
     loop = asyncio.get_running_loop()
     await loop.run_in_executor(executer2, clientMQ.loop_start)
 
