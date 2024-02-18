@@ -2609,3 +2609,229 @@ Following the peak load value's classification as "BRONZE," a GridPeakDetected m
 - **Minimum Load Value:** 19.77
 
 Following the peak load value's classification as "BRONZE," a GridPeakDetected message has been conveyed to C2Agent, and subsequent notices have also been disseminated to both the CommandCenter and ControlPanel, in strict accordance with protocol requirements.
+[2024-02-18 00:48:36.430701] DEBUG: runserver: Received message 'Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"2/17/2024 8:00:00 PM","105668"
+"2/17/2024 9:00:00 PM","104043"
+"2/17/2024 10:00:00 PM","101406"
+"2/17/2024 11:00:00 PM","98848"
+' on topic 'openai/assistant/GridLoadMan-1-0-0/ToAssistant'
+[2024-02-18 00:48:36.430701] DEBUG: runserver: To Assistant Inbound: openai/assistant/GridLoadMan-1-0-0/ToAssistant Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"2/17/2024 8:00:00 PM","105668"
+"2/17/2024 9:00:00 PM","104043"
+"2/17/2024 10:00:00 PM","101406"
+"2/17/2024 11:00:00 PM","98848"
+
+[2024-02-18 00:48:36.432713] DEBUG: openailib: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"2/17/2024 8:00:00 PM","105668"
+"2/17/2024 9:00:00 PM","104043"
+"2/17/2024 10:00:00 PM","101406"
+"2/17/2024 11:00:00 PM","98848"
+
+[2024-02-18 00:48:36.708274] DEBUG: openailib: Message Object: ThreadMessage(id='msg_RXSR7FVXNYox9BgQHK6kCjTm', assistant_id=None, content=[MessageContentText(text=Text(annotations=[], value='Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.\r\n\r\n\r\nData values are time,load\r\n"2/17/2024 8:00:00 PM","105668"\r\n"2/17/2024 9:00:00 PM","104043"\r\n"2/17/2024 10:00:00 PM","101406"\r\n"2/17/2024 11:00:00 PM","98848"\r\n'), type='text')], created_at=1708217318, file_ids=[], metadata={}, object='thread.message', role='user', run_id=None, thread_id='thread_Ru257KWmiffUjRI6jxyL6j5b') 
+
+[2024-02-18 00:48:37.098416] DEBUG: openailib: Run Object: Run(id='run_li0zJg9xvrxjXkT2hEOxpQhi', assistant_id='asst_mUVcoTtfwqIvVcg23f4Cs0Vc', cancelled_at=None, completed_at=None, created_at=1708217318, expires_at=1708217918, failed_at=None, file_ids=[], instructions='Act like an a very smart data analyst and provide answers that are concise. You have all the mathamatical algorithms available to you. I will be sending you new data, with the same instructions each time, periodically so continue to examine the data and provide results, even if the data has not changed. Call my functions each time you run the prompt.', last_error=None, metadata={}, model='gpt-4-0125-preview', object='thread.run', required_action=None, started_at=None, status='queued', thread_id='thread_Ru257KWmiffUjRI6jxyL6j5b', tools=[ToolAssistantToolsCode(type='code_interpreter'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendAlarmSignalToNetworkNode', description='Send an alarm signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alarm signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendControlSignalToNetworkNode', description='Send a control signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the control signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendNoticeSignalToNetworkNode', description='Send a notice signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the notice signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendCommandSignalToNetworkNode', description='Send a command signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the command signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendAlertSignalToNetworkNode', description='Send an alert signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alert signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getNickname', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getMagicNumber', description='This number is magical.', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the magic number'}}, 'required': ['tagname']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getSensorValuebyName', description='Get the value of a sensor by its name. The value is NOTFOUND if the sensor is not available', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the sensor.'}}, 'required': ['tagname']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendGridPeakDetected', description='Send a grid peak detected to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include C2Agent, AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The description of the peak detected.'}, 'start_date_time': {'type': 'string', 'description': 'The datetime of the peak detected.'}, 'duration_mins': {'type': 'string', 'description': 'The duration in minutes of the peak detected.'}, 'peak_lmp': {'type': 'string', 'description': 'The LMP for a megawatt-hour during the peak detected.'}, 'grid_node': {'type': 'string', 'description': 'The grid pricing node for the peak detected .'}}, 'required': ['network_node', 'message', 'start_date_time', 'duration_mins', 'peak_lmp', 'grid_node']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getNickname3', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}), type='function')], usage=None) 
+
+[2024-02-18 00:48:44.862709] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.8917302084954274", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 00:48:44.862709] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.8917302084954274", "status": "OK"}
+[2024-02-18 00:48:44.862709] DEBUG: runserver: value from cache = {"time": "2024-02-17T19:48:44.862709", "value": "0.8917302084954274", "status": "OK"}
+[2024-02-18 00:48:44.922003] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.2642082987550165", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 00:48:44.922003] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.2642082987550165", "status": "OK"}
+[2024-02-18 00:48:44.922003] DEBUG: runserver: value from cache = {"time": "2024-02-17T19:48:44.922003", "value": "0.2642082987550165", "status": "OK"}
+[2024-02-18 00:48:44.968924] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 00:48:44.968924] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 00:48:44.968924] DEBUG: runserver: value from cache = {"time": "2024-02-17T19:48:44.968924", "value": "ON", "status": "OK"}
+[2024-02-18 00:48:45.016509] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 00:48:45.016509] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 00:48:45.016509] DEBUG: runserver: value from cache = {"time": "2024-02-17T19:48:45.016509", "value": "69", "status": "OK"}
+[2024-02-18 00:49:05.914556] DEBUG: openailib: sendGridPeakDetected
+[2024-02-18 00:49:05.914556] DEBUG: openailib: {"network_node": "C2Agent", "message": "Grid Peak detected", "start_date_time": "02/17/2024 08:00:00 PM", "duration_mins": "120", "peak_lmp": "4000", "grid_node": "PJM"}
+[2024-02-18 00:49:05.914556] DEBUG: xfunction: Hello From Below
+[2024-02-18 00:49:05.962335] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-18 00:49:05.962335] DEBUG: xfunction: sendGridPeakedDetected: Grid Peak detected to C2Agent
+[2024-02-18 00:49:05.963343] DEBUG: openailib: sendNoticeSignalToNetworkNode
+[2024-02-18 00:49:05.963343] DEBUG: openailib: {"network_node": "CommandCenter", "message": "Grid Peak detected"}
+[2024-02-18 00:49:05.963343] DEBUG: xfunction: Hello From Below
+[2024-02-18 00:49:06.008491] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-18 00:49:07.023647] DEBUG: xfunction: sendNoticeSignalToNetworkNode: Grid Peak detected to openai/assistant/GridLoadMan-1-0-0/CommandCenter
+[2024-02-18 00:49:07.024541] DEBUG: openailib: sendNoticeSignalToNetworkNode
+[2024-02-18 00:49:07.025521] DEBUG: openailib: {"network_node": "ControlPanel", "message": "Grid Peak detected"}
+[2024-02-18 00:49:07.025521] DEBUG: xfunction: Hello From Below
+[2024-02-18 00:49:07.116744] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-18 00:49:07.116744] DEBUG: xfunction: sendNoticeSignalToNetworkNode: Grid Peak detected to openai/assistant/GridLoadMan-1-0-0/ControlPanel
+[2024-02-18 00:49:18.285519] DEBUG: openailib: ------------------------------------------------------------ 
+[2024-02-18 00:49:18.456502] DEBUG: openailib: All Message Count: 20
+[2024-02-18 00:49:18.458392] DEBUG: openailib: User: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"2/17/2024 8:00:00 PM","105668"
+"2/17/2024 9:00:00 PM","104043"
+"2/17/2024 10:00:00 PM","101406"
+"2/17/2024 11:00:00 PM","98848"
+
+[2024-02-18 00:49:18.458392] DEBUG: openailib: Assistant: The analysis of the provided time series data has been completed, yielding the following insights:
+
+- **Average Load Value:** 102,491.25
+- **Maximum Load Value:** 105,668 at 02/17/2024 08:00:00 PM, categorized as "GOLD."
+- **Minimum Load Value:** 98,848
+
+Given the peak load's "GOLD" categorization, a GridPeakDetected message has been dispatched to C2Agent, and notices have been sent to the CommandCenter and ControlPanel, following established procedures.
+[2024-02-18 00:49:18.458392] DEBUG: openailib: User Message Count: 1
+[2024-02-18 00:49:18.458392] DEBUG: openailib: Assistant Message Count: 1
+[2024-02-18 00:49:18.459459] DEBUG: openailib: last_message: The analysis of the provided time series data has been completed, yielding the following insights:
+
+- **Average Load Value:** 102,491.25
+- **Maximum Load Value:** 105,668 at 02/17/2024 08:00:00 PM, categorized as "GOLD."
+- **Minimum Load Value:** 98,848
+
+Given the peak load's "GOLD" categorization, a GridPeakDetected message has been dispatched to C2Agent, and notices have been sent to the CommandCenter and ControlPanel, following established procedures.
+[2024-02-18 00:49:18.459459] DEBUG: runserver: Finished and publishing results to client: The analysis of the provided time series data has been completed, yielding the following insights:
+
+- **Average Load Value:** 102,491.25
+- **Maximum Load Value:** 105,668 at 02/17/2024 08:00:00 PM, categorized as "GOLD."
+- **Minimum Load Value:** 98,848
+
+Given the peak load's "GOLD" categorization, a GridPeakDetected message has been dispatched to C2Agent, and notices have been sent to the CommandCenter and ControlPanel, following established procedures.
+[2024-02-18 00:49:18.459459] DEBUG: runserver: last_message: The analysis of the provided time series data has been completed, yielding the following insights:
+
+- **Average Load Value:** 102,491.25
+- **Maximum Load Value:** 105,668 at 02/17/2024 08:00:00 PM, categorized as "GOLD."
+- **Minimum Load Value:** 98,848
+
+Given the peak load's "GOLD" categorization, a GridPeakDetected message has been dispatched to C2Agent, and notices have been sent to the CommandCenter and ControlPanel, following established procedures.
+[2024-02-18 00:49:18.477285] DEBUG: runserver: Received message 'The analysis of the provided time series data has been completed, yielding the following insights:
+
+- **Average Load Value:** 102,491.25
+- **Maximum Load Value:** 105,668 at 02/17/2024 08:00:00 PM, categorized as "GOLD."
+- **Minimum Load Value:** 98,848
+
+Given the peak load's "GOLD" categorization, a GridPeakDetected message has been dispatched to C2Agent, and notices have been sent to the CommandCenter and ControlPanel, following established procedures.' on topic 'openai/assistant/GridLoadMan-1-0-0/ToClient'
+[2024-02-18 00:49:18.477285] DEBUG: runserver: To Client Outbound: openai/assistant/GridLoadMan-1-0-0/ToClient The analysis of the provided time series data has been completed, yielding the following insights:
+
+- **Average Load Value:** 102,491.25
+- **Maximum Load Value:** 105,668 at 02/17/2024 08:00:00 PM, categorized as "GOLD."
+- **Minimum Load Value:** 98,848
+
+Given the peak load's "GOLD" categorization, a GridPeakDetected message has been dispatched to C2Agent, and notices have been sent to the CommandCenter and ControlPanel, following established procedures.
+[2024-02-18 00:51:41.792062] DEBUG: runserver: Received message 'Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"2/17/2024 8:00:00 PM","105765"
+"2/17/2024 9:00:00 PM","104444"
+"2/17/2024 10:00:00 PM","102040"
+"2/17/2024 11:00:00 PM","99519"
+' on topic 'openai/assistant/GridLoadMan-1-0-0/ToAssistant'
+[2024-02-18 00:51:41.793069] DEBUG: runserver: To Assistant Inbound: openai/assistant/GridLoadMan-1-0-0/ToAssistant Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"2/17/2024 8:00:00 PM","105765"
+"2/17/2024 9:00:00 PM","104444"
+"2/17/2024 10:00:00 PM","102040"
+"2/17/2024 11:00:00 PM","99519"
+
+[2024-02-18 00:51:41.800082] DEBUG: openailib: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"2/17/2024 8:00:00 PM","105765"
+"2/17/2024 9:00:00 PM","104444"
+"2/17/2024 10:00:00 PM","102040"
+"2/17/2024 11:00:00 PM","99519"
+
+[2024-02-18 00:51:42.010505] DEBUG: openailib: Message Object: ThreadMessage(id='msg_xRv3AiwyAw4mn5nbuFuOEDlM', assistant_id=None, content=[MessageContentText(text=Text(annotations=[], value='Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.\r\n\r\n\r\nData values are time,load\r\n"2/17/2024 8:00:00 PM","105765"\r\n"2/17/2024 9:00:00 PM","104444"\r\n"2/17/2024 10:00:00 PM","102040"\r\n"2/17/2024 11:00:00 PM","99519"\r\n'), type='text')], created_at=1708217503, file_ids=[], metadata={}, object='thread.message', role='user', run_id=None, thread_id='thread_Ru257KWmiffUjRI6jxyL6j5b') 
+
+[2024-02-18 00:51:42.485771] DEBUG: openailib: Run Object: Run(id='run_iLrOkCb85d7NcRjEwL3dlzQT', assistant_id='asst_mUVcoTtfwqIvVcg23f4Cs0Vc', cancelled_at=None, completed_at=None, created_at=1708217504, expires_at=1708218104, failed_at=None, file_ids=[], instructions='Act like an a very smart data analyst and provide answers that are concise. You have all the mathamatical algorithms available to you. I will be sending you new data, with the same instructions each time, periodically so continue to examine the data and provide results, even if the data has not changed. Call my functions each time you run the prompt.', last_error=None, metadata={}, model='gpt-4-0125-preview', object='thread.run', required_action=None, started_at=None, status='queued', thread_id='thread_Ru257KWmiffUjRI6jxyL6j5b', tools=[ToolAssistantToolsCode(type='code_interpreter'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendAlarmSignalToNetworkNode', description='Send an alarm signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alarm signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendControlSignalToNetworkNode', description='Send a control signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the control signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendNoticeSignalToNetworkNode', description='Send a notice signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the notice signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendCommandSignalToNetworkNode', description='Send a command signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the command signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendAlertSignalToNetworkNode', description='Send an alert signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alert signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getNickname', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getMagicNumber', description='This number is magical.', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the magic number'}}, 'required': ['tagname']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getSensorValuebyName', description='Get the value of a sensor by its name. The value is NOTFOUND if the sensor is not available', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the sensor.'}}, 'required': ['tagname']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendGridPeakDetected', description='Send a grid peak detected to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include C2Agent, AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The description of the peak detected.'}, 'start_date_time': {'type': 'string', 'description': 'The datetime of the peak detected.'}, 'duration_mins': {'type': 'string', 'description': 'The duration in minutes of the peak detected.'}, 'peak_lmp': {'type': 'string', 'description': 'The LMP for a megawatt-hour during the peak detected.'}, 'grid_node': {'type': 'string', 'description': 'The grid pricing node for the peak detected .'}}, 'required': ['network_node', 'message', 'start_date_time', 'duration_mins', 'peak_lmp', 'grid_node']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getNickname3', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}), type='function')], usage=None) 
+
+[2024-02-18 00:52:24.158194] DEBUG: openailib: sendGridPeakDetected
+[2024-02-18 00:52:24.158194] DEBUG: openailib: {"network_node": "C2Agent", "message": "Grid Peak detected", "start_date_time": "02/17/2024 08:00:00 PM", "duration_mins": "120", "peak_lmp": "4000", "grid_node": "PJM"}
+[2024-02-18 00:52:24.159189] DEBUG: xfunction: Hello From Below
+[2024-02-18 00:52:24.190801] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-18 00:52:24.190801] DEBUG: xfunction: sendGridPeakedDetected: Grid Peak detected to C2Agent
+[2024-02-18 00:52:24.191763] DEBUG: openailib: sendNoticeSignalToNetworkNode
+[2024-02-18 00:52:24.191763] DEBUG: openailib: {"network_node": "CommandCenter", "message": "Grid Peak detected"}
+[2024-02-18 00:52:24.191763] DEBUG: xfunction: Hello From Below
+[2024-02-18 00:52:24.237743] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-18 00:52:24.237743] DEBUG: xfunction: sendNoticeSignalToNetworkNode: Grid Peak detected to openai/assistant/GridLoadMan-1-0-0/CommandCenter
+[2024-02-18 00:52:24.238718] DEBUG: openailib: sendNoticeSignalToNetworkNode
+[2024-02-18 00:52:24.238718] DEBUG: openailib: {"network_node": "ControlPanel", "message": "Grid Peak detected"}
+[2024-02-18 00:52:24.239615] DEBUG: xfunction: Hello From Below
+[2024-02-18 00:52:24.331267] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-18 00:52:24.331267] DEBUG: xfunction: sendNoticeSignalToNetworkNode: Grid Peak detected to openai/assistant/GridLoadMan-1-0-0/ControlPanel
+[2024-02-18 00:52:35.931246] DEBUG: openailib: ------------------------------------------------------------ 
+[2024-02-18 00:52:36.229525] DEBUG: openailib: All Message Count: 20
+[2024-02-18 00:52:36.229525] DEBUG: openailib: User: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"2/17/2024 8:00:00 PM","105765"
+"2/17/2024 9:00:00 PM","104444"
+"2/17/2024 10:00:00 PM","102040"
+"2/17/2024 11:00:00 PM","99519"
+
+[2024-02-18 00:52:36.229525] DEBUG: openailib: Assistant: The analysis of the newly provided time series data has concluded with the following insights:
+
+- **Average Load Value:** 102,942.0
+- **Maximum Load Value:** 105,765 at 02/17/2024 08:00:00 PM, falling within the "GOLD" classification.
+- **Minimum Load Value:** 99,519
+
+In response to the peak load value's classification as "GOLD," a GridPeakDetected message has been dispatched to C2Agent, and corresponding notices have been relayed to both the CommandCenter and ControlPanel, adhering to established protocols.
+[2024-02-18 00:52:36.229525] DEBUG: openailib: User Message Count: 1
+[2024-02-18 00:52:36.229525] DEBUG: openailib: Assistant Message Count: 1
+[2024-02-18 00:52:36.230369] DEBUG: openailib: last_message: The analysis of the newly provided time series data has concluded with the following insights:
+
+- **Average Load Value:** 102,942.0
+- **Maximum Load Value:** 105,765 at 02/17/2024 08:00:00 PM, falling within the "GOLD" classification.
+- **Minimum Load Value:** 99,519
+
+In response to the peak load value's classification as "GOLD," a GridPeakDetected message has been dispatched to C2Agent, and corresponding notices have been relayed to both the CommandCenter and ControlPanel, adhering to established protocols.
+[2024-02-18 00:52:36.230369] DEBUG: runserver: Finished and publishing results to client: The analysis of the newly provided time series data has concluded with the following insights:
+
+- **Average Load Value:** 102,942.0
+- **Maximum Load Value:** 105,765 at 02/17/2024 08:00:00 PM, falling within the "GOLD" classification.
+- **Minimum Load Value:** 99,519
+
+In response to the peak load value's classification as "GOLD," a GridPeakDetected message has been dispatched to C2Agent, and corresponding notices have been relayed to both the CommandCenter and ControlPanel, adhering to established protocols.
+[2024-02-18 00:52:36.230369] DEBUG: runserver: last_message: The analysis of the newly provided time series data has concluded with the following insights:
+
+- **Average Load Value:** 102,942.0
+- **Maximum Load Value:** 105,765 at 02/17/2024 08:00:00 PM, falling within the "GOLD" classification.
+- **Minimum Load Value:** 99,519
+
+In response to the peak load value's classification as "GOLD," a GridPeakDetected message has been dispatched to C2Agent, and corresponding notices have been relayed to both the CommandCenter and ControlPanel, adhering to established protocols.
+[2024-02-18 00:52:36.234702] DEBUG: runserver: Received message 'The analysis of the newly provided time series data has concluded with the following insights:
+
+- **Average Load Value:** 102,942.0
+- **Maximum Load Value:** 105,765 at 02/17/2024 08:00:00 PM, falling within the "GOLD" classification.
+- **Minimum Load Value:** 99,519
+
+In response to the peak load value's classification as "GOLD," a GridPeakDetected message has been dispatched to C2Agent, and corresponding notices have been relayed to both the CommandCenter and ControlPanel, adhering to established protocols.' on topic 'openai/assistant/GridLoadMan-1-0-0/ToClient'
+[2024-02-18 00:52:36.234702] DEBUG: runserver: To Client Outbound: openai/assistant/GridLoadMan-1-0-0/ToClient The analysis of the newly provided time series data has concluded with the following insights:
+
+- **Average Load Value:** 102,942.0
+- **Maximum Load Value:** 105,765 at 02/17/2024 08:00:00 PM, falling within the "GOLD" classification.
+- **Minimum Load Value:** 99,519
+
+In response to the peak load value's classification as "GOLD," a GridPeakDetected message has been dispatched to C2Agent, and corresponding notices have been relayed to both the CommandCenter and ControlPanel, adhering to established protocols.
+[2024-02-18 00:53:44.844538] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.16630463097434256", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 00:53:44.844538] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.16630463097434256", "status": "OK"}
+[2024-02-18 00:53:44.844538] DEBUG: runserver: value from cache = {"time": "2024-02-17T19:53:44.844538", "value": "0.16630463097434256", "status": "OK"}
+[2024-02-18 00:53:44.890241] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.66540452416541", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 00:53:44.890241] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.66540452416541", "status": "OK"}
+[2024-02-18 00:53:44.891241] DEBUG: runserver: value from cache = {"time": "2024-02-17T19:53:44.891241", "value": "0.66540452416541", "status": "OK"}
+[2024-02-18 00:53:45.942596] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 00:53:45.942596] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 00:53:45.943605] DEBUG: runserver: value from cache = {"time": "2024-02-17T19:53:45.942596", "value": "ON", "status": "OK"}
+[2024-02-18 00:53:46.003626] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 00:53:46.003626] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 00:53:46.003626] DEBUG: runserver: value from cache = {"time": "2024-02-17T19:53:46.003626", "value": "69", "status": "OK"}

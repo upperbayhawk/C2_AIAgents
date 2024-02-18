@@ -23,7 +23,7 @@ from thingspeaklib import XThingspeak
 
 from openai import OpenAI
 from pathlib import Path
-from pygame import mixer
+import pygame
 import random
 import config
 
@@ -269,18 +269,25 @@ def dispatch_alert_message(message):
 #=============================================
 # voices = alloy,echo,fable,onyx,nova,shimmer
 def speak_message(message):
-    speech_file_path = "data\\talktalk.mp3"
-    response = clientAI.audio.speech.create(
-    model="tts-1-hd",
-    voice="nova",
-    input=message
-    )
-     #response.stream_to_file(speech_file_path)
-    response.with_streaming_response.method(speech_file_path)
-    mixer.init()
-    mixer.music.load(speech_file_path)
-    mixer.music.play()
-    os.remove(speech_file_path)
+    try:
+        speech_file_path = "data\\talktalk.mp3"
+        response = clientAI.audio.speech.create(
+        model="tts-1-hd",
+        voice="nova",
+        input=message
+        )
+        response.write_to_file(speech_file_path)
+
+        pygame.init()
+        pygame.mixer.init()
+        pygame.mixer.music.load(speech_file_path)
+        pygame.mixer.music.play()
+        while pygame.mixer.music.get_busy():
+            pygame.time.Clock().tick(10)
+        pygame.mixer.music.unload()
+        os.remove(speech_file_path)
+    finally:
+        pass
 
 
 #=============================================
