@@ -49,12 +49,14 @@ class OpenAILib:
             for item in self.my_assistants.data:
                 # Check if substring exists in text
                 if agent_name in str(item):
+                    self.log.debug("Agent found!" + agent_name)
                     print("Agent found!: " + agent_name)
                     self.my_assistant = item
                     agent_found = True
                     break
 
             if agent_found == False:
+                self.log.debug("Agent not found!" + agent_name)
                 print("Agent not found!" + agent_name)
                 return
 
@@ -67,6 +69,7 @@ class OpenAILib:
             # Step 2: Create a Thread
             self.my_thread = self.client.beta.threads.create()
             self.log.debug(f"Thread Object: {self.my_thread} \n")
+            print("Created Thread Object\n")
 
             # Open the initialization file and read its contents
             with open(self.agent_init_prompt_file, 'r', encoding='utf-8') as init_file:
@@ -79,6 +82,7 @@ class OpenAILib:
                 content=self.init_file_contents,
             )
             self.log.debug(f"Message Object: {my_thread_message} \n")
+            print("Created Message Object\n")
         #---------------------------------------------
 
             # Open the instructions file and read its contents
@@ -94,7 +98,8 @@ class OpenAILib:
 
             self.log.debug(f"Run Object: {my_run} \n")
             
-            while my_run.status != "completed":
+            self.gpt_run_status = "started"
+            while self.gpt_run_status != "completed":
                 keep_retrieving_run = self.client.beta.threads.runs.retrieve(
                     thread_id=self.my_thread.id,
                     run_id=my_run.id
@@ -102,32 +107,56 @@ class OpenAILib:
                 #print(f"Run status: {keep_retrieving_run.status}")
 
                 if keep_retrieving_run.status == "completed":
-                    print("\n")
+                    self.gpt_run_status = "completed"
+                    break
+ 
+                if keep_retrieving_run.status == "expired":
+                    self.gpt_run_status = "stopped"
+                    self.log.error("GPT run EXPIRED: " + my_run.last_error)
+                    print("GPT run EXPIRED: " + my_run.last_error)
                     break
 
-            print("-------------------------------------------- \n")
+                if keep_retrieving_run.status == "cancelled":
+                    self.gpt_run_status = "stopped"
+                    self.log.error("GPT run CANCELLED " + my_run.last_error)
+                    print("GPT run CANCELLED " + my_run.last_error)
+                    break
 
-            # Process outputs
+                if keep_retrieving_run.status == "failed":
+                    self.gpt_run_status = "stopped"
+                    self.log.error("GPT run FAILED: " + my_run.last_error)
+                    print("GPT run FAILED: " + my_run.last_error)
+                    break
 
-            # Step 6: Retrieve the Messages added by the Assistant to the Thread
-            all_messages = self.client.beta.threads.messages.list(
-                thread_id=self.my_thread.id
-            )
+            if self.gpt_run_status == "completed":
+                print("-------------------------------------------- \n")
 
-            user_msg = my_thread_message.content[0].text.value
-            assist_msg = all_messages.data[0].content[0].text.value
+                # Process outputs
 
-            print(f"User: {user_msg}")
-            print(f"Assistant: {assist_msg}")
+                # Step 6: Retrieve the Messages added by the Assistant to the Thread
+                all_messages = self.client.beta.threads.messages.list(
+                    thread_id=self.my_thread.id
+                )
 
-            self.log.debug(f"User: {user_msg}")
-            self.log.debug(f"Assistant: {assist_msg}")
+                user_msg = my_thread_message.content[0].text.value
+                assist_msg = all_messages.data[0].content[0].text.value
 
-            with open(self.agent_output_file, "a", encoding="utf-8") as file:
-                file.write(str(my_thread_message.content[0].text.value + "\n"))
-                file.write(str(all_messages.data[0].content[0].text.value+ "\n"))
+                print(f"User: {user_msg}")
+                print(f"Assistant: {assist_msg}")
 
-            self.is_initialized = True
+                self.log.debug(f"User: {user_msg}")
+                self.log.debug(f"Assistant: {assist_msg}")
+
+                with open(self.agent_output_file, "a", encoding="utf-8") as file:
+                    file.write(str(my_thread_message.content[0].text.value + "\n"))
+                    file.write(str(all_messages.data[0].content[0].text.value+ "\n"))
+
+                self.is_initialized = True
+            else:
+                self.log.error("GPT DID NOT COMPLETE!")
+                print ("ERROR: GPT DID NOT COMPLETE!")
+                return "ERROR"                
+
         else:
             self.log.debug("OpenAILib is already initialized.")
 
@@ -136,7 +165,7 @@ class OpenAILib:
             #print("Running OpenAILib...")
             # Add code to execute AI-related tasks here
             #print ("processing")
-            self.log.debug (input_message)
+            self.log.debug ("Input Message: " + input_message + "\n")
             self.last_message = "NULL"
             my_thread_message = self.client.beta.threads.messages.create(
                             thread_id=self.my_thread.id,
@@ -147,9 +176,9 @@ class OpenAILib:
 
             # Step 4: Run the Assistant
             my_run = self.client.beta.threads.runs.create(
-            thread_id=self.my_thread.id,
-            assistant_id=self.my_assistant.id,
-            instructions=self.instruct__file_contents
+                thread_id=self.my_thread.id,
+                assistant_id=self.my_assistant.id,
+                instructions=self.instruct__file_contents
             )
             self.log.debug(f"Run Object: {my_run} \n")
             
@@ -169,18 +198,20 @@ class OpenAILib:
 
                 if keep_retrieving_run.status == "expired":
                     self.gpt_run_status = "stopped"
-                    self.log.error("GPT run expired")
+                    self.log.error("GPT run EXPIRED: " + my_run.last_error)
+                    print("GPT run EXPIRED: " + my_run.last_error)
                     break
 
                 if keep_retrieving_run.status == "cancelled":
                     self.gpt_run_status = "stopped"
-                    self.log.error("GPT run cancelled")
+                    self.log.error("GPT run CANCELLED " + my_run.last_error)
+                    print("GPT run CANCELLED " + my_run.last_error)
                     break
 
                 if keep_retrieving_run.status == "failed":
                     self.gpt_run_status = "stopped"
-                    print("GPT run failed")
-                    self.log.error("GPT run failed: " + my_run.last_error)
+                    self.log.error("GPT run FAILED: " + my_run.last_error)
+                    print("GPT run FAILED: " + my_run.last_error)
                     break
 
                 if keep_retrieving_run.status == "requires_action":
@@ -560,7 +591,7 @@ class OpenAILib:
             if self.gpt_run_status == "completed":
 
                 print("------------------------------------------------------------ \n")
-                self.log.debug("------------------------------------------------------------ ")
+                self.log.debug("------------------------------------------------------------ \n")
 
                 # Step 6: Retrieve the Messages added by the Assistant to the Thread
                 try:
