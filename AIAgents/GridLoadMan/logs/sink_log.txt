@@ -51,3 +51,7 @@
 [2024-02-18 19:12:41.479108] DEBUG: runsink: =========================
 [2024-02-18 19:12:41.479108] DEBUG: runsink: Connected to MQTT
 [2024-02-18 19:12:41.485321] DEBUG: runsink: Connected with result code 0
+[2024-02-18 19:15:21.794447] DEBUG: runsink: Hello From Below: GridLoadMan-1-0-0
+[2024-02-18 19:15:22.026857] DEBUG: runsink: =========================
+[2024-02-18 19:15:22.026857] DEBUG: runsink: Connected to MQTT
+[2024-02-18 19:15:22.040967] DEBUG: runsink: Connected with result code 0

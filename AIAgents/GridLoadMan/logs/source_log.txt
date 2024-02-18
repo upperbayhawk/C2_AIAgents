@@ -15,3 +15,20 @@
 [2024-02-18 19:14:57.744444] DEBUG: XNetwork: Connected to MQTT broker
 [2024-02-18 19:14:57.745597] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
 [2024-02-18 19:14:57.745597] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-18 19:21:07.232007] DEBUG: runsource: Hello From Below: GridLoadMan-1-0-0
+[2024-02-18 19:21:07.502633] DEBUG: runsource: =========================
+[2024-02-18 19:21:07.502633] DEBUG: runsource: Connected to MQTT
+[2024-02-18 19:21:07.502633] DEBUG: xfunction: Hello From Below
+[2024-02-18 19:21:07.502633] DEBUG: runsource: Connected with result code 0
+[2024-02-18 19:21:07.535263] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-18 19:21:08.546173] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.9156485983679575", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-18 19:21:08.546173] DEBUG: runsource: sendDataToAgent: RANDO = 0.9156485983679575 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-18 19:21:08.561679] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-18 19:21:08.561679] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.11032192282220199", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-18 19:21:08.561679] DEBUG: runsource: sendDataToAgent: Dave = 0.11032192282220199 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-18 19:21:08.593452] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-18 19:21:08.593452] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-18 19:21:08.593452] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-18 19:21:08.656164] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-18 19:21:08.656164] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-18 19:21:08.656164] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed

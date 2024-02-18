@@ -181,3 +181,6 @@ The efficiency of this energy conversion process determines how "bouncy" a ball 
 [2024-02-18 19:14:57.759470] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
 [2024-02-18 19:14:57.759470] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
 [2024-02-18 19:14:57.760408] DEBUG: runserver: value from cache = {"time": "2024-02-18T14:14:57.760408", "value": "69", "status": "OK"}
+[2024-02-18 19:16:31.448930] DEBUG: runserver: Hello From Below: GridLoadMan-1-0-0
+[2024-02-18 19:16:31.676790] DEBUG: openailib: Initializing OpenAILib...
+[2024-02-18 19:16:31.680575] DEBUG: runserver: Connected with result code 0
