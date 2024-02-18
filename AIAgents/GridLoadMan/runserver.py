@@ -20,7 +20,9 @@ import json
 import arrow
 import paho.mqtt.client as mqtt
 from concurrent.futures import ThreadPoolExecutor
-from openai import OpenAI
+import openai
+
+import pygame
 
 from xcachelib import data_cache_instance
 from openailib import openailib_instance
@@ -55,6 +57,7 @@ log.debug("Hello From Below: " + agent_name)
 in_queue = queue.Queue()
 datafeed_queue = queue.Queue()
 clientMQ = mqtt.Client()
+clientAI = openai.OpenAI()
 
 # MQTT Callbacks
 def on_connect(client, userdata, flags, rc):
@@ -136,7 +139,27 @@ def main_worker_thread():
             log.error("Exception " + str(ex))
             print ("Exception " + str(ex))
 #-------------------------------------------------------
+# voices = alloy,echo,fable,onyx,nova,shimmer
+def speak_message(message):
+    try:
+        speech_file_path = "data\\runserver.mp3"
+        response = clientAI.audio.speech.create(
+        model="tts-1-hd",
+        voice="nova",
+        input=message
+        )
+        response.write_to_file(speech_file_path)
 
+        pygame.init()
+        pygame.mixer.init()
+        pygame.mixer.music.load(speech_file_path)
+        pygame.mixer.music.play()
+        while pygame.mixer.music.get_busy():
+            pygame.time.Clock().tick(10)
+        pygame.mixer.music.unload()
+        os.remove(speech_file_path)
+    finally:
+        pass
 # Main async function
 async def main():
     # Set up MQTT client
@@ -172,6 +195,7 @@ async def main():
         print ("Exception openailib_instance.initialize: " + str(ex))
    
     try:
+        speak_message("Hello. The server agent is starting")
         while True:
             user_input = await async_input("Enter message (or type 'x' to quit): ")
             if user_input.lower() == 'x':

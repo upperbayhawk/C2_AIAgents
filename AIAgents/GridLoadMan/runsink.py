@@ -20,7 +20,7 @@ import paho.mqtt.client as mqtt
 from concurrent.futures import ThreadPoolExecutor
 from thingspeaklib import XThingspeak
 
-from openai import OpenAI
+import openai
 from pathlib import Path
 
 # speech
@@ -77,7 +77,7 @@ c2agent_queue = queue.Queue()
 
 clientMQ = mqtt.Client()
 
-clientAI = OpenAI()
+clientAI = openai.OpenAI()
 
 #-----------------------------------------------------
 
@@ -297,7 +297,7 @@ def dispatch_c2agent_message(message):
 # voices = alloy,echo,fable,onyx,nova,shimmer
 def speak_message(message):
     try:
-        speech_file_path = "data\\talktalk.mp3"
+        speech_file_path = "data\\runsink.mp3"
         response = clientAI.audio.speech.create(
         model="tts-1-hd",
         voice="nova",
@@ -407,6 +407,8 @@ async def main():
     my_main_run_thread.start()
 
     try:
+        speak_message("hello. Sink agent is starting")
+
         while True:
             user_input = await async_input("Enter message (or type 'x' to quit): \n")
             if user_input.lower() == 'x':

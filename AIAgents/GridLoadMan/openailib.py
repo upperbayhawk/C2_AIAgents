@@ -68,8 +68,8 @@ class OpenAILib:
 
             # Step 2: Create a Thread
             self.my_thread = self.client.beta.threads.create()
-            self.log.debug(f"Thread Object: {self.my_thread} \n")
-            print("Created Thread Object\n")
+            self.log.debug(f"Thread Object: {self.my_thread}\n")
+            print("Created Thread Object")
 
             # Open the initialization file and read its contents
             with open(self.agent_init_prompt_file, 'r', encoding='utf-8') as init_file:
@@ -82,7 +82,7 @@ class OpenAILib:
                 content=self.init_file_contents,
             )
             self.log.debug(f"Message Object: {my_thread_message} \n")
-            print("Created Message Object\n")
+            print("Created Message Object")
         #---------------------------------------------
 
             # Open the instructions file and read its contents
