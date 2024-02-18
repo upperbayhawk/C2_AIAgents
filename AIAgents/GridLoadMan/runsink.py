@@ -22,7 +22,10 @@ from thingspeaklib import XThingspeak
 
 from openai import OpenAI
 from pathlib import Path
-from pygame import mixer
+
+# speech
+import pygame
+
 
 import config
 
@@ -34,7 +37,12 @@ logging_level = config.logging_level
 agent_period_secs = 120
 
 enable_mqtt_speech = False
-enable_command_speech = True
+enable_command_speech = False
+enable_notice_speech = False
+enable_control_speech = False
+enable_alert_speech = False
+enable_alarm_speech = False
+enable_c2agent_speech = True
 
 agent_output_file = ".\\data\\sink_output.txt"
 agent_log_file = ".\\logs\\sink_log.txt"
@@ -246,7 +254,7 @@ def dispatch_command_message(message):
         pass
 
 def dispatch_control_message(message):
-    if enable_command_speech == True:
+    if enable_control_speech == True:
         my_message = "Control message " + message
         print (my_message)
         speak_message(my_message)
@@ -254,7 +262,7 @@ def dispatch_control_message(message):
         pass
 
 def dispatch_alarm_message(message):
-    if enable_command_speech == True:
+    if enable_alarm_speech == True:
         my_message = "Alarm message " + message
         print (my_message)
         speak_message(my_message)
@@ -262,7 +270,7 @@ def dispatch_alarm_message(message):
         pass
 
 def dispatch_notice_message(message):
-    if enable_command_speech == True:
+    if enable_notice_speech == True:
         my_message = "Notice message " + message
         print (my_message)
         speak_message(my_message)
@@ -270,7 +278,7 @@ def dispatch_notice_message(message):
         pass
 
 def dispatch_alert_message(message):
-    if enable_command_speech == True:
+    if enable_alert_speech == True:
         my_message = "Alert message " + message
         print (my_message)
         speak_message(my_message)
@@ -278,7 +286,7 @@ def dispatch_alert_message(message):
         pass
 
 def dispatch_c2agent_message(message):
-    if enable_command_speech == True:
+    if enable_c2agent_speech == True:
         my_message = "C2Agent message " + message
         print (my_message)
         speak_message(my_message)
@@ -288,19 +296,25 @@ def dispatch_c2agent_message(message):
 #=============================================
 # voices = alloy,echo,fable,onyx,nova,shimmer
 def speak_message(message):
-    speech_file_path = "data\\talktalk.mp3"
-    response = clientAI.audio.speech.create(
-    model="tts-1-hd",
-    voice="nova",
-    input=message
-    )
-    response.stream_to_file(speech_file_path)
-    #response.with_streaming_response.method(speech_file_path)
-    mixer.init()
-    mixer.music.load(speech_file_path)
-    mixer.music.play()
-    #os.remove(speech_file_path)
+    try:
+        speech_file_path = "data\\talktalk.mp3"
+        response = clientAI.audio.speech.create(
+        model="tts-1-hd",
+        voice="nova",
+        input=message
+        )
+        response.write_to_file(speech_file_path)
 
+        pygame.init()
+        pygame.mixer.init()
+        pygame.mixer.music.load(speech_file_path)
+        pygame.mixer.music.play()
+        while pygame.mixer.music.get_busy():
+            pygame.time.Clock().tick(10)
+        pygame.mixer.music.unload()
+        os.remove(speech_file_path)
+    finally:
+        pass
 #=============================================
 
 #Main app thread
@@ -383,9 +397,9 @@ async def main():
     my_alert_thread.start()
 
     # Start worker in separate thread
-    my_alert_thread = threading.Thread(target=c2agent_worker_thread)
-    my_alert_thread.daemon = True
-    my_alert_thread.start()
+    my_c2agent_thread = threading.Thread(target=c2agent_worker_thread)
+    my_c2agent_thread.daemon = True
+    my_c2agent_thread.start()
 
    # Start main app function in separate thread
     my_main_run_thread = threading.Thread(target=main_run_thread)
