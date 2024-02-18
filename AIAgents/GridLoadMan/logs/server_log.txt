@@ -1163,3 +1163,135 @@ Is there anything else you need help with?
 [2024-02-18 20:39:37.507845] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:39:37.507845", "value": "ON", "status": "OK"}
 [2024-02-18 20:39:37.507845] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
 [2024-02-18 20:39:37.508856] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:39:37.508856", "value": "69", "status": "OK"}
+[2024-02-18 20:44:37.409516] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.3081458960064777", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:44:37.409516] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.3081458960064777", "status": "OK"}
+[2024-02-18 20:44:37.410525] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:44:37.410525", "value": "0.3081458960064777", "status": "OK"}
+[2024-02-18 20:44:37.462875] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.11782469338791624", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:44:37.463897] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.11782469338791624", "status": "OK"}
+[2024-02-18 20:44:37.463897] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:44:37.463897", "value": "0.11782469338791624", "status": "OK"}
+[2024-02-18 20:44:37.515491] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:44:37.515491] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 20:44:37.515491] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:44:37.515491", "value": "ON", "status": "OK"}
+[2024-02-18 20:44:38.515711] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:44:38.515711] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 20:44:38.520729] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:44:38.519730", "value": "69", "status": "OK"}
+[2024-02-18 20:49:37.426187] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.5673917543492918", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:49:37.426187] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.5673917543492918", "status": "OK"}
+[2024-02-18 20:49:37.427245] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:49:37.427245", "value": "0.5673917543492918", "status": "OK"}
+[2024-02-18 20:49:37.488049] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.24128162720767599", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:49:37.488049] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.24128162720767599", "status": "OK"}
+[2024-02-18 20:49:37.488553] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:49:37.488049", "value": "0.24128162720767599", "status": "OK"}
+[2024-02-18 20:49:37.548488] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:49:37.548488] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 20:49:37.548488] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:49:37.548488", "value": "ON", "status": "OK"}
+[2024-02-18 20:49:37.548488] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:49:37.548488] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 20:49:37.549629] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:49:37.549629", "value": "69", "status": "OK"}
+[2024-02-18 20:54:37.410370] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.5954084015369431", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:54:37.410370] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.5954084015369431", "status": "OK"}
+[2024-02-18 20:54:37.410370] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:54:37.410370", "value": "0.5954084015369431", "status": "OK"}
+[2024-02-18 20:54:37.457089] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.07416831773571841", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:54:37.457089] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.07416831773571841", "status": "OK"}
+[2024-02-18 20:54:37.458089] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:54:37.458089", "value": "0.07416831773571841", "status": "OK"}
+[2024-02-18 20:54:37.505886] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:54:37.505886] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 20:54:37.505886] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:54:37.505886", "value": "ON", "status": "OK"}
+[2024-02-18 20:54:37.506866] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:54:37.506866] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 20:54:37.507115] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:54:37.507115", "value": "69", "status": "OK"}
+[2024-02-18 20:59:37.408094] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.5364903407490109", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:59:37.408094] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.5364903407490109", "status": "OK"}
+[2024-02-18 20:59:37.408094] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:59:37.408094", "value": "0.5364903407490109", "status": "OK"}
+[2024-02-18 20:59:37.457873] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.8493703774787527", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:59:37.457873] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.8493703774787527", "status": "OK"}
+[2024-02-18 20:59:37.457873] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:59:37.457873", "value": "0.8493703774787527", "status": "OK"}
+[2024-02-18 20:59:37.514439] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:59:37.514439] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 20:59:37.515760] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 20:59:37.516434] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:59:37.515760", "value": "ON", "status": "OK"}
+[2024-02-18 20:59:37.516434] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 20:59:37.516434] DEBUG: runserver: value from cache = {"time": "2024-02-18T15:59:37.516434", "value": "69", "status": "OK"}
+[2024-02-18 21:04:37.406130] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.7545365459387299", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:04:37.406130] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.7545365459387299", "status": "OK"}
+[2024-02-18 21:04:37.406130] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:04:37.406130", "value": "0.7545365459387299", "status": "OK"}
+[2024-02-18 21:04:37.467806] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.9689202666382062", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:04:37.467806] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.9689202666382062", "status": "OK"}
+[2024-02-18 21:04:37.467806] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:04:37.467806", "value": "0.9689202666382062", "status": "OK"}
+[2024-02-18 21:04:37.515302] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:04:37.516240] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 21:04:37.516240] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:04:37.516240] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 21:04:37.516240] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:04:37.516240", "value": "ON", "status": "OK"}
+[2024-02-18 21:04:37.516240] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:04:37.516240", "value": "69", "status": "OK"}
+[2024-02-18 21:09:37.407240] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.1489213713918014", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:09:37.407240] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.1489213713918014", "status": "OK"}
+[2024-02-18 21:09:37.408245] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:09:37.408245", "value": "0.1489213713918014", "status": "OK"}
+[2024-02-18 21:09:38.432639] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.2732435979947504", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:09:38.432639] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.2732435979947504", "status": "OK"}
+[2024-02-18 21:09:38.432639] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:09:38.432639", "value": "0.2732435979947504", "status": "OK"}
+[2024-02-18 21:09:38.499210] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:09:38.499210] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 21:09:38.499210] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:09:38.499210", "value": "ON", "status": "OK"}
+[2024-02-18 21:09:38.550320] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:09:38.550320] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 21:09:38.550320] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:09:38.550320", "value": "69", "status": "OK"}
+[2024-02-18 21:14:37.401421] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.8865074060176259", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:14:37.401421] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.8865074060176259", "status": "OK"}
+[2024-02-18 21:14:37.401421] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:14:37.401421", "value": "0.8865074060176259", "status": "OK"}
+[2024-02-18 21:14:37.449470] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.49666536676872275", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:14:37.449470] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.49666536676872275", "status": "OK"}
+[2024-02-18 21:14:37.449774] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:14:37.449774] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:14:37.449774", "value": "0.49666536676872275", "status": "OK"}
+[2024-02-18 21:14:37.449774] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 21:14:37.450617] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:14:37.450617", "value": "ON", "status": "OK"}
+[2024-02-18 21:14:38.486503] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:14:38.486503] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 21:14:38.486503] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:14:38.486503", "value": "69", "status": "OK"}
+[2024-02-18 21:19:37.400315] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.19898141532598912", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:19:37.400315] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.19898141532598912", "status": "OK"}
+[2024-02-18 21:19:37.400315] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:19:37.400315", "value": "0.19898141532598912", "status": "OK"}
+[2024-02-18 21:19:37.444561] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.49560466055678554", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:19:37.444561] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.49560466055678554", "status": "OK"}
+[2024-02-18 21:19:37.445494] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:19:37.445494", "value": "0.49560466055678554", "status": "OK"}
+[2024-02-18 21:19:37.492391] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:19:37.492391] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 21:19:37.493451] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:19:37.493451] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 21:19:37.493451] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:19:37.493451", "value": "ON", "status": "OK"}
+[2024-02-18 21:19:37.494397] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:19:37.494397", "value": "69", "status": "OK"}
+[2024-02-18 21:24:37.417771] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.8682713900073464", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:24:37.417771] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.8682713900073464", "status": "OK"}
+[2024-02-18 21:24:37.418776] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:24:37.418776", "value": "0.8682713900073464", "status": "OK"}
+[2024-02-18 21:24:37.471812] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.06717947252896517", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:24:37.472882] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.06717947252896517", "status": "OK"}
+[2024-02-18 21:24:37.472882] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:24:37.472882", "value": "0.06717947252896517", "status": "OK"}
+[2024-02-18 21:24:37.521294] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:24:37.521294] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 21:24:37.522312] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:24:37.522312", "value": "ON", "status": "OK"}
+[2024-02-18 21:24:37.522312] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:24:37.522312] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 21:24:37.524036] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:24:37.524036", "value": "69", "status": "OK"}
+[2024-02-18 21:29:37.422430] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.07471293254193379", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:29:37.422430] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.07471293254193379", "status": "OK"}
+[2024-02-18 21:29:37.423243] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:29:37.423243", "value": "0.07471293254193379", "status": "OK"}
+[2024-02-18 21:29:37.473133] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.6113162190694564", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:29:37.473133] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.6113162190694564", "status": "OK"}
+[2024-02-18 21:29:37.474205] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:29:37.474205] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:29:37.474205", "value": "0.6113162190694564", "status": "OK"}
+[2024-02-18 21:29:37.474205] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 21:29:37.475086] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:29:37.475086", "value": "ON", "status": "OK"}
+[2024-02-18 21:29:37.518483] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:29:37.518483] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 21:29:37.518483] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:29:37.518483", "value": "69", "status": "OK"}
+[2024-02-18 21:34:37.411213] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.3353435668757285", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:34:37.411213] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.3353435668757285", "status": "OK"}
+[2024-02-18 21:34:37.411213] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:34:37.411213", "value": "0.3353435668757285", "status": "OK"}
+[2024-02-18 21:34:37.460030] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.713290906546796", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:34:37.460030] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.713290906546796", "status": "OK"}
+[2024-02-18 21:34:37.461025] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:34:37.461025", "value": "0.713290906546796", "status": "OK"}
+[2024-02-18 21:34:37.506311] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:34:37.506311] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
+[2024-02-18 21:34:37.506311] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
+[2024-02-18 21:34:37.507317] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:34:37.507317", "value": "ON", "status": "OK"}
+[2024-02-18 21:34:37.507317] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
+[2024-02-18 21:34:37.507317] DEBUG: runserver: value from cache = {"time": "2024-02-18T16:34:37.507317", "value": "69", "status": "OK"}
