@@ -221,3 +221,7 @@ Data values are time,load
 A "GridPeakDetected" message was sent to C2Agent, and notifications were sent to both CommandCenter and ControlPanel with the details of the peak assessment.
 Is there anything else you need help with?
 [2024-02-18 22:32:58.568741] DEBUG: runsink: Connected with result code 0
+[2024-02-19 16:09:03.524750] DEBUG: runsink: Hello From Below: GridLoadMan-1-0-0
+[2024-02-19 16:09:03.770764] DEBUG: runsink: =========================
+[2024-02-19 16:09:03.770764] DEBUG: runsink: Connected to MQTT
+[2024-02-19 16:09:03.777825] DEBUG: runsink: Connected with result code 0
