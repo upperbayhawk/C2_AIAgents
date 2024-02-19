@@ -42,7 +42,7 @@ class ThreadSafeJSONCache:
             return self.cache.get(name, None)
 
 # Instantiate class to make it a singleton instance
-data_cache_instance = ThreadSafeJSONCache(maxsize=10000, ttl=600)
+data_cache_instance = ThreadSafeJSONCache(maxsize=100000, ttl=600)
 
 # Example usage
 #if __name__ == "__main__":
