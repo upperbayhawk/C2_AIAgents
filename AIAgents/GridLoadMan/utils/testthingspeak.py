@@ -1,7 +1,8 @@
 import thingspeak
 
-channel_id = 1114974
-channel_key = 'USI884Q84ANQ0HBX'
+channel_key = 'U'
+channel_id = 12397
+
 
 ch = thingspeak.Channel(channel_id,api_key=channel_key)
 #get one field in channel
