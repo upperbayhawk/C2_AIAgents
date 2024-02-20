@@ -20,12 +20,6 @@ Overview
 
 https://upperbay.com/v1/blogs/beachblogs/the-personal-advisory-sidekick
 
-
-
-
-
-
-
 Code Summary
 
 The code is 100% Python 3.12 developed on Windows 11 with Microsoft VSCode.
