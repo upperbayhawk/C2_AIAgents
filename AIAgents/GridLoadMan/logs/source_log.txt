@@ -7022,3 +7022,16 @@ It's important to note that "wetness" is not an inherent property of water itsel
 [2024-02-20 16:54:40.362238] DEBUG: XNetwork: Connected to MQTT broker
 [2024-02-20 16:54:40.363246] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
 [2024-02-20 16:54:40.363246] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 16:59:40.227462] DEBUG: xfunction: Hello From Below
+[2024-02-20 16:59:40.274777] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 16:59:40.275270] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.3475582236623317", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 16:59:40.275270] DEBUG: runsource: sendDataToAgent: RANDO = 0.3475582236623317 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 16:59:40.291716] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 16:59:40.291716] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.05760740668252984", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 16:59:40.291716] DEBUG: runsource: sendDataToAgent: Dave = 0.05760740668252984 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 16:59:40.316723] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 16:59:40.316723] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 16:59:40.316723] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 16:59:40.342622] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 16:59:40.342622] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 16:59:40.342622] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
