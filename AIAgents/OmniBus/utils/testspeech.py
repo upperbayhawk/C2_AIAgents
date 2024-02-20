@@ -28,7 +28,7 @@ clientAI = openai.OpenAI()
 # voices = alloy,echo,fable,onyx,nova,shimmer
 def speak_message(message):
     try:
-        speech_file_path = "data\\testspeech.mp3"
+        speech_file_path = "testspeech.mp3"
         response = clientAI.audio.speech.create(
         model="tts-1-hd",
         voice="nova",

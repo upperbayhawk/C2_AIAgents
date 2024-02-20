@@ -5100,3 +5100,9 @@ The analysis of the new day's load time series data produces the following resul
 - Time of Maximum Load: 2024-02-20 19:00:00
 
 Following these findings, a GridPeakDetected message designated as GOLD has been transmitted to the C2Agent. Notices have also been dispatched to both the CommandCenter and the ControlPanel, announcing a GOLD peak detected at PJM.
+Why is the sky blue?
+The sky appears blue to the human eye because of the scattering of sunlight by the Earth's atmosphere. Sunlight is made up of different colors of light that have various wavelengths. When sunlight enters the Earth's atmosphere, it collides with molecules and particles in the atmosphere. 
+
+Blue light has shorter wavelengths and more energy compared to other colors. Because of its short wavelength, blue light is scattered in all directions by the tiny molecules of air in the Earth's atmosphere much more efficiently than other colors. This scattering causes the direct sunlight that looks white to our eyes to take on a blue hue in the sky. 
+
+This phenomenon is known as Rayleigh scattering, named after the British physicist Lord Rayleigh who first described it in the 19th century. The effect of Rayleigh scattering is also why sunsets and sunrises often appear red or orange. At sunrise and sunset, the light has to travel through more of the Earth's atmosphere to reach your eyes. This longer path through the atmosphere allows more blue light to be scattered out of the direct line of sight, leaving the longer wavelengths of red and orange to dominate the observed spectrum of sunlight.
