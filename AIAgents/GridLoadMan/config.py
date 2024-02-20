@@ -25,7 +25,7 @@ MQTT_TOPIC_ALERT = mqtt_base_topic + agent_name + "/AlertPanel"
 MQTT_TOPIC_C2AGENT = mqtt_base_topic_c2agent
 #
 MQTT_TOPIC_DATAFEED = mqtt_base_topic + agent_name + "/DataFeed"
-# Logger level
+# Logger level DEBUG, INFO
 logging_level = logbook.DEBUG
 
 class GridPeakDetected:
