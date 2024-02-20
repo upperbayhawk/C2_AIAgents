@@ -535,46 +535,7 @@ class OpenAILib:
                             except Exception as e:
                                 self.log.error("FUNCTION WRAPPER ERROR: {e}:" + function_name)
 
-                        if function_name == "sendGridPeakDetected":
-                            try:
-                                my_args = json.loads(arguments)
-                                if "network_node" in my_args:
-                                    print("From Json location = " + my_args["network_node"])
-                                    network_node = my_args["network_node"]
-                                    message = my_args["message"]
-                                    start_date_time = my_args["start_date_time"]
-                                    duration_mins = my_args["duration_mins"]
-                                    peak_lmp = my_args["peak_lmp"]
-                                    grid_node = my_args["grid_node"]
-                                    return_value = "ERROR"
-                                    try:
-                                        xfunc = XFunction()
-                                        print("Calling " + "sendGridPeakDetected")
-                                        return_value = xfunc.sendGridPeakDetected(network_node,message,start_date_time,duration_mins,peak_lmp,grid_node)
-                                    except Exception as e1:
-                                        self.log.error("FUNCTION ERROR: {e1}: " + function_name)
-
-                                    tool_return = json.loads('{"tool_call_id": "hello", "output": "return_value"}')
-
-                                    tool_return["tool_call_id"] = tool_call.id
-                                    tool_return["output"] = return_value
-
-                                    print("function: " + function_name + " = " + tool_return["output"])
-                                    tool_returns.append(tool_return)
-                                else:
-                                    self.log.error("network_node argument is missing: {e}:" + function_name)    
-                                    return_value = "ERROR"
-                                    tool_return = json.loads('{"tool_call_id": "hello", "output": "return_value"}')
-
-                                    tool_return["tool_call_id"] = tool_call.id
-                                    tool_return["output"] = return_value
-
-                                    print("function: " + function_name + " = " + tool_return["output"])
-                                    tool_returns.append(tool_return)
-
-                            except Exception as e:
-                                self.log.error("FUNCTION WRAPPER ERROR: {e}:" + function_name)
-                        #////////////////////////////////////////////////////////
+                    #////////////////////////////////////////////////////////
                             
                     run = self.client.beta.threads.runs.submit_tool_outputs(
                         thread_id=self.my_thread.id,
