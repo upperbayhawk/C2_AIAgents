@@ -8,7 +8,7 @@
 import logbook
 
 agent_name = "GridLoadMan-1-0-0"
-# MQTT Broker settings
+# MQTT Broker settings. USE IP or "localhost".
 MQTT_BROKER = "192.168.0.131"
 MQTT_PORT = 1883
 mqtt_base_topic = "openai/assistant/"
