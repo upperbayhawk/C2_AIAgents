@@ -120,6 +120,8 @@ def main_worker_thread():
             message = in_queue.get()
             if message is None:
                 break
+            if len(message) < 3:
+                break
             msg_return = openailib_instance.run(message)
             if msg_return == "OK":
                 last_message = openailib_instance.last_message

@@ -102,7 +102,5 @@ NOTES:
 
 	The following agents are play toys and can be disregarded:
 		○ GridLoadMan
-		○ HomePowerMan
-		○ ThingsSpeakMan
-		○ WeatherMan
+	
 	

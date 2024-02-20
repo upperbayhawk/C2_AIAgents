@@ -34,7 +34,13 @@ logging_level = config.logging_level
 agent_period_secs = 120
 
 enable_mqtt_speech = False
-enable_command_speech = True
+enable_command_speech = False
+enable_notice_speech = False
+enable_control_speech = False
+enable_alert_speech = True
+enable_alarm_speech = False
+
+
 
 agent_output_file = ".\\data\\sink_output.txt"
 agent_log_file = ".\\logs\\sink_log.txt"
@@ -228,7 +234,7 @@ def dispatch_command_message(message):
         pass
 
 def dispatch_control_message(message):
-    if enable_command_speech == True:
+    if enable_control_speech == True:
         my_message = "Control message " + message
         print (my_message)
         speak_message(my_message)
@@ -236,7 +242,7 @@ def dispatch_control_message(message):
         pass
 
 def dispatch_alarm_message(message):
-    if enable_command_speech == True:
+    if enable_alarm_speech == True:
         my_message = "Alarm message " + message
         print (my_message)
         speak_message(my_message)
@@ -244,7 +250,7 @@ def dispatch_alarm_message(message):
         pass
 
 def dispatch_notice_message(message):
-    if enable_command_speech == True:
+    if enable_notice_speech == True:
         my_message = "Notice message " + message
         print (my_message)
         speak_message(my_message)
@@ -252,7 +258,7 @@ def dispatch_notice_message(message):
         pass
 
 def dispatch_alert_message(message):
-    if enable_command_speech == True:
+    if enable_alert_speech == True:
         my_message = "Alert message " + message
         print (my_message)
         speak_message(my_message)

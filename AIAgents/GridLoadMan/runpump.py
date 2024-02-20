@@ -26,7 +26,7 @@ agent_name = config.agent_name
 
 logging_level = config.logging_level
 
-# 10 min
+# 5 min
 agent_period_secs = 300
 
 agent_output_file = ".\\data\\pump_output.txt"

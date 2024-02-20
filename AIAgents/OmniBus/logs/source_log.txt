@@ -501,3 +501,52 @@ If you can provide more comprehensive data, I could conduct a more complete anal
 [2023-12-11 18:24:33.295092] DEBUG: XNetwork: Connected to MQTT broker
 [2023-12-11 18:24:33.295727] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
 [2023-12-11 18:24:33.295727] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:08:23.393930] DEBUG: runsource: Hello From Below: OmniBus-1-0-0
+[2024-02-20 21:08:23.626376] DEBUG: runsource: =========================
+[2024-02-20 21:08:23.626376] DEBUG: runsource: Connected to MQTT
+[2024-02-20 21:08:23.627495] DEBUG: runsource: Connected with result code 0
+[2024-02-20 21:08:23.629754] DEBUG: xfunction: Hello From Below
+[2024-02-20 21:08:23.676652] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:08:23.676652] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.39976444020883906", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:08:23.677729] DEBUG: runsource: sendDataToAgent: RANDO = 0.39976444020883906 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:08:23.738137] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:08:23.739113] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.4239205326050165", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:08:23.739113] DEBUG: runsource: sendDataToAgent: Dave = 0.4239205326050165 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:08:23.769973] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:08:23.769973] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:08:23.769973] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:08:23.801616] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:08:23.802785] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:08:23.802785] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:08:32.061341] DEBUG: runsource: 
+[2024-02-20 21:08:51.792485] DEBUG: runsource: get the RANDO magic number
+[2024-02-20 21:08:57.476393] DEBUG: runsource: The "RANDO" magic number is 0.39976444020883906.
+[2024-02-20 21:13:23.630462] DEBUG: xfunction: Hello From Below
+[2024-02-20 21:13:23.634048] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:13:23.634048] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.8601650713118986", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:13:23.635214] DEBUG: runsource: sendDataToAgent: RANDO = 0.8601650713118986 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:13:23.652558] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:13:23.653378] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.8268310310558884", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:13:23.653378] DEBUG: runsource: sendDataToAgent: Dave = 0.8268310310558884 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:13:23.668059] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:13:24.682009] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:13:24.682009] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:13:24.697934] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:13:24.697934] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:13:24.698932] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:13:32.000289] DEBUG: runsource: get the RANDO magic number
+[2024-02-20 21:13:38.507440] DEBUG: runsource: The "RANDO" magic number is now 0.8601650713118986.
+[2024-02-20 21:18:23.631275] DEBUG: xfunction: Hello From Below
+[2024-02-20 21:18:23.681746] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:18:23.681746] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.3413156817775962", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:18:23.681746] DEBUG: runsource: sendDataToAgent: RANDO = 0.3413156817775962 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:18:23.728831] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:18:23.729708] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.11429265585185056", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:18:23.729708] DEBUG: runsource: sendDataToAgent: Dave = 0.11429265585185056 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:18:23.759008] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:18:23.760752] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:18:23.760752] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:18:23.761750] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:18:24.773420] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:18:24.773420] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:20:46.542158] DEBUG: runsource: 

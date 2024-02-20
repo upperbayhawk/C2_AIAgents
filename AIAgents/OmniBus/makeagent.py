@@ -15,8 +15,8 @@ import config
 
 agent_name = config.agent_name
 # These files are uploaded when agent is born
-agent_base_file = "./data/AgentBase.txt"
-agent_data_file = "./data/LMP_LOAD.csv"
+agent_base_file = "./data/xxx.txt"
+agent_data_file = "./data/yyy.csv"
 agent_instructions_file = "./data/AgentInstructions.txt"
 agent_model="gpt-4-0125-preview"
 #agent_tools=[{"type": "code_interpreter"},{"type":"retrieval"}],
