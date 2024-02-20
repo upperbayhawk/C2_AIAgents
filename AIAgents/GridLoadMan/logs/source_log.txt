@@ -6661,3 +6661,16 @@ Following these findings, a GridPeakDetected message designated as GOLD has been
 Blue light has shorter wavelengths and more energy compared to other colors. Because of its short wavelength, blue light is scattered in all directions by the tiny molecules of air in the Earth's atmosphere much more efficiently than other colors. This scattering causes the direct sunlight that looks white to our eyes to take on a blue hue in the sky. 
 
 This phenomenon is known as Rayleigh scattering, named after the British physicist Lord Rayleigh who first described it in the 19th century. The effect of Rayleigh scattering is also why sunsets and sunrises often appear red or orange. At sunrise and sunset, the light has to travel through more of the Earth's atmosphere to reach your eyes. This longer path through the atmosphere allows more blue light to be scattered out of the direct line of sight, leaving the longer wavelengths of red and orange to dominate the observed spectrum of sunlight.
+[2024-02-20 14:44:40.195894] DEBUG: xfunction: Hello From Below
+[2024-02-20 14:44:40.227006] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 14:44:40.227776] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.7784588272496373", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 14:44:40.227776] DEBUG: runsource: sendDataToAgent: RANDO = 0.7784588272496373 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 14:44:40.239188] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 14:44:40.240079] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.10307249207372582", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 14:44:40.240079] DEBUG: runsource: sendDataToAgent: Dave = 0.10307249207372582 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 14:44:40.261888] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 14:44:40.263017] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 14:44:40.263017] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 14:44:40.294767] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 14:44:40.294767] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-20 14:44:40.294767] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
