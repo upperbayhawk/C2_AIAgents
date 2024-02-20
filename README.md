@@ -100,4 +100,4 @@ NOTES:
 		○ HomePowerMan
 		○ ThingsSpeakMan
 		○ WeatherMan
-![image](https://github.com/upperbayhawk/C2_AIAgents/assets/1062536/76f219ab-f89a-4651-98c2-6c35ae55ef3e)
+
