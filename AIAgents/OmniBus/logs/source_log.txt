@@ -618,3 +618,16 @@ In summary, the latest weather data for Boston hints at a minor upward trend in 
 [2024-02-20 21:48:36.872659] DEBUG: XNetwork: Connected to MQTT broker
 [2024-02-20 21:48:36.874181] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
 [2024-02-20 21:48:36.874181] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:53:36.841194] DEBUG: xfunction: Hello From Below
+[2024-02-20 21:53:36.843718] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:53:36.843718] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.3774190302576179", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:53:36.843718] DEBUG: runsource: sendDataToAgent: RANDO = 0.3774190302576179 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:53:36.862972] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:53:37.876632] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.2957414798736182", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:53:37.876632] DEBUG: runsource: sendDataToAgent: Dave = 0.2957414798736182 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:53:37.907863] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:53:37.908879] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:53:37.908879] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:53:37.924589] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-20 21:53:37.924589] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-02-20 21:53:37.924589] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/OmniBus-1-0-0/DataFeed
