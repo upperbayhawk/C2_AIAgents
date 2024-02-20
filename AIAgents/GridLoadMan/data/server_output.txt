@@ -5106,3 +5106,13 @@ The sky appears blue to the human eye because of the scattering of sunlight by t
 Blue light has shorter wavelengths and more energy compared to other colors. Because of its short wavelength, blue light is scattered in all directions by the tiny molecules of air in the Earth's atmosphere much more efficiently than other colors. This scattering causes the direct sunlight that looks white to our eyes to take on a blue hue in the sky. 
 
 This phenomenon is known as Rayleigh scattering, named after the British physicist Lord Rayleigh who first described it in the 19th century. The effect of Rayleigh scattering is also why sunsets and sunrises often appear red or orange. At sunrise and sunset, the light has to travel through more of the Earth's atmosphere to reach your eyes. This longer path through the atmosphere allows more blue light to be scattered out of the direct line of sight, leaving the longer wavelengths of red and orange to dominate the observed spectrum of sunlight.
+Why is water wet?
+Water is often described as "wet" because of how it interacts with different materials, including our skin, and the sensations and effects it induces. This experience of water as "wet" can be attributed to a combination of factors:
+
+1. **Cohesion and Adhesion:** Water molecules exhibit strong cohesive forces, meaning they tend to stick to each other due to hydrogen bonding. They also have adhesive properties, meaning they can adhere to many other types of substances. When water comes into contact with a surface, these properties allow it to spread out and form a thin film, which can make the surface feel "wet."
+
+2. **Sensation on Skin:** The interaction between water molecules and human skin results in a distinct sensation. Water can reduce the friction between skin and other surfaces (like when we wash our hands), and this change in how things feel contributes to our perception of wetness.
+
+3. **Temperature Change:** When water evaporates from a surface, including our skin, it absorbs heat, which can lead to a cooling sensation. This evaporation-induced cooling further enhances our perception of wetness.
+
+It's important to note that "wetness" is not an inherent property of water itself, but rather a description of our subjective experience and the outcomes of water's interactions with other materials. The term "wet" is used to describe the state or sensation that results when a liquid comes into contact with a solid, often leading to the liquid spreading over the surface of the solid.
