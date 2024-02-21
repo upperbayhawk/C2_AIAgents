@@ -8,7 +8,6 @@
 # Notes:
 # ==============================================================================
 
-
 import json
 import logging
 import logbook
@@ -155,10 +154,8 @@ agent_tools=[{"type": "code_interpreter"},{
 #-----------------------------------------------------
 # Configure logging
 agent_log_file = ".\\logs\\make_log.txt"
-
 logbook.FileHandler(agent_log_file).push_application()
 log = logbook.Logger("makeagent")
-
 log.info("Hello From Below: " + agent_name)
 
 client = OpenAI()
@@ -178,7 +175,6 @@ AgentData = client.files.create(
     purpose='assistants'
 ) """
 
-
 #-----------------------------------------------------
 
 # Add instructions to agent
@@ -190,23 +186,11 @@ print(instructions)
 my_assistant = client.beta.assistants.create(
     instructions=instructions,
     name=agent_name,
-    #model="gpt-4-1106-preview",
     model=agent_model,
-    #model="gpt-4",
     tools=agent_tools,
-    #tools=[{"type": "code_interpreter"},{"type":"retrieval"}],
-    #tools=[{"type": "retrieval"}]
-    #tools=[{"type": "code_interpreter"}],
     # File IDS here
     #file_ids=[AgentBase.id,AgentData.id]
 )
-
-#my_assistants = client.beta.assistants.list(
-#    order="desc",
-#    limit="20",
-#)
-#print("All Assistants")
-#print(my_assistants.data)
 
 print("New Assistant")
 print(my_assistant)

@@ -8,7 +8,6 @@
 # Notes: # API doesnt work!! MUST ALSO DELETE ASSISTANT FILES
 # ==============================================================================
 
-
 from openai import OpenAI
 import logbook
 import sys
