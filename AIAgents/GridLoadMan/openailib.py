@@ -16,7 +16,6 @@ from openai import OpenAI
 
 from xfunctionlib import XFunction
 
-
 class OpenAILib:
    
     def __init__(self):
@@ -581,12 +580,6 @@ class OpenAILib:
                         thread_id=self.my_thread.id,
                         run_id=my_run.id,
                         tool_outputs= tool_returns
-                        #[
-                        #    {
-                        #        "tool_call_id": tool_call.id,
-                        #        "output": return_value
-                        #    }
-                        #    ]
                         )
            
             if self.gpt_run_status == "completed":

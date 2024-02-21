@@ -13,7 +13,6 @@ import sys
 import os
 import queue
 import threading
-#import logging
 import logbook
 import json
 
@@ -46,16 +45,13 @@ SEPARATOR = "======================"
 
 #-----------------------------------------------------
 
-# Configure logging
-#logging.basicConfig(filename=agent_log_file, encoding='utf-8',level=logging.INFO)
-#logger = logging.getLogger(__name__)
-
 logbook.FileHandler(agent_log_file,level=logging_level).push_application()
 log = logbook.Logger("runserver")
 log.debug("Hello From Below: " + agent_name)
 #-----------------------------------------------------
 in_queue = queue.Queue()
 datafeed_queue = queue.Queue()
+
 clientMQ = mqtt.Client()
 clientAI = openai.OpenAI()
 
