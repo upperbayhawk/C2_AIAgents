@@ -1,9 +1,12 @@
-# listagent.py
-
-# Copyright (C) Upperbay Systems, LLC - All Rights Reserved
-# Unauthorized copying of this file, via any medium is strictly prohibited
-# Proprietary and confidential
-# Written by Dave Hardin <dave@upperbay.com>, 2023
+# ==============================================================================
+# Module: listagent.py
+# Author: Dave Hardin, Upperbay Systems LLC
+# Author URL: https://upperbay.com
+# License: MIT
+# Date: 1/2024
+# Description: List all OpenAI Assistants
+# Notes:
+# ==============================================================================
 
 from openai import OpenAI
 

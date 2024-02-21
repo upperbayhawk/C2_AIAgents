@@ -1,9 +1,15 @@
-# runpump.py
+# ==============================================================================
+# Module: runpump.py
+# Author: Dave Hardin, Upperbay Systems LLC
+# Author URL: https://upperbay.com
+# License: MIT
+# Date: 1/2024
+# Description: Console app that periodically sends 
+#   fully dressed prompts with both data and text 
+#   to runserver.py using MQTT messages 
+# Notes:
+# ==============================================================================
 
-# Copyright (C) Upperbay Systems, LLC - All Rights Reserved
-# Unauthorized copying of this file, via any medium is strictly prohibited
-# Proprietary and confidential
-# Written by Dave Hardin <dave@upperbay.com>, 2023
 
 import asyncio
 import sys

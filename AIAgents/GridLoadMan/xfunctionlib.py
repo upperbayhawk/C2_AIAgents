@@ -1,9 +1,13 @@
-# xfunctionlib.py
-
-# Copyright (C) Upperbay Systems, LLC - All Rights Reserved
-# Unauthorized copying of this file, via any medium is strictly prohibited
-# Proprietary and confidential
-# Written by Dave Hardin <dave@upperbay.com>, 2023
+# ==============================================================================
+# Module: xfunctionlib.py
+# Author: Dave Hardin, Upperbay Systems LLC
+# Author URL: https://upperbay.com
+# License: MIT
+# Date: 1/2024
+# Description: Library that implements the call-back functions 
+#   from the AI Assistant.
+# Notes: Must include functions defined in makeagent.py and openailib.py
+# ==============================================================================
 
 import logbook
 import paho.mqtt.client as mqtt

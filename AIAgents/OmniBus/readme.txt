@@ -1,3 +1,12 @@
+# ==============================================================================
+# Module: readme.txt
+# Author: Dave Hardin, Upperbay Systems LLC
+# Author URL: https://upperbay.com
+# License: MIT
+# Date: 1/2024
+# Description: Python installation and dependencies
+# Notes: 
+# ==============================================================================
 
 
 Create openAI API account
