@@ -15,6 +15,7 @@ import asyncio
 import queue
 import threading
 import logbook
+from pathlib import Path
 
 import time
 import datetime
@@ -25,11 +26,8 @@ from concurrent.futures import ThreadPoolExecutor
 from thingspeaklib import XThingspeak
 
 import openai
-from pathlib import Path
-
-# speech
+# for speech
 import pygame
-
 
 import config
 

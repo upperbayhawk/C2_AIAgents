@@ -11130,3 +11130,20 @@ Since the maximum value exceeds 94,500, it's categorized as "BRONZE". Accordingl
 [2024-02-21 19:01:54.600320] DEBUG: XNetwork: Connected to MQTT broker
 [2024-02-21 19:01:54.600320] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
 [2024-02-21 19:01:54.600320] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:21:28.149327] DEBUG: runsource: Hello From Below: GridLoadMan-1-0-0
+[2024-02-21 19:21:28.525760] DEBUG: runsource: =========================
+[2024-02-21 19:21:28.525760] DEBUG: runsource: Connected to MQTT
+[2024-02-21 19:21:28.529107] DEBUG: xfunction: Hello From Below
+[2024-02-21 19:21:28.534436] DEBUG: runsource: Connected with result code 0
+[2024-02-21 19:21:28.602910] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:21:28.602910] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.21484563506341336", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:21:28.602910] DEBUG: runsource: sendDataToAgent: RANDO = 0.21484563506341336 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:21:28.650557] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:21:28.650557] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.6549269142956852", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:21:28.650557] DEBUG: runsource: sendDataToAgent: Dave = 0.6549269142956852 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:21:28.681418] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:21:28.682443] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:21:28.682443] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:21:28.712919] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:21:28.713734] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:21:28.713734] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed

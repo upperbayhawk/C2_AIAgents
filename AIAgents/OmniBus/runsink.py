@@ -15,6 +15,7 @@ import asyncio
 import queue
 import threading
 import logbook
+from pathlib import Path
 
 import time
 import datetime
@@ -25,7 +26,7 @@ from concurrent.futures import ThreadPoolExecutor
 from thingspeaklib import XThingspeak
 
 from openai import OpenAI
-from pathlib import Path
+# for speech
 import pygame
 
 import config
@@ -43,8 +44,6 @@ enable_notice_speech = False
 enable_control_speech = False
 enable_alert_speech = True
 enable_alarm_speech = False
-
-
 
 agent_output_file = ".\\data\\sink_output.txt"
 agent_log_file = ".\\logs\\sink_log.txt"

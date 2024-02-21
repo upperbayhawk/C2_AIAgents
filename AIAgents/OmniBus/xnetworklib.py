@@ -11,7 +11,6 @@
 import logbook
 
 import paho.mqtt.client as mqtt
-
 class XNetwork:
     def __init__(self, mqtt_broker_host, mqtt_broker_port):
         self.client = mqtt.Client()

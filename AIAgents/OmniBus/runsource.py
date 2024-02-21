@@ -16,6 +16,7 @@ import queue
 import threading
 import logbook
 import json
+from pathlib import Path
 
 import time
 import datetime
@@ -26,11 +27,11 @@ from concurrent.futures import ThreadPoolExecutor
 from thingspeaklib import XThingspeak
 
 from openai import OpenAI
-from pathlib import Path
+# for speech
 import pygame
 import random
-import config
 
+import config
 from xfunctionlib import XFunction
 
 agent_name = config.agent_name
@@ -214,7 +215,6 @@ def alert_worker_thread():
         dispatch_alert_message(message)
 
 #=============================================
-#Application functions
 def dispatch_incoming_message(message):
     if enable_mqtt_speech == True:
         pass
@@ -222,7 +222,6 @@ def dispatch_incoming_message(message):
     else:
         pass
 
-#Application functions
 def dispatch_outgoing_message(message):
     if enable_mqtt_speech == True:
         #speak_message(message)
@@ -384,7 +383,7 @@ async def main():
     my_command_thread.daemon = True
     my_command_thread.start()
 
-# Start worker in separate thread
+    # Start worker in separate thread
     my_control_thread = threading.Thread(target=control_worker_thread)
     my_control_thread.daemon = True
     my_control_thread.start()

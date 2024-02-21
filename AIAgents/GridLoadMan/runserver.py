@@ -4,7 +4,7 @@
 # Author URL: https://upperbay.com
 # License: MIT
 # Date: 1/2024
-# Description: Console app that is the main proxy server for the OpenAI Assistant
+# Description: Console app, the main proxy server for the OpenAI Assistant
 # Notes:
 # ==============================================================================
 

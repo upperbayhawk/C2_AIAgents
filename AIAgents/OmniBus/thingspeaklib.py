@@ -8,7 +8,6 @@
 # Notes: https://thingspeak.readthedocs.io/en/latest/
 # ==============================================================================
 
-
 import thingspeak
 import logbook
 
