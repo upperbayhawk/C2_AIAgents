@@ -568,3 +568,7 @@ Data values are time,load
 [2024-02-21 19:30:57.493967] DEBUG: runsink: I have analyzed the data and calculated the average load to be 93,062.67, the maximum load to be 98,319 (classified as SILVER), and the minimum load to be 86,827. The time of the maximum load value was 7:00 PM on February 21, 2024.
 
 Given that the maximum load classified as SILVER, a "GridPeakDetected" message along with the classification "SILVER" has been sent to the C2Agent, CommandCenter, and ControlPanel successfully.
+[2024-02-21 20:02:49.354391] DEBUG: runsink: Hello From Below: GridLoadMan-1-0-0
+[2024-02-21 20:02:49.611403] DEBUG: runsink: =========================
+[2024-02-21 20:02:49.611403] DEBUG: runsink: Connected to MQTT
+[2024-02-21 20:02:49.619945] DEBUG: runsink: Connected with result code 0

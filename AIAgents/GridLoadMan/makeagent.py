@@ -17,9 +17,11 @@ from openai import OpenAI
 import config
 
 agent_name = config.agent_name
-# These files are uploaded when agent is born
-agent_base_file = "./data/AgentBase.txt"
-agent_data_file = "./data/LMP_LOAD.csv"
+
+# RETRIEVAL: These files are uploaded when agent is born if Assistant has retrieval
+#agent_base_file = "./data/AgentBase.txt"
+#agent_data_file = "./data/LMP_LOAD.csv"
+#
 agent_instructions_file = "./data/AgentInstructions.txt"
 agent_model="gpt-4-0125-preview"
 #agent_tools=[{"type": "code_interpreter"},{"type":"retrieval"}],
@@ -193,7 +195,6 @@ AgentData = client.files.create(
     purpose='assistants'
 ) """
 
-
 #-----------------------------------------------------
 
 # Add instructions to agent
@@ -207,7 +208,7 @@ my_assistant = client.beta.assistants.create(
     name=agent_name,
     model=agent_model,
     tools=agent_tools,
-    # File IDS here
+    # File IDS here for Retrieval assistant
     #file_ids=[AgentBase.id,AgentData.id]
 )
 

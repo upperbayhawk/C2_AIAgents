@@ -11205,3 +11205,328 @@ Given that the maximum load classified as SILVER, a "GridPeakDetected" message a
 [2024-02-21 19:36:28.639385] DEBUG: XNetwork: Connected to MQTT broker
 [2024-02-21 19:36:28.639385] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
 [2024-02-21 19:36:28.639385] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:41:28.535265] DEBUG: xfunction: Hello From Below
+[2024-02-21 19:41:28.559255] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:41:28.559255] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.44886008451846493", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:41:28.559255] DEBUG: runsource: sendDataToAgent: RANDO = 0.44886008451846493 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:41:28.585747] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:41:28.586827] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.6105779382590033", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:41:28.586827] DEBUG: runsource: sendDataToAgent: Dave = 0.6105779382590033 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:41:28.700933] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:41:28.700933] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:41:28.700933] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:41:28.733341] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:41:28.734317] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:41:28.734317] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:46:28.535911] DEBUG: xfunction: Hello From Below
+[2024-02-21 19:46:28.569194] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:46:28.569951] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.48002405512059065", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:46:28.569951] DEBUG: runsource: sendDataToAgent: RANDO = 0.48002405512059065 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:46:28.609291] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:46:28.609291] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.952858593682187", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:46:28.609291] DEBUG: runsource: sendDataToAgent: Dave = 0.952858593682187 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:46:28.640445] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:46:28.641225] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:46:28.641225] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:46:28.674891] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:46:28.674891] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:46:28.674891] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:51:28.536798] DEBUG: xfunction: Hello From Below
+[2024-02-21 19:51:28.566862] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:51:28.566862] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.8305488061347782", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:51:28.566862] DEBUG: runsource: sendDataToAgent: RANDO = 0.8305488061347782 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:51:28.615158] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:51:28.616019] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.22771785131737787", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:51:28.617026] DEBUG: runsource: sendDataToAgent: Dave = 0.22771785131737787 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:51:28.645279] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:51:28.646277] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:51:28.646277] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:51:28.694063] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:51:28.694063] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:51:28.694063] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:56:28.538042] DEBUG: xfunction: Hello From Below
+[2024-02-21 19:56:28.566802] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:56:28.566802] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.8478814686794379", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:56:28.566802] DEBUG: runsource: sendDataToAgent: RANDO = 0.8478814686794379 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:56:28.589866] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:56:28.589866] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.9733577987208883", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:56:28.589866] DEBUG: runsource: sendDataToAgent: Dave = 0.9733577987208883 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:56:28.616491] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:56:28.617510] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:56:28.617510] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:56:28.641443] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 19:56:28.641443] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 19:56:28.641443] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:01:28.540464] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:01:28.562419] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:01:28.562419] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.9371019195727797", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:01:28.563441] DEBUG: runsource: sendDataToAgent: RANDO = 0.9371019195727797 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:01:28.583195] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:01:28.583195] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.02285046693006121", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:01:28.584154] DEBUG: runsource: sendDataToAgent: Dave = 0.02285046693006121 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:01:28.630607] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:01:28.630607] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:01:28.630607] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:01:28.648423] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:01:28.649321] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:01:28.649321] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:06:28.541955] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:06:28.659612] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:06:28.659612] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.29423016263613055", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:06:28.659612] DEBUG: runsource: sendDataToAgent: RANDO = 0.29423016263613055 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:06:28.695476] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:06:28.695476] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.026184613224432662", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:06:28.695476] DEBUG: runsource: sendDataToAgent: Dave = 0.026184613224432662 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:06:28.796585] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:06:28.796585] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:06:28.796585] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:06:28.842820] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:06:28.843246] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:06:28.843246] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:11:28.542375] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:11:28.574833] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:11:28.574833] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.5804705766927843", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:11:28.574833] DEBUG: runsource: sendDataToAgent: RANDO = 0.5804705766927843 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:11:28.593135] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:11:28.593871] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.6730719622722552", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:11:28.593871] DEBUG: runsource: sendDataToAgent: Dave = 0.6730719622722552 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:11:28.611436] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:11:28.611436] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:11:28.611436] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:11:28.642178] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:11:28.642178] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:11:28.642178] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:16:28.542841] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:16:28.572887] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:16:28.572887] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.7306563592798352", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:16:28.572887] DEBUG: runsource: sendDataToAgent: RANDO = 0.7306563592798352 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:16:28.585575] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:16:28.585575] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.7466834079509344", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:16:28.585575] DEBUG: runsource: sendDataToAgent: Dave = 0.7466834079509344 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:16:28.603123] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:16:28.603123] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:16:28.603123] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:16:28.614394] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:16:28.614394] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:16:28.614394] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:21:28.544170] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:21:28.573453] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:21:28.573453] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.203312421674691", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:21:28.573453] DEBUG: runsource: sendDataToAgent: RANDO = 0.203312421674691 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:21:28.592355] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:21:28.592355] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.9634147096500093", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:21:28.592355] DEBUG: runsource: sendDataToAgent: Dave = 0.9634147096500093 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:21:28.616807] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:21:28.616807] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:21:28.616807] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:21:28.642379] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:21:28.642379] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:21:28.642379] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:26:28.545044] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:26:28.570790] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:26:28.572361] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.04162638793234852", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:26:28.572361] DEBUG: runsource: sendDataToAgent: RANDO = 0.04162638793234852 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:26:28.599128] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:26:28.599128] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.9598676974129229", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:26:28.599128] DEBUG: runsource: sendDataToAgent: Dave = 0.9598676974129229 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:26:28.619015] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:26:28.619015] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:26:28.619015] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:26:28.641751] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:26:28.642053] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:26:28.642053] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:31:28.545983] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:31:28.570666] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:31:28.570666] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.849845817615151", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:31:28.570666] DEBUG: runsource: sendDataToAgent: RANDO = 0.849845817615151 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:31:28.582077] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:31:28.583985] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.9162522361021117", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:31:28.583985] DEBUG: runsource: sendDataToAgent: Dave = 0.9162522361021117 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:31:28.617119] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:31:28.617551] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:31:28.617551] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:31:28.641300] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:31:29.641972] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:31:29.641972] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:36:28.547443] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:36:28.579071] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:36:29.579294] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.04393123981898406", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:36:29.579294] DEBUG: runsource: sendDataToAgent: RANDO = 0.04393123981898406 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:36:29.592083] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:36:29.592083] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.7281799906731306", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:36:29.592083] DEBUG: runsource: sendDataToAgent: Dave = 0.7281799906731306 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:36:29.613609] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:36:29.613609] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:36:29.613609] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:36:29.644466] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:36:29.644923] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:36:29.644923] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:41:28.548713] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:41:28.600372] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:41:28.601255] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.5463594208398193", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:41:28.601255] DEBUG: runsource: sendDataToAgent: RANDO = 0.5463594208398193 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:41:28.643909] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:41:28.643909] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.5691122711313861", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:41:28.643909] DEBUG: runsource: sendDataToAgent: Dave = 0.5691122711313861 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:41:28.660536] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:41:28.660536] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:41:28.660536] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:41:28.702702] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:41:28.702702] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:41:28.702702] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:46:28.550268] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:46:28.577100] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:46:28.577100] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.4532149508812864", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:46:28.577100] DEBUG: runsource: sendDataToAgent: RANDO = 0.4532149508812864 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:46:28.603923] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:46:28.604310] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.20117149744879126", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:46:28.604310] DEBUG: runsource: sendDataToAgent: Dave = 0.20117149744879126 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:46:28.644454] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:46:28.645302] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:46:28.645302] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:46:28.666741] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:46:28.666741] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:46:28.666741] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:51:28.552106] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:51:28.591532] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:51:28.591532] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.41902304999992457", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:51:28.591532] DEBUG: runsource: sendDataToAgent: RANDO = 0.41902304999992457 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:51:28.622971] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:51:28.622971] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.2304852245424076", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:51:28.622971] DEBUG: runsource: sendDataToAgent: Dave = 0.2304852245424076 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:51:28.644591] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:51:28.644591] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:51:28.644591] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:51:28.680515] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:51:28.680515] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:51:28.680515] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:56:28.552614] DEBUG: xfunction: Hello From Below
+[2024-02-21 20:56:28.603383] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:56:28.603383] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.668470809585881", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:56:28.603383] DEBUG: runsource: sendDataToAgent: RANDO = 0.668470809585881 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:56:28.695864] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:56:28.695864] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.5292334275994771", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:56:28.695864] DEBUG: runsource: sendDataToAgent: Dave = 0.5292334275994771 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:56:28.734689] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:56:28.734689] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:56:28.735556] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:56:28.807754] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 20:56:28.808437] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 20:56:28.808437] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:01:28.554463] DEBUG: xfunction: Hello From Below
+[2024-02-21 21:01:28.627338] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:01:28.627338] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.6257306385842291", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:01:28.627338] DEBUG: runsource: sendDataToAgent: RANDO = 0.6257306385842291 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:01:28.664812] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:01:28.664812] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.6138599785977454", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:01:28.664812] DEBUG: runsource: sendDataToAgent: Dave = 0.6138599785977454 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:01:28.745938] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:01:28.745938] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:01:28.745938] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:01:28.779414] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:01:28.779414] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:01:28.779414] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:06:28.554966] DEBUG: xfunction: Hello From Below
+[2024-02-21 21:06:28.599475] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:06:28.599475] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.40417140762784254", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:06:28.600442] DEBUG: runsource: sendDataToAgent: RANDO = 0.40417140762784254 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:06:28.618060] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:06:28.619924] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.4132605989185212", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:06:28.619924] DEBUG: runsource: sendDataToAgent: Dave = 0.4132605989185212 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:06:28.650042] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:06:28.650042] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:06:28.650042] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:06:28.684965] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:06:28.685410] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:06:28.685410] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:11:28.555967] DEBUG: xfunction: Hello From Below
+[2024-02-21 21:11:28.571954] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:11:28.572137] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.15576910330553395", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:11:28.572137] DEBUG: runsource: sendDataToAgent: RANDO = 0.15576910330553395 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:11:28.611778] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:11:28.611778] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.24909098027026733", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:11:28.612992] DEBUG: runsource: sendDataToAgent: Dave = 0.24909098027026733 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:11:28.651726] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:11:28.651726] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:11:28.651726] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:11:28.683137] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:11:28.683676] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:11:28.683676] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:16:28.556675] DEBUG: xfunction: Hello From Below
+[2024-02-21 21:16:28.592997] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:16:28.592997] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.05722561727922515", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:16:28.592997] DEBUG: runsource: sendDataToAgent: RANDO = 0.05722561727922515 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:16:28.634754] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:16:28.634754] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.8128699243755905", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:16:28.634754] DEBUG: runsource: sendDataToAgent: Dave = 0.8128699243755905 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:16:28.660011] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:16:28.660011] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:16:28.660011] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:16:28.685755] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:16:28.685755] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:16:28.685755] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:21:28.558579] DEBUG: xfunction: Hello From Below
+[2024-02-21 21:21:28.640933] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:21:28.641790] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.4717472909306256", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:21:28.641790] DEBUG: runsource: sendDataToAgent: RANDO = 0.4717472909306256 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:21:28.734746] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:21:28.734746] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.25417262661035656", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:21:28.734746] DEBUG: runsource: sendDataToAgent: Dave = 0.25417262661035656 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:21:28.774331] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:21:28.774331] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:21:28.774331] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:21:28.806566] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:21:28.806566] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:21:28.807572] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:26:28.558614] DEBUG: xfunction: Hello From Below
+[2024-02-21 21:26:28.585800] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:26:28.585800] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.3616240925411004", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:26:28.585800] DEBUG: runsource: sendDataToAgent: RANDO = 0.3616240925411004 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:26:28.619488] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:26:28.619488] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.9810106520127778", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:26:28.619488] DEBUG: runsource: sendDataToAgent: Dave = 0.9810106520127778 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:26:28.649590] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:26:28.649590] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:26:28.649590] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:26:28.669346] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:26:28.669346] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:26:28.669346] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:31:28.559850] DEBUG: xfunction: Hello From Below
+[2024-02-21 21:31:28.689848] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:31:28.689848] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.22859394948242806", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:31:28.689848] DEBUG: runsource: sendDataToAgent: RANDO = 0.22859394948242806 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:31:28.743242] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:31:28.743242] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.4156649849116423", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:31:28.743242] DEBUG: runsource: sendDataToAgent: Dave = 0.4156649849116423 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:31:28.888983] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:31:28.888983] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:31:28.888983] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:31:29.068605] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:31:29.068605] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:31:29.068605] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:36:28.561339] DEBUG: xfunction: Hello From Below
+[2024-02-21 21:36:28.600644] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:36:28.601495] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.6897067582325414", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:36:28.601495] DEBUG: runsource: sendDataToAgent: RANDO = 0.6897067582325414 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:36:28.680267] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:36:28.680267] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.7185095525407399", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:36:28.680267] DEBUG: runsource: sendDataToAgent: Dave = 0.7185095525407399 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:36:28.732720] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:36:28.732720] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:36:28.732720] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:36:28.766087] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:36:28.766087] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:36:28.766087] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:41:28.562519] DEBUG: xfunction: Hello From Below
+[2024-02-21 21:41:28.587118] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:41:28.587118] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.4464555207872296", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:41:28.588069] DEBUG: runsource: sendDataToAgent: RANDO = 0.4464555207872296 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:41:28.624051] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:41:28.624051] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.1564952753728247", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:41:28.624899] DEBUG: runsource: sendDataToAgent: Dave = 0.1564952753728247 on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:41:28.644013] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:41:28.645064] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:41:28.645064] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:41:28.669445] DEBUG: XNetwork: Connected to MQTT broker
+[2024-02-21 21:41:28.671957] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/GridLoadMan-1-0-0/DataFeed
+[2024-02-21 21:41:28.671957] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/GridLoadMan-1-0-0/DataFeed
