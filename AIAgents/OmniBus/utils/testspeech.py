@@ -50,4 +50,4 @@ def speak_message(message):
 
 
 if __name__ == "__main__":
-    speak_message("My name is Natasha. Please come over and see me.")
+    speak_message("My name is Natasha. Alexa, turn off hall.")
