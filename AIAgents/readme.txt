@@ -94,7 +94,5 @@ Usage
 NOTES: 
 	The OpenAI Assistant API and the OpenAI runtime environment are BETA and subject to change, with intermittent downtime and slow response.
 
-	The following agents are play toys and can be disregarded:
-		○ GridLoadMan
-	
+	GridLoadMan is for testing only.
 	
