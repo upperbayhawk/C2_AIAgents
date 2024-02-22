@@ -5,7 +5,7 @@
 # License: MIT
 # Date: 1/2024
 # Description: Delete an OpenAI Assistant
-# Notes: # API doesnt work!! MUST ALSO DELETE ASSISTANT FILES
+# Notes: # API doesn't work!! MUST DELETE ASSISTANT AND FILES VIA WEBSITE
 # ==============================================================================
 
 from openai import OpenAI
