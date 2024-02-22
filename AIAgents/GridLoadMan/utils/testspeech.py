@@ -50,4 +50,4 @@ def speak_message(message):
 
 
 if __name__ == "__main__":
-    speak_message("Testing 1, 2, 3. Testing 1,2 ,3. I hope my voice sounds OK.")
+    speak_message("Our Father who art in heaven, hallowed be thy name. Thy kingdom come, your will be done, on earth as it is in heaven. Give us this day our daily bread, and forgive us our debts, as we also have forgiven our debtors. And lead us not into temptation, but deliver us from evil")
