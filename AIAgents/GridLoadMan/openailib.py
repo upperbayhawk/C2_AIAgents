@@ -8,7 +8,6 @@
 # Notes: https://platform.openai.com/docs/api-reference?lang=python
 # ==============================================================================
 
-import logging
 import logbook
 import json
 

@@ -19,7 +19,6 @@ import json
 from pathlib import Path
 
 import time
-import datetime
 import arrow
 
 import paho.mqtt.client as mqtt

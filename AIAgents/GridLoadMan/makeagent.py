@@ -8,8 +8,6 @@
 # Notes:
 # ==============================================================================
 
-import json
-import logging
 import logbook
 
 from openai import OpenAI

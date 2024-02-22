@@ -10,10 +10,8 @@
 
 import asyncio
 import sys
-import os
 import queue
 import threading
-#import logging
 import logbook
 import json
 
@@ -43,10 +41,6 @@ MQTT_TOPIC_DATAFEED = config.MQTT_TOPIC_DATAFEED
 SEPARATOR = "======================"
 
 #-----------------------------------------------------
-
-# Configure logging
-#logging.basicConfig(filename=agent_log_file, encoding='utf-8',level=logging.INFO)
-#logger = logging.getLogger(__name__)
 
 logbook.FileHandler(agent_log_file,level=logging_level).push_application()
 log = logbook.Logger("runserver")

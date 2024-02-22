@@ -12,13 +12,11 @@
 
 import asyncio
 import sys
-import os
 import queue
 import threading
 import logbook
 
 import time
-import datetime
 import arrow
 
 import paho.mqtt.client as mqtt

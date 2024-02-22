@@ -11,14 +11,12 @@
 
 import asyncio
 import sys
-import os
 import queue
 import threading
 import logbook
 
 import paho.mqtt.client as mqtt
 from concurrent.futures import ThreadPoolExecutor
-import arrow
 
 import config
 
