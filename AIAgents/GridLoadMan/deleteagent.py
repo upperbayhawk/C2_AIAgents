@@ -8,10 +8,10 @@
 # Notes: # API doesn't work!! MUST DELETE ASSISTANT AND FILES VIA WEBSITE
 # ==============================================================================
 
+import sys
+import logbook
 
 from openai import OpenAI
-import logbook
-import sys
 
 import config
 
