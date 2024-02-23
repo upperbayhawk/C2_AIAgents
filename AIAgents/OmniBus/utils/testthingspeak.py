@@ -11,5 +11,5 @@ ch = thingspeak.Channel(channel_id,api_key=channel_key)
 my_results = ch.get_field(field=1,options={'results': 1000})
 print(my_results)
 # Open the file in write mode
-with open('thingspeaktest.txt', 'w') as file:
+with open('data/thingspeaktest.txt', 'w') as file:
     file.write(my_results)

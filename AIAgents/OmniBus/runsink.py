@@ -44,8 +44,8 @@ enable_control_speech = False
 enable_alert_speech = True
 enable_alarm_speech = False
 
-agent_output_file = ".\\data\\sink_output.txt"
-agent_log_file = ".\\logs\\sink_log.txt"
+agent_output_file = "./data/sink_output.txt"
+agent_log_file = "./logs/sink_log.txt"
 
 MQTT_BROKER = config.MQTT_BROKER
 MQTT_PORT = config.MQTT_PORT
@@ -271,7 +271,7 @@ def dispatch_alert_message(message):
 # voices = alloy,echo,fable,onyx,nova,shimmer
 def speak_message(message):
     try:
-        speech_file_path = "data\\runsink.mp3"
+        speech_file_path = "data/runsink.mp3"
         response = clientAI.audio.speech.create(
         model="tts-1-hd",
         #voice="nova",

@@ -43,8 +43,8 @@ agent_period_secs = 300
 enable_mqtt_speech = False
 enable_command_speech = True
 
-agent_output_file = ".\\data\\source_output.txt"
-agent_log_file = ".\\logs\\source_log.txt"
+agent_output_file = "./data/source_output.txt"
+agent_log_file = "./logs/source_log.txt"
 
 MQTT_BROKER = config.MQTT_BROKER
 MQTT_PORT = config.MQTT_PORT
@@ -272,7 +272,7 @@ def dispatch_alert_message(message):
 # voices = alloy,echo,fable,onyx,nova,shimmer
 def speak_message(message):
     try:
-        speech_file_path = "data\\runsource.mp3"
+        speech_file_path = "data/runsource.mp3"
         response = clientAI.audio.speech.create(
         model="tts-1-hd",
         voice="nova",

@@ -31,7 +31,7 @@ class XThingspeak:
         my_results = ch.get_field(field=self.field,options={'results': self.num_of_values})
         print(my_results)
         # Open the file in write mode
-        with open('data\\PumpDataPrompt.json', 'w') as file:
+        with open('data/PumpDataPrompt.json', 'w') as file:
             file.write(my_results)
         self.log.debug("get_thingspeak_data: " + str(self.channel_id))
         return "OK"

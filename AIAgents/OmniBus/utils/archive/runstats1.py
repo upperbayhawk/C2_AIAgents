@@ -2,7 +2,7 @@ import pandas as pd
 
 # Read the CSV file
 # Assuming the CSV file has columns: 'datetime', 'price', 'load'
-df = pd.read_csv('..\\data\\LMP_LOAD_meta.csv', parse_dates=['datetime'])
+df = pd.read_csv('../data/LMP_LOAD_meta.csv', parse_dates=['datetime'])
 
 # Set datetime as the index
 df.set_index('datetime', inplace=True)

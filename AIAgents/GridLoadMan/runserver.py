@@ -31,10 +31,10 @@ agent_name = config.agent_name
 
 logging_level = config.logging_level
 
-agent_output_file = ".\\data\\server_output.txt"
-agent_log_file = ".\\logs\\server_log.txt"
-agent_init_prompt_file = ".\\data\\InitialPrompt.txt"
-agent_init_instructions_file = ".\\data\\InitialInstructions.txt"
+agent_output_file = "./data/server_output.txt"
+agent_log_file = "./logs/server_log.txt"
+agent_init_prompt_file = "./data/InitialPrompt.txt"
+agent_init_instructions_file = "./data/InitialInstructions.txt"
 
 MQTT_BROKER = config.MQTT_BROKER
 MQTT_PORT = config.MQTT_PORT
@@ -140,7 +140,7 @@ def main_worker_thread():
 # voices = alloy,echo,fable,onyx,nova,shimmer
 def speak_message(message):
     try:
-        speech_file_path = "data\\runserver.mp3"
+        speech_file_path = "data/runserver.mp3"
         response = clientAI.audio.speech.create(
         model="tts-1-hd",
         voice="nova",

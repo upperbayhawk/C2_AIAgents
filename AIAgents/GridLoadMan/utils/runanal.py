@@ -12,19 +12,19 @@ def is_float(str_val):
 
 # Read the CSV file
 # Assuming the CSV file has columns: 'datetime', 'price', 'load'
-df_stats = pd.read_csv('..\\data\\LMP_LOAD_STATS.csv', parse_dates=['datetime'])
+df_stats = pd.read_csv('../data/LMP_LOAD_STATS.csv', parse_dates=['datetime'])
 df_stats.set_index('datetime', inplace=True)
 df_stats.index = df_stats.index.date
 
-df_data = pd.read_csv('..\\data\\LMP_LOAD_META.csv', parse_dates=['datetime'])
+df_data = pd.read_csv('../data/LMP_LOAD_META.csv', parse_dates=['datetime'])
 df_data.set_index('datetime', inplace=True)
 df_data.index = df_data.index.date
 
 """
-df_stats_all = pd.read_csv('..\\data\\LMP_LOAD_STATS.csv', parse_dates=['datetime'])
+df_stats_all = pd.read_csv('../data/LMP_LOAD_STATS.csv', parse_dates=['datetime'])
 df_stats_all.set_index('datetime', inplace=True)
 
-df_data_all = pd.read_csv('..\\data\\LMP_LOAD_META.csv', parse_dates=['datetime'])
+df_data_all = pd.read_csv('../data/LMP_LOAD_META.csv', parse_dates=['datetime'])
 df_data_all.set_index('datetime', inplace=True)
 """
 # Iterating over rows using iterrows()

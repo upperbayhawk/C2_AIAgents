@@ -624,3 +624,9 @@ Data values are time,load
 - **Minimum Load:** 16.52
 
 Given that the maximum value classifies as **SILVER**, a **GridPeakDetected** message has been sent to the **C2Agent**, and notices have been distributed to both the **CommandCenter** and the **ControlPanel** with the peak details, marking the significance of the peak at a SILVER level.
+[2024-02-23 17:09:15.726778] DEBUG: runsink: Hello From Below: GridLoadMan-1-0-0
+[2024-02-23 17:09:15.978937] DEBUG: runsink: =========================
+[2024-02-23 17:09:15.978937] DEBUG: runsink: Connected to MQTT
+[2024-02-23 17:09:15.982638] DEBUG: runsink: Connected with result code 0
+[2024-02-23 17:10:52.283424] DEBUG: runsink: why is the sky blue?
+[2024-02-23 17:10:57.753124] DEBUG: runsink: The sky appears blue to the human eye because of the way Earth's atmosphere scatters sunlight. Sunlight is made up of different colors of light, which are scattered in all directions by the gases and particles in the Earth's atmosphere. Blue light is scattered more than other colors because it travels as shorter, smaller waves. This phenomenon is known as Rayleigh scattering. When we look towards the sky away from the sun, we see the scattered blue light more than other colors, making the sky appear blue.

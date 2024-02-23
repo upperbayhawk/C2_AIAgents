@@ -32,12 +32,12 @@ logging_level = config.logging_level
 # 5 min
 agent_period_secs = 300
 
-agent_output_file = ".\\data\\pump_output.txt"
-agent_log_file = ".\\logs\\pump_log.txt"
+agent_output_file = "./data/pump_output.txt"
+agent_log_file = "./logs/pump_log.txt"
 
-full_prompt = "data\\FullPumpPrompt.txt"
-pump_data = "data\\PumpDataPrompt.json"
-pump_prompt = "data\\PumpTextPrompt.txt"
+full_prompt = "data/FullPumpPrompt.txt"
+pump_data = "data/PumpDataPrompt.json"
+pump_prompt = "data/PumpTextPrompt.txt"
 
 MQTT_BROKER = config.MQTT_BROKER
 MQTT_PORT = config.MQTT_PORT

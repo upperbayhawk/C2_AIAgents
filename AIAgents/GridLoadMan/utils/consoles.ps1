@@ -2,7 +2,7 @@
 #Set-ExecutionPolicy RemoteSigned
 
 # Desired directory
-$desiredPath = "C:\\C2_AIAgents\\AIAgents\\GridLoadMan"
+$desiredPath = "C\\C2_AIAgents\\AIAgents\\GridLoadMan"
 
 
 # Desired window size

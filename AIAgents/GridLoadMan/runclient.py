@@ -24,8 +24,8 @@ agent_name = config.agent_name
 
 logging_level = config.logging_level
 
-agent_output_file = ".\\data\\client_output.txt"
-agent_log_file = ".\\logs\\client_log.txt"
+agent_output_file = "./data/client_output.txt"
+agent_log_file = "./logs/client_log.txt"
 
 MQTT_BROKER = config.MQTT_BROKER
 MQTT_PORT = config.MQTT_PORT

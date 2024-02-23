@@ -28,10 +28,10 @@ agent_name = config.agent_name
 
 logging_level = config.logging_level
 
-agent_output_file = ".\\data\\server_output.txt"
-agent_log_file = ".\\logs\\server_log.txt"
-agent_init_prompt_file = ".\\data\\InitialPrompt.txt"
-agent_init_instructions_file = ".\\data\\InitialInstructions.txt"
+agent_output_file = "./data/server_output.txt"
+agent_log_file = "./logs/server_log.txt"
+agent_init_prompt_file = "./data/InitialPrompt.txt"
+agent_init_instructions_file = "./data/InitialInstructions.txt"
 
 MQTT_BROKER = config.MQTT_BROKER
 MQTT_PORT = config.MQTT_PORT
