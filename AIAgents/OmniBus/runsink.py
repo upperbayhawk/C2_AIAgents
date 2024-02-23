@@ -274,7 +274,8 @@ def speak_message(message):
         speech_file_path = "data\\runsink.mp3"
         response = clientAI.audio.speech.create(
         model="tts-1-hd",
-        voice="nova",
+        #voice="nova",
+        voice="shimmer",
         input=message
         )
         response.write_to_file(speech_file_path)
