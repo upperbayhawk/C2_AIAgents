@@ -278,3 +278,19 @@ This phenomenon is known as Rayleigh scattering, named after the British physici
 3. **Temperature Change:** When water evaporates from a surface, including our skin, it absorbs heat, which can lead to a cooling sensation. This evaporation-induced cooling further enhances our perception of wetness.
 
 It's important to note that "wetness" is not an inherent property of water itself, but rather a description of our subjective experience and the outcomes of water's interactions with other materials. The term "wet" is used to describe the state or sensation that results when a liquid comes into contact with a solid, often leading to the liquid spreading over the surface of the solid.
+[2024-02-23 17:12:50.035693] DEBUG: runclient: Hello From Below: GridLoadMan-1-0-0
+[2024-02-23 17:12:50.066239] DEBUG: runclient: =========================
+[2024-02-23 17:12:50.066239] DEBUG: runclient: Connected to MQTT
+[2024-02-23 17:12:50.070895] DEBUG: runclient: Connected with result code 0
+[2024-02-23 17:12:59.925500] DEBUG: runclient: why is water wet?
+[2024-02-23 17:13:12.729282] DEBUG: runclient: Water is perceived as "wet" due to the way its molecules interact with the molecules of other substances, including those that make up our skin. Here’s a more detailed explanation:
+
+1. **Cohesion:** Water molecules are attracted to each other due to hydrogen bonding. This strong attraction between water molecules creates a cohesive force that allows water to form droplets and flow smoothly.
+
+2. **Adhesion:** Water molecules also have the capability to adhere or stick to the molecules of other materials. When water comes into contact with a surface, the adhesive forces enable the water molecules to spread out and wet the surface.
+
+3. **Surface Tension:** The cohesive forces at the surface of water create a sort of "skin" or surface tension, making it capable of supporting very light objects and forming droplets that can move across surfaces.
+
+When you touch water, the sensation of wetness is actually a complex interaction involving the thermal and tactile receptors in your skin. The water causes a change in the thermal properties at the surface of your skin and also changes the tactile sensations by reducing friction. These changes in sensory inputs are interpreted by your brain as the sensation of wetness.
+
+In essence, "wetness" is not a property of water itself but rather an experience or sensation created by the interaction of water with our nervous system.
