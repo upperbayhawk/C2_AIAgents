@@ -7,10 +7,9 @@
 # Description: Library to handle communications to the OpenAI Assistant
 # Notes: https://platform.openai.com/docs/api-reference?lang=python
 # ==============================================================================
-
-import logbook
 import json
 
+import logbook
 from openai import OpenAI
 
 from xfunctionlib import XFunction

@@ -16,7 +16,6 @@ import time
 import datetime
 import arrow
 
-
 from pathlib import Path
 import openai
 # speech

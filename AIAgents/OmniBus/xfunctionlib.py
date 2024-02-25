@@ -9,9 +9,10 @@
 # Notes: Must include functions defined in makeagent.py and openailib.py
 # ==============================================================================
 
+import json
+
 import logbook
 import paho.mqtt.client as mqtt
-import json
 
 from xnetworklib import XNetwork
 from xcachelib import data_cache_instance

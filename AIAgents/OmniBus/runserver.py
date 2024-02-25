@@ -12,12 +12,12 @@ import asyncio
 import sys
 import queue
 import threading
-import logbook
 import json
+from concurrent.futures import ThreadPoolExecutor
 
+import logbook
 import arrow
 import paho.mqtt.client as mqtt
-from concurrent.futures import ThreadPoolExecutor
 from openai import OpenAI
 
 from xcachelib import data_cache_instance

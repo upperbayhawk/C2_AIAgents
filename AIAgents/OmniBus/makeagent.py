@@ -9,7 +9,6 @@
 # ==============================================================================
 
 import logbook
-
 from openai import OpenAI
 
 import config

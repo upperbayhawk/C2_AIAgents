@@ -29,13 +29,12 @@ https://pip.pypa.io/en/stable/installation/
 
 pip install openai
 pip install logbook
-    OpenAI API uses the standard logger and spews messages so I needed a different logger.
-pip install smartthings
+pip install paho-mqtt
+pip install thingspeak
 pip install arrow
-
-
 pip install pygame
 pip install cachetools
+pip install random2
 ---------------------------------------------
 
 Log Levels, Trace, debug, info

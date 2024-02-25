@@ -14,13 +14,12 @@ import asyncio
 import sys
 import queue
 import threading
-import logbook
-
 import time
-import arrow
-
-import paho.mqtt.client as mqtt
 from concurrent.futures import ThreadPoolExecutor
+
+import logbook
+import arrow
+import paho.mqtt.client as mqtt
 from thingspeaklib import XThingspeak
 
 import config

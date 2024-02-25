@@ -13,14 +13,13 @@ import sys
 import os
 import queue
 import threading
-import logbook
 import json
+from concurrent.futures import ThreadPoolExecutor
 
+import logbook
 import arrow
 import paho.mqtt.client as mqtt
-from concurrent.futures import ThreadPoolExecutor
 import openai
-
 import pygame
 
 from xcachelib import data_cache_instance

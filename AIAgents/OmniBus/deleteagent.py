@@ -9,8 +9,8 @@
 # ==============================================================================
 
 import sys
-import logbook
 
+import logbook
 from openai import OpenAI
 
 import config

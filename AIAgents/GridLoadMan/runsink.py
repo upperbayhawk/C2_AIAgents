@@ -14,16 +14,14 @@ import sys
 import asyncio
 import queue
 import threading
-import logbook
 from pathlib import Path
-
 import time
-import arrow
-
-import paho.mqtt.client as mqtt
 from concurrent.futures import ThreadPoolExecutor
-from thingspeaklib import XThingspeak
 
+import logbook
+import arrow
+import paho.mqtt.client as mqtt
+from thingspeaklib import XThingspeak
 import openai
 # for speech
 import pygame
