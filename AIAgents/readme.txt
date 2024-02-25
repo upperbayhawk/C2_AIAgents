@@ -28,23 +28,18 @@ Overview
 
 https://upperbay.com/v1/blogs/beachblogs/the-personal-advisory-sidekick
 
-https://upperbay.com/v1/blogs/beachblogs/ai-integration-into-operational-systems
-
-
-
-
-
+https://upperbay.com/v1/blogs/beachblogs/integrating-ai-into-industrial-operations
 
 
 Code Summary
 
 The code is Python 3.12 developed on Windows 11 using Microsoft VSCode. It consists of a folder with a set of console apps and libraries that perform different functions associated with a specific GPT-4 Assistant that resides in the OpenAI cloud.
 
-The GPT-4 assistant is created by makeagent.py. Use https://platform.openai.com/assistants to verify creation. All GPT-4 Assistant behavior is defined in this file. Delete the GPT-4 Assistant using the OpenAI API website. See https://platform.openai.com/docs/overview. 
+The GPT-4 assistant is created by makeagent.py. Use https://platform.openai.com/assistants to verify creation. GPT-4 Assistant behavior is defined in this file. Delete the GPT-4 Assistant using the OpenAI API website. See https://platform.openai.com/docs/overview. 
 
 The runserver.py is the primary local proxy agent that communicates directly with the cloud Assistant. It sends messages to the Assistant and waits for responses. Other functions include:
 	• Prompt messages can be entered on the command line or received in an MQTT message.
-	• Maintains a local cache of tag/data values that is refreshed from the runsource.py agent. The runsource.py agent collects whatever external data it desires and sends that data in JSON to the runserver.py agent via an MQTT message. The data is then available to the GPT-4 Assistant through function call-backs.
+	• Maintains a local cache of tag/data values that is refreshed from the runsource.py agent. The runsource.py agent collects external data and sends the data in JSON to the runserver.py agent via an MQTT message. The data is then available to the GPT-4 Assistant through function call-backs.
 	• Implements a set of call-back functions that the GPT-4 Assistant can call whenever he/she/it desires. These represent external actions that the Assistant can perform based on the combined prompt with data (i.e. fully-dressed prompt) submitted. Typically these would be JSON encoded strings directed to a destination sink. Messages handled include: COMMAND, CONTROL, NOTICE, ALERT, ALARM
 	• Command-line: python runserver.py
 
@@ -52,7 +47,7 @@ Agent libraries include:
 	• Openailib.py: 
 		○ Handles Assistant communications using the Assistant API
 	• Xfunctionlib.py: 
-		○ Handles function call-backs from the Assistant API
+		○ Handles function call-backs from the Assistant
 	• Xnetworklib.py: 
 		○ Handles MQTT messaging
 	• Xcachelib.py: 
@@ -77,7 +72,7 @@ Other agents are optional. They are:
 		○ Accesses thingspeak.com and sends public weather data from MathWorks in Natick, MA to runserver.py
 		○ Command-line: python runpump.py
 
-These console apps have a simple structure that extends the OpenAI Assistant API in a straight forward if not elegant way. No attempt has been made to create production code and it deserves a dose of refactoring. The purpose of this code is to help experiment and explore the capabilities of GPT-4 while providing a means to integrate GPT-4 with other apps, regardless of where the apps are running.
+These console apps have a simple structure that extends the OpenAI Assistant API in a straight forward if not elegant way. No attempt has been made to create production code and it deserves a dose of refactoring. The purpose of this code is to experiment and explore the capabilities of GPT-4 while providing a means to integrate GPT-4 with other apps, regardless of where those apps are running.
 
 Each console app is multi-threaded and creates threads to handle keyboard and MQTT message dispatching based on topic. The topic tree is defined in config.py to avoid conflict between agents. Incoming MQTT messages are pushed into topic queues and the topic worker threads get and service the messages received. Other worker threads are spawned as needed. Most of the code is plumbing and can be changed to do whatever is required. Note that the OpenAI API uses the standard logging package so the agents use logbook to avoid conflict.
 
