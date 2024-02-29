@@ -18,7 +18,7 @@ agent_name = config.agent_name
 #agent_base_file = "./data/xxx.txt"
 #agent_data_file = "./data/yyy.csv"
 
-agent_instructions_file = "./data/AgentInstructions.txt"
+agent_instructions_file = "./prompts/AgentInstructions.txt"
 #
 agent_model="gpt-4-0125-preview"
 #

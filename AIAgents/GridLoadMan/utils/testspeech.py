@@ -31,8 +31,8 @@ def speak_message(message):
         speech_file_path = "data/testspeech.mp3"
         response = clientAI.audio.speech.create(
         model="tts-1-hd",
-        #voice="nova",
-        voice="shimmer",
+        voice="nova",
+        #voice="shimmer",
         input=message
         )
         response.write_to_file(speech_file_path)
@@ -44,7 +44,7 @@ def speak_message(message):
         while pygame.mixer.music.get_busy():
             pygame.time.Clock().tick(10)
         pygame.mixer.music.unload()
-        os.remove(speech_file_path)
+        #os.remove(speech_file_path)
     finally:
         pass
 #=============================================
