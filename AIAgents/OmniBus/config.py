@@ -28,3 +28,5 @@ MQTT_TOPIC_ALERT = mqtt_base_topic + agent_name + "/AlertPanel"
 MQTT_TOPIC_DATAFEED = mqtt_base_topic + agent_name + "/DataFeed"
 # Logger levels DEBUG, INFO
 logging_level = logbook.DEBUG
+
+ai_polling_interval = 1

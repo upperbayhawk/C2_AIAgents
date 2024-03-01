@@ -21,7 +21,7 @@ import paho.mqtt.client as mqtt
 from openai import OpenAI
 
 from xcachelib import data_cache_instance
-from openailib import openailib_instance
+import openailib
 import config
 
 agent_name = config.agent_name
@@ -49,6 +49,7 @@ log.debug("Hello From Below: " + agent_name)
 in_queue = queue.Queue()
 datafeed_queue = queue.Queue()
 clientMQ = mqtt.Client()
+openailib_instance = openailib.OpenAILib()
 
 # MQTT Callbacks
 def on_connect(client, userdata, flags, rc):
@@ -112,22 +113,20 @@ def main_worker_thread():
     while True:
         try:
             message = in_queue.get()
-            if message is None:
-                break
-            if len(message) < 3:
-                break
-            msg_return = openailib_instance.run(message)
-            if msg_return == "OK":
-                last_message = openailib_instance.last_message
-                if last_message != "NULL":
-                    log.debug("Finished and publishing results to client: " + last_message)
+            if message is not None:
+                if len(message) > 2:
+                    msg_return = openailib_instance.run(message)
+                    if msg_return == "OK":
+                        last_message = openailib_instance.last_message
+                        if last_message != "NULL":
+                            log.debug("Finished and publishing results to client: " + last_message)
 
-                    clientMQ.publish(MQTT_TOPIC_TOCLIENT, last_message)
-                    log.debug("last_message: " + last_message)
-                else:
-                    log.error("WORKER ERROR. Last message is null.")
-            else:
-                log.error("WORKER ERROR PROCESSING INPUT")
+                            clientMQ.publish(MQTT_TOPIC_TOCLIENT, last_message)
+                            log.debug("last_message: " + last_message)
+                        else:
+                            log.error("WORKER ERROR. Last message is null.")
+                    else:
+                        log.error("WORKER ERROR PROCESSING INPUT")
         except Exception as ex:
             log.error("Exception " + str(ex))
             print ("Exception " + str(ex))

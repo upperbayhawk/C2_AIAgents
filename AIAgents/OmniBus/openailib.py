@@ -7,11 +7,14 @@
 # Description: Library to handle communications to the OpenAI Assistant
 # Notes: https://platform.openai.com/docs/api-reference?lang=python
 # ==============================================================================
-import json
 
 import logbook
+import json
+import time
+
 from openai import OpenAI
 
+import config
 from xfunctionlib import XFunction
 
 class OpenAILib:
@@ -102,7 +105,7 @@ class OpenAILib:
                     thread_id=self.my_thread.id,
                     run_id=my_run.id
                 )
-                #print(f"Run status: {keep_retrieving_run.status}")
+                print(f"Run status: {keep_retrieving_run.status}")
 
                 if keep_retrieving_run.status == "completed":
                     self.gpt_run_status = "completed"
@@ -110,21 +113,24 @@ class OpenAILib:
  
                 if keep_retrieving_run.status == "expired":
                     self.gpt_run_status = "stopped"
-                    self.log.error("GPT run EXPIRED: " + my_run.last_error)
-                    print("GPT run EXPIRED: " + my_run.last_error)
+                    self.log.error("GPT RUN EXPIRED!")
+                    print("GPT RUN EXPIRED!")
                     break
 
                 if keep_retrieving_run.status == "cancelled":
                     self.gpt_run_status = "stopped"
-                    self.log.error("GPT run CANCELLED " + my_run.last_error)
-                    print("GPT run CANCELLED " + my_run.last_error)
+                    self.log.error("GPT RUN CANCELLED!")
+                    print("GPT RUN CANCELLED!")
                     break
 
                 if keep_retrieving_run.status == "failed":
                     self.gpt_run_status = "stopped"
-                    self.log.error("GPT run FAILED: " + my_run.last_error)
-                    print("GPT run FAILED: " + my_run.last_error)
+                    self.log.error("GPT RUN FAILED!")
+                    print("GPT RUN FAILED!")
                     break
+
+                if config.ai_polling_interval > 0:
+                    time.sleep(config.ai_polling_interval)         
 
             if self.gpt_run_status == "completed":
                 print("-------------------------------------------- \n")
@@ -188,7 +194,7 @@ class OpenAILib:
                     thread_id=self.my_thread.id,
                     run_id=my_run.id
                 )
-                #print(f"Run status: {keep_retrieving_run.status}")
+                print(f"Run status: {keep_retrieving_run.status}")
 
                 if keep_retrieving_run.status == "completed":
                     self.gpt_run_status = "completed"
@@ -196,20 +202,20 @@ class OpenAILib:
 
                 if keep_retrieving_run.status == "expired":
                     self.gpt_run_status = "stopped"
-                    self.log.error("GPT run EXPIRED: " + my_run.last_error)
-                    print("GPT run EXPIRED: " + my_run.last_error)
+                    self.log.error("GPT RUN EXPIRED!")
+                    print("GPT RUN EXPIRED!")
                     break
 
                 if keep_retrieving_run.status == "cancelled":
                     self.gpt_run_status = "stopped"
-                    self.log.error("GPT run CANCELLED " + my_run.last_error)
-                    print("GPT run CANCELLED " + my_run.last_error)
+                    self.log.error("GPT RUN CANCELLED!")
+                    print("GPT RUN CANCELLED!")
                     break
 
                 if keep_retrieving_run.status == "failed":
                     self.gpt_run_status = "stopped"
-                    self.log.error("GPT run FAILED: " + my_run.last_error)
-                    print("GPT run FAILED: " + my_run.last_error)
+                    self.log.error("GPT RUN FAILED!")
+                    print("GPT RUN FAILED!")
                     break
 
                 if keep_retrieving_run.status == "requires_action":
@@ -533,14 +539,56 @@ class OpenAILib:
                             except Exception as e:
                                 self.log.error("FUNCTION WRAPPER ERROR: {e}:" + function_name)
 
-                    #////////////////////////////////////////////////////////
+                        if function_name == "sendGridPeakDetected":
+                            try:
+                                my_args = json.loads(arguments)
+                                if "network_node" in my_args:
+                                    print("From Json location = " + my_args["network_node"])
+                                    network_node = my_args["network_node"]
+                                    message = my_args["message"]
+                                    start_date_time = my_args["start_date_time"]
+                                    duration_mins = my_args["duration_mins"]
+                                    peak_lmp = my_args["peak_lmp"]
+                                    grid_node = my_args["grid_node"]
+                                    return_value = "ERROR"
+                                    try:
+                                        xfunc = XFunction()
+                                        print("Calling " + "sendGridPeakDetected")
+                                        return_value = xfunc.sendGridPeakDetected(network_node,message,start_date_time,duration_mins,peak_lmp,grid_node)
+                                    except Exception as e1:
+                                        self.log.error("FUNCTION ERROR: {e1}: " + function_name)
+
+                                    tool_return = json.loads('{"tool_call_id": "hello", "output": "return_value"}')
+
+                                    tool_return["tool_call_id"] = tool_call.id
+                                    tool_return["output"] = return_value
+
+                                    print("function: " + function_name + " = " + tool_return["output"])
+                                    tool_returns.append(tool_return)
+                                else:
+                                    self.log.error("network_node argument is missing: {e}:" + function_name)    
+                                    return_value = "ERROR"
+                                    tool_return = json.loads('{"tool_call_id": "hello", "output": "return_value"}')
+
+                                    tool_return["tool_call_id"] = tool_call.id
+                                    tool_return["output"] = return_value
+
+                                    print("function: " + function_name + " = " + tool_return["output"])
+                                    tool_returns.append(tool_return)
+
+                            except Exception as e:
+                                self.log.error("FUNCTION WRAPPER ERROR: {e}:" + function_name)
+                        #////////////////////////////////////////////////////////
                             
                     run = self.client.beta.threads.runs.submit_tool_outputs(
                         thread_id=self.my_thread.id,
                         run_id=my_run.id,
                         tool_outputs= tool_returns
                         )
-           
+
+                if config.ai_polling_interval > 0:
+                    time.sleep(config.ai_polling_interval)         
+
             if self.gpt_run_status == "completed":
 
                 print("------------------------------------------------------------ \n")
@@ -592,10 +640,16 @@ class OpenAILib:
     def close(self):
         if self.is_initialized:
             print("Closing OpenAILib...")
+            try:
+                print("Closing Thread...")
+                response = self.client.beta.threads.delete(self.my_thread.id)
+                print(response)
+            except Exception as e:
+                self.log.error("close err: {e}")
             # Add code to clean up and close your AI library here
             self.is_initialized = False
         else:
             print("OpenAILib is not initialized. No need to close it.")
 
 # Instantiate OpenAILib class to make it a singleton instance
-openailib_instance = OpenAILib()
+#openailib_instance = OpenAILib()

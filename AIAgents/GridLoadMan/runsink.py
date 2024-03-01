@@ -407,7 +407,7 @@ async def main():
     my_main_run_thread.start()
 
     try:
-        speak_message("hello. Sink agent is starting")
+        speak_message("Hello. Stink agent is starting")
 
         while True:
             user_input = await async_input("Enter message (or type 'x' to quit): \n")

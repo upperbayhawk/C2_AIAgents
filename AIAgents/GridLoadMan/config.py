@@ -31,6 +31,8 @@ MQTT_TOPIC_DATAFEED = mqtt_base_topic + agent_name + "/DataFeed"
 # Logger level DEBUG, INFO
 logging_level = logbook.DEBUG
 
+ai_polling_interval = 1
+
 class GridPeakDetected:
     def __init__ (self, type_name, agent_name, message, start_date_time, duration_mins, peak_lmp, grid_node):
         self.type_name = type_name

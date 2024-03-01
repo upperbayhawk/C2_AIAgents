@@ -5,7 +5,7 @@
 # License: MIT
 # Date: 1/2024
 # Description: Delete an OpenAI Assistant
-# Notes: # API doesn't work!! MUST DELETE ASSISTANT AND FILES VIA WEBSITE
+# Notes: # 
 # ==============================================================================
 
 import sys
@@ -40,7 +40,7 @@ for item in my_assistants.data:
     if substring in str(item):
         print("Agent found!")
         #my_assistant = item
-        response = client.beta.assistants.delete(agent_name)
+        response = client.beta.assistants.delete(item.id)
         print(response)
         print("Agent deleted\n")
         break

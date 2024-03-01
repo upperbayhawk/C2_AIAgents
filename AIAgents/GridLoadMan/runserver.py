@@ -23,7 +23,8 @@ import openai
 import pygame
 
 from xcachelib import data_cache_instance
-from openailib import openailib_instance
+import openailib
+#from openailib import openailib_instance
 import config
 
 agent_name = config.agent_name
@@ -53,6 +54,8 @@ datafeed_queue = queue.Queue()
 
 clientMQ = mqtt.Client()
 clientAI = openai.OpenAI()
+
+openailib_instance = openailib.OpenAILib()
 
 # MQTT Callbacks
 def on_connect(client, userdata, flags, rc):
@@ -116,22 +119,20 @@ def main_worker_thread():
     while True:
         try:
             message = in_queue.get()
-            if message is None:
-                break
-            if len(message) < 3:
-                break
-            msg_return = openailib_instance.run(message)
-            if msg_return == "OK":
-                last_message = openailib_instance.last_message
-                if last_message != "NULL":
-                    log.debug("Finished and publishing results to client: " + last_message)
+            if message is not None:
+                if len(message) > 2:
+                    msg_return = openailib_instance.run(message)
+                    if msg_return == "OK":
+                        last_message = openailib_instance.last_message
+                        if last_message != "NULL":
+                            log.debug("Finished and publishing results to client: " + last_message)
 
-                    clientMQ.publish(MQTT_TOPIC_TOCLIENT, last_message)
-                    log.debug("last_message: " + last_message)
-                else:
-                    log.error("WORKER ERROR. Last message is null.")
-            else:
-                log.error("WORKER ERROR PROCESSING INPUT")
+                            clientMQ.publish(MQTT_TOPIC_TOCLIENT, last_message)
+                            log.debug("last_message: " + last_message)
+                        else:
+                            log.error("WORKER ERROR. Last message is null.")
+                    else:
+                        log.error("WORKER ERROR PROCESSING INPUT")
         except Exception as ex:
             log.error("Exception " + str(ex))
             print ("Exception " + str(ex))
@@ -185,6 +186,7 @@ async def main():
     my_datafeed_thread.daemon = True
     my_datafeed_thread.start()
 
+    
     try:
         openailib_instance.initialize(agent_name,agent_init_prompt_file,agent_init_instructions_file,agent_output_file)
     except Exception as ex:
@@ -211,6 +213,7 @@ async def main():
     finally:
         clientMQ.loop_stop()
         clientMQ.disconnect()
+        
 
 if __name__ == "__main__":
 

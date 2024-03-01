@@ -14975,3 +14975,20 @@ Should you require insights into other weather parameters such as wind speed, hu
 [2024-02-27 16:53:36.436849] DEBUG: XNetwork: Connected to MQTT broker
 [2024-02-27 16:53:36.437840] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
 [2024-02-27 16:53:36.437840] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-03-01 19:51:52.544059] DEBUG: runsource: Hello From Below: OmniBus-1-0-0
+[2024-03-01 19:51:52.786005] DEBUG: runsource: =========================
+[2024-03-01 19:51:52.786005] DEBUG: runsource: Connected to MQTT
+[2024-03-01 19:51:52.787012] DEBUG: runsource: Connected with result code 0
+[2024-03-01 19:51:52.789227] DEBUG: xfunction: Hello From Below
+[2024-03-01 19:51:52.856255] DEBUG: XNetwork: Connected to MQTT broker
+[2024-03-01 19:51:52.856255] DEBUG: xfunction: sendDataToAgent: {"name": "RANDO", "value": "0.9628806763122095", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-03-01 19:51:52.856255] DEBUG: runsource: sendDataToAgent: RANDO = 0.9628806763122095 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-03-01 19:51:52.903776] DEBUG: XNetwork: Connected to MQTT broker
+[2024-03-01 19:51:52.903776] DEBUG: xfunction: sendDataToAgent: {"name": "Dave", "value": "0.4351097015411781", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-03-01 19:51:52.903776] DEBUG: runsource: sendDataToAgent: Dave = 0.4351097015411781 on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-03-01 19:51:52.935313] DEBUG: XNetwork: Connected to MQTT broker
+[2024-03-01 19:51:52.936268] DEBUG: xfunction: sendDataToAgent: {"name": "MasterSwitch", "value": "ON", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-03-01 19:51:52.936268] DEBUG: runsource: sendDataToAgent: MasterSwitch = ON on openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-03-01 19:51:52.981445] DEBUG: XNetwork: Connected to MQTT broker
+[2024-03-01 19:51:52.981445] DEBUG: xfunction: sendDataToAgent: {"name": "TemperatureInLewes", "value": "69", "status": "OK"} to openai/assistant/OmniBus-1-0-0/DataFeed
+[2024-03-01 19:51:52.981445] DEBUG: runsource: sendDataToAgent: TemperatureInLewes = 69 on openai/assistant/OmniBus-1-0-0/DataFeed

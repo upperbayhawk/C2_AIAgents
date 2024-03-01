@@ -35,7 +35,7 @@ Code Summary
 
 The code is Python 3.12 developed on Windows 11 using Microsoft VSCode. It consists of a folder with a set of console apps and libraries that perform different functions associated with a specific GPT-4 Assistant that resides in the OpenAI cloud.
 
-The GPT-4 assistant is created by makeagent.py. Use https://platform.openai.com/assistants to verify creation. GPT-4 Assistant behavior is defined in this file. Delete the GPT-4 Assistant using the OpenAI API website. See https://platform.openai.com/docs/overview. 
+The GPT-4 assistant is created by makeagent.py. Use https://platform.openai.com/assistants to verify creation. GPT-4 Assistant behavior is defined in this file. See https://platform.openai.com/docs/overview. 
 
 The runserver.py is the primary local proxy agent that communicates directly with the cloud Assistant. It sends messages to the Assistant and waits for responses. Other functions include:
 	• Prompt messages can be entered on the command line or received in an MQTT message.
@@ -71,6 +71,9 @@ Other agents are optional. They are:
 		○ Periodically sends fully-dressed prompt messages with both text and data to runserver.py
 		○ Accesses thingspeak.com and sends public weather data from MathWorks in Natick, MA to runserver.py
 		○ Command-line: python runpump.py
+    • deleteagent.py
+        ○ Deletes the Assistant
+        ○ Command-line: python deleteagent.py
 
 These console apps have a simple structure that extends the OpenAI Assistant API in a straight forward if not elegant way. No attempt has been made to create production code and it deserves a dose of refactoring. The purpose of this code is to experiment and explore the capabilities of GPT-4 while providing a means to integrate GPT-4 with other apps, regardless of where those apps are running.
 
