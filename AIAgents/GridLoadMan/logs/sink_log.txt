@@ -1331,3 +1331,207 @@ The genetics behind eye color are complex, involving multiple genes that influen
 [2024-03-01 20:38:48.780901] DEBUG: runsink: =========================
 [2024-03-01 20:38:48.780901] DEBUG: runsink: Connected to MQTT
 [2024-03-01 20:38:48.786416] DEBUG: runsink: Connected with result code 0
+[2024-03-01 20:41:33.287035] DEBUG: runsink: Hello From Below: GridLoadMan-1-0-0
+[2024-03-01 20:41:33.522153] DEBUG: runsink: =========================
+[2024-03-01 20:41:33.522153] DEBUG: runsink: Connected to MQTT
+[2024-03-01 20:41:33.526017] DEBUG: runsink: Connected with result code 0
+[2024-03-01 20:42:12.895390] DEBUG: runsink: The color of human eyes is determined by the amount and distribution of melanin in the iris, the colored part of the eye. Blue eyes have the least amount of melanin in the iris. When light enters the eye, it is scattered and reflected by the iris. In eyes with little melanin, such as blue eyes, light undergoes a scattering process known as Rayleigh scattering, which is the same physical principle that causes the sky to appear blue. This scattering process results in the blue coloration observed in the eyes. Essentially, the color is not due to blue pigment but rather the way light interacts with the eye's structure and the low melanin concentration.
+[2024-03-01 21:07:14.977373] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"3/1/2024 5:00:00 PM","93369"
+"3/1/2024 6:00:00 PM","96943"
+"3/1/2024 7:00:00 PM","96667"
+"3/1/2024 8:00:00 PM","95210"
+"3/1/2024 9:00:00 PM","92990"
+"3/1/2024 10:00:00 PM","89767"
+"3/1/2024 11:00:00 PM","86292"
+
+[2024-03-01 21:07:41.727315] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-1-0-0", "message": "BRONZE", "start_date_time": "2024-03-01 18:00:00", "duration_mins": "120", "peak_lmp": "$4000", "grid_node": "PJM"}
+[2024-03-01 21:07:41.778618] DEBUG: runsink: Grid Peak Detected: BRONZE. Start Time: 2024-03-01 18:00:00, Duration: 120 mins, LMP: $4000, Grid Node: PJM
+[2024-03-01 21:07:41.778618] DEBUG: runsink: Grid Peak Detected: BRONZE. Start Time: 2024-03-01 18:00:00, Duration: 120 mins, LMP: $4000, Grid Node: PJM
+[2024-03-01 21:07:53.509075] DEBUG: runsink: The analysis of the time series data is complete. The average load value is 93,034, with a maximum load of 96,943 at 6:00 PM on March 1, 2024, and a minimum load of 86,292. The category based on the maximum value is "BRONZE".
+
+- **Average:** 93,034
+- **Maximum:** 96,943
+- **Minimum:** 86,292 
+- **Category:** BRONZE (Indicating a Grid Peak Detected)
+
+Since the value is not "NOGAME", a "Grid Peak Detected" message has been sent to the C2Agent, and corresponding notices have also been sent to the CommandCenter and ControlPanel.
+[2024-03-01 21:09:17.894128] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a price data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 40, then it is "GOLD". If the maximum value is greater than 30, then it is "SILVER". If the value is greater than 25, then it is "BRONZE". If the value is less than 20, then it is "NOGAME". Set the PeakLmp to the price. If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"3/1/2024 5:00:00 PM","28.43956"
+"3/1/2024 6:00:00 PM","31.4056"
+"3/1/2024 7:00:00 PM","27.93585"
+"3/1/2024 8:00:00 PM","25.66811"
+"3/1/2024 9:00:00 PM","24.71494"
+"3/1/2024 10:00:00 PM","20.84552"
+"3/1/2024 11:00:00 PM","18.52057"
+
+[2024-03-01 21:09:46.822256] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-1-0-0", "message": "SILVER", "start_date_time": "2024-03-01 18:00:00", "duration_mins": "120", "peak_lmp": "$4000", "grid_node": "PJM"}
+[2024-03-01 21:09:46.876250] DEBUG: runsink: Grid Peak Detected: SILVER. Start Time: 2024-03-01 18:00:00, Duration: 120 mins, LMP: $4000, Grid Node: PJM
+[2024-03-01 21:09:46.922914] DEBUG: runsink: Grid Peak Detected: SILVER. Start Time: 2024-03-01 18:00:00, Duration: 120 mins, LMP: $4000, Grid Node: PJM
+[2024-03-01 21:09:54.964119] DEBUG: runsink: The analysis of the new time series data is complete. The average price is 25.36, with a maximum price of 31.41 at 6:00 PM on March 1, 2024, and a minimum price of 18.52. The category based on the maximum value is "SILVER".
+
+- **Average:** 25.36
+- **Maximum:** 31.41
+- **Minimum:** 18.52
+- **Category:** SILVER (Indicating a Grid Peak Detected)
+
+A "Grid Peak Detected" message of category "SILVER" has been sent to the C2Agent, and corresponding notices have also been sent to the CommandCenter and ControlPanel.
+[2024-03-01 21:16:10.259303] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"3/1/2024 5:00:00 PM","93369"
+"3/1/2024 6:00:00 PM","96943"
+"3/1/2024 7:00:00 PM","96667"
+"3/1/2024 8:00:00 PM","95210"
+"3/1/2024 9:00:00 PM","92990"
+"3/1/2024 10:00:00 PM","89767"
+"3/1/2024 11:00:00 PM","86292"
+
+[2024-03-01 21:16:31.461449] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-1-0-0", "message": "BRONZE", "start_date_time": "2024-03-01 18:00:00", "duration_mins": "120", "peak_lmp": "$4000", "grid_node": "PJM"}
+[2024-03-01 21:16:31.516339] DEBUG: runsink: Grid Peak Detected: BRONZE. Start Time: 2024-03-01 18:00:00, Duration: 120 mins, LMP: $4000, Grid Node: PJM
+[2024-03-01 21:16:31.516339] DEBUG: runsink: Grid Peak Detected: BRONZE. Start Time: 2024-03-01 18:00:00, Duration: 120 mins, LMP: $4000, Grid Node: PJM
+[2024-03-01 21:16:36.573816] DEBUG: runsink: The necessary actions have been taken based on the given time series data, identical to the previous request. The "Grid Peak Detected" message of category "BRONZE" has been sent again to the C2Agent, and corresponding notices have been sent to the CommandCenter and ControlPanel, just like before.
+[2024-03-01 21:18:38.798862] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a price data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 40, then it is "GOLD". If the maximum value is greater than 30, then it is "SILVER". If the value is greater than 25, then it is "BRONZE". If the value is less than 20, then it is "NOGAME". Set the PeakLmp to the price. If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"3/1/2024 5:00:00 PM","28.43956"
+"3/1/2024 6:00:00 PM","31.4056"
+"3/1/2024 7:00:00 PM","27.93585"
+"3/1/2024 8:00:00 PM","25.66811"
+"3/1/2024 9:00:00 PM","24.71494"
+"3/1/2024 10:00:00 PM","20.84552"
+"3/1/2024 11:00:00 PM","18.52057"
+
+[2024-03-01 21:19:25.930125] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-1-0-0", "message": "SILVER", "start_date_time": "03/01/2024 18:00:00", "duration_mins": "120", "peak_lmp": "$4000", "grid_node": "PJM"}
+[2024-03-01 21:19:25.983474] DEBUG: runsink: SILVER
+[2024-03-01 21:19:25.983474] DEBUG: runsink: SILVER
+[2024-03-01 21:19:33.196380] DEBUG: runsink: The analysis of the provided time series data gave us the following results:
+
+- **Average Value:** 25.36
+- **Maximum Value:** 31.41 (Occurred at: 03/01/2024 18:00:00)
+- **Minimum Value:** 18.52
+- **Status Level:** SILVER
+
+Since the maximum value qualified as "SILVER," a Grid Peak Detected message has been successfully sent to the C2Agent network node, along with the appropriate notices to both the CommandCenter and the ControlPanel.
+[2024-03-01 21:20:13.042156] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"3/1/2024 5:00:00 PM","94857"
+"3/1/2024 6:00:00 PM","97316"
+"3/1/2024 7:00:00 PM","96650"
+"3/1/2024 8:00:00 PM","95232"
+"3/1/2024 9:00:00 PM","92862"
+"3/1/2024 10:00:00 PM","89685"
+"3/1/2024 11:00:00 PM","86163"
+
+[2024-03-01 21:20:43.131002] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-1-0-0", "message": "BRONZE", "start_date_time": "03/01/2024 18:00:00", "duration_mins": "120", "peak_lmp": "$4000", "grid_node": "PJM"}
+[2024-03-01 21:20:43.194566] DEBUG: runsink: BRONZE
+[2024-03-01 21:20:43.195566] DEBUG: runsink: BRONZE
+[2024-03-01 21:20:51.466414] DEBUG: runsink: The analysis of the provided time series load data yielded the following results:
+
+- **Average Load:** 93,252.14
+- **Maximum Load:** 97,316 (Occurred at: 03/01/2024 18:00:00)
+- **Minimum Load:** 86,163
+- **Status Level:** BRONZE
+
+Since the maximum load value qualified as "BRONZE," a Grid Peak Detected message has been successfully dispatched to the C2Agent network node, with accompanying notices sent to the CommandCenter and the ControlPanel.
+[2024-03-01 21:21:53.076445] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a price data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 40, then it is "GOLD". If the maximum value is greater than 30, then it is "SILVER". If the value is greater than 25, then it is "BRONZE". If the value is less than 20, then it is "NOGAME". Set the PeakLmp to the price. If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"3/1/2024 5:00:00 PM","28.43956"
+"3/1/2024 6:00:00 PM","31.4056"
+"3/1/2024 7:00:00 PM","27.93585"
+"3/1/2024 8:00:00 PM","25.66811"
+"3/1/2024 9:00:00 PM","24.71494"
+"3/1/2024 10:00:00 PM","20.84552"
+"3/1/2024 11:00:00 PM","18.52057"
+
+[2024-03-01 21:21:59.590043] DEBUG: runsink: The given time series data has already been analyzed, and the results were as follows:
+
+- **Average Value:** 25.36
+- **Maximum Value:** 31.41 (Occurred at: 03/01/2024 18:00:00)
+- **Minimum Value:** 18.52
+- **Status Level:** SILVER
+
+Since the maximum value qualified as "SILVER," the required Grid Peak Detected message, along with the appropriate notices, were successfully sent to the specified network nodes.
+
+Is there anything else you'd like me to assist you with?
+[2024-03-01 21:23:23.168015] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"3/1/2024 5:00:00 PM","94857"
+"3/1/2024 6:00:00 PM","97316"
+"3/1/2024 7:00:00 PM","96650"
+"3/1/2024 8:00:00 PM","95232"
+"3/1/2024 9:00:00 PM","92862"
+"3/1/2024 10:00:00 PM","89685"
+"3/1/2024 11:00:00 PM","86163"
+
+[2024-03-01 21:23:32.120000] DEBUG: runsink: The provided time series load data has already been analyzed, and the results were as follows:
+
+- **Average Load:** 93,252.14
+- **Maximum Load:** 97,316 (Occurred at: 03/01/2024 18:00:00)
+- **Minimum Load:** 86,163
+- **Status Level:** BRONZE
+
+Since the maximum load value qualified as "BRONZE," the required Grid Peak Detected message, along with the accompanying notices, were successfully dispatched to the specified network nodes.
+
+Would you like any further analysis or assistance with another query?
+[2024-03-01 21:35:07.873452] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"3/1/2024 5:00:00 PM","94857"
+"3/1/2024 6:00:00 PM","97316"
+"3/1/2024 7:00:00 PM","96650"
+"3/1/2024 8:00:00 PM","95232"
+"3/1/2024 9:00:00 PM","92862"
+"3/1/2024 10:00:00 PM","89685"
+"3/1/2024 11:00:00 PM","86163"
+
+[2024-03-01 21:35:32.237805] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-1-0-0", "message": "BRONZE", "start_date_time": "2024-03-01 18:00:00", "duration_mins": "120", "peak_lmp": "$4000", "grid_node": "PJM"}
+[2024-03-01 21:35:32.291385] DEBUG: runsink: BRONZE
+[2024-03-01 21:35:32.292385] DEBUG: runsink: BRONZE
+[2024-03-01 21:35:38.358077] DEBUG: runsink: The analysis of the time series data has been completed. Here are the results:
+
+- **Average Load:** 93,252.14
+- **Maximum Load:** 97,316 (at 2024-03-01 18:00:00)
+- **Minimum Load:** 86,163
+- **Status:** BRONZE
+
+Since the maximum value places the data in the "BRONZE" category, I've sent a GridPeakDetected message to the C2Agent and notices to both the CommandCenter and the ControlPanel regarding the peak detected.
+[2024-03-01 21:42:16.578035] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with two columns. A datetime value and a load data value. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values for all the data values and save the time of the maximum value. If the maximum value is greater than 100000, then it is "GOLD". If the maximum value is greater than 98000, then it is "SILVER". If the value is greater than 94500, then it is "BRONZE". If the value is less than 94500, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP $4000. Set the startime to the datetime when the value was selected and set the duration to 120 mins.
+
+
+Data values are time,load
+"3/1/2024 5:00:00 PM","94857"
+"3/1/2024 6:00:00 PM","97316"
+"3/1/2024 7:00:00 PM","96650"
+"3/1/2024 8:00:00 PM","95232"
+"3/1/2024 9:00:00 PM","92862"
+"3/1/2024 10:00:00 PM","89685"
+"3/1/2024 11:00:00 PM","86163"
+
+[2024-03-01 21:42:38.772109] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-1-0-0", "message": "BRONZE", "start_date_time": "2024-03-01 18:00:00", "duration_mins": "120", "peak_lmp": "$4000", "grid_node": "PJM"}
+[2024-03-01 21:42:38.819410] DEBUG: runsink: BRONZE
+[2024-03-01 21:42:38.820308] DEBUG: runsink: BRONZE
+[2024-03-01 21:42:48.410144] DEBUG: runsink: The analysis for the provided time series data has been completed.
+
+- The average load value is **93,252.14**
+- The maximum load value is **97,316**, which occurred at **6:00 PM on March 1, 2024**. This value has been classified as **"BRONZE"**.
+- The minimum load value is **86,163**.
+
+Due to the classification as **"BRONZE"**, I've sent a GridPeakDetected message to C2Agent and also forwarded the notice to both the CommandCenter and the ControlPanel indicating the detected peak status.
+
+Is there anything else you'd like to analyze or any other assistance you require?
