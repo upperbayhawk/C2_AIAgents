@@ -602,22 +602,25 @@ class OpenAILib:
 
                     all_message_count = len(all_messages.data)
                     self.log.debug("All Message Count: " + str(all_message_count))
+                    print("All Message Count: " + str(all_message_count))
+
+                    user_message_count = len(my_thread_message.content)
+                    self.log.debug("User Message Count: " + str(user_message_count))
+                    print("User Message Count: " + str(user_message_count))
+
+                    assistant_message_count = len(all_messages.data[0].content)
+                    self.log.debug("Assistant Message Count: " + str(assistant_message_count))
+                    print("Assistant Message Count: " + str(assistant_message_count))
 
                     #self.log.debug(all_messages.data[0].content[0].text.value)
 
                     user_msg = my_thread_message.content[0].text.value
-                    assist_msg = all_messages.data[0].content[0].text.value
-
-                    print(f"User: {user_msg}")
-                    print(f"Assistant: {assist_msg}")
-
                     self.log.debug(f"User: {user_msg}")
-                    self.log.debug(f"Assistant: {assist_msg}")
+                    print(f"User: {user_msg}")
 
-                    user_message_count = len(my_thread_message.content)
-                    assistant_message_count = len(all_messages.data[0].content)
-                    self.log.debug("User Message Count: " + str(user_message_count))
-                    self.log.debug("Assistant Message Count: " + str(assistant_message_count))
+                    assist_msg = all_messages.data[0].content[0].text.value
+                    self.log.debug(f"Assistant: {assist_msg}")
+                    print(f"Assistant: {assist_msg}")
 
                     with open(self.agent_output_file, "a", encoding="utf-8") as file:
                         file.write(str(user_msg + "\n"))
@@ -625,10 +628,12 @@ class OpenAILib:
 
                     self.last_message = str(assist_msg)
                     self.log.debug("last_message: " + self.last_message)
+                    print("last_message: " + self.last_message)
+                    return("OK")
                 except Exception as ex:
                     self.log.error("Exception: " + str(ex))
                     print("Exception: " + str(ex))
-                return "OK"
+                    return("ERROR")
             else:
                 self.log.error("GPT DID NOT COMPLETE!")
                 print ("ERROR: GPT DID NOT COMPLETE!")
