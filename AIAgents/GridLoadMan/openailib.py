@@ -550,11 +550,13 @@ class OpenAILib:
                                     duration_mins = my_args["duration_mins"]
                                     peak_lmp = my_args["peak_lmp"]
                                     grid_node = my_args["grid_node"]
+                                    award_level = my_args["award_level"]
+                                    game_type = my_args["game_type"]
                                     return_value = "ERROR"
                                     try:
                                         xfunc = XFunction()
                                         print("Calling " + "sendGridPeakDetected")
-                                        return_value = xfunc.sendGridPeakDetected(network_node,message,start_date_time,duration_mins,peak_lmp,grid_node)
+                                        return_value = xfunc.sendGridPeakDetected(network_node,message,start_date_time,duration_mins,peak_lmp,grid_node,award_level,game_type)
                                     except Exception as e1:
                                         self.log.error("FUNCTION ERROR: {e1}: " + function_name)
 
