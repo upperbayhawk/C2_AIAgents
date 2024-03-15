@@ -30,13 +30,13 @@ class XFunction:
         self.base_topic = config.mqtt_base_topic + agent_name + "/"
         self.base_topic_c2agent = config.mqtt_base_topic_c2agent
  
-    def sendGridPeakDetected(self, network_node, message, start_date_time,duration_mins,peak_lmp,grid_node):
+    def sendGridPeakDetected(self, network_node, message, start_date_time,duration_mins,peak_lmp,grid_node,award_level,game_type):
         xnet = XNetwork(self.mqtt_broker_host, self.mqtt_broker_port)
         xnet.connect_to_broker()
         while xnet.connected == False:
             pass
         topic = self.base_topic_c2agent
-        grid_peak_detected = config.GridPeakDetected("GridPeakDetected", agent_name, message, start_date_time, duration_mins,peak_lmp, grid_node)
+        grid_peak_detected = config.GridPeakDetected("GridPeakDetected", agent_name, message, start_date_time, duration_mins,peak_lmp, grid_node,award_level,game_type)
         message_json = json.dumps(grid_peak_detected.__dict__)
         #my_message = message + "'" + start_date_time + "'" + duration_mins + "," + peak_lmp + "," + grid_node
         print("TO: " + topic + "," + message_json)       

@@ -34,7 +34,7 @@ logging_level = logbook.DEBUG
 ai_polling_interval = 1
 
 class GridPeakDetected:
-    def __init__ (self, type_name, agent_name, message, start_date_time, duration_mins, peak_lmp, grid_node):
+    def __init__ (self, type_name, agent_name, message, start_date_time, duration_mins, peak_lmp, grid_node,award_level,game_type):
         self.type_name = type_name
         self.agent_name = agent_name
         self.message = message
@@ -42,3 +42,5 @@ class GridPeakDetected:
         self.duration_mins = duration_mins
         self.peak_lmp = peak_lmp
         self.grid_node = grid_node
+        self.award_level = award_level
+        self.game_type = game_type

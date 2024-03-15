@@ -149,8 +149,10 @@ agent_tools=[{"type": "code_interpreter"},{
           "duration_mins": {"type": "string", "description": "The duration in minutes of the peak detected."},
           "peak_lmp": {"type": "string", "description": "The LMP for a megawatt-hour during the peak detected."},
           "grid_node": {"type": "string", "description": "The grid pricing node for the peak detected ."},
+          "award_level": {"type": "string", "description": "The award level of the game. Values can be BRONZE, SILVER and GOLD"},
+          "game_type": {"type": "string", "description": "The type of game that is being played. The values can be SHEDPOWER or HARVESTPOWER"},
         },
-        "required": ["network_node", "message","start_date_time","duration_mins","peak_lmp","grid_node"]
+        "required": ["network_node", "message","start_date_time","duration_mins","peak_lmp","grid_node","award_level","game_type"]
       }
     } 
   },{

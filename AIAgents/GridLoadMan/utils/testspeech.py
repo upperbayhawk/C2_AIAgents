@@ -31,8 +31,8 @@ def speak_message(message):
         speech_file_path = "data/testspeech.mp3"
         response = clientAI.audio.speech.create(
         model="tts-1-hd",
-        voice="nova",
-        #voice="shimmer",
+        #voice="nova",
+        voice="shimmer",
         input=message
         )
         response.write_to_file(speech_file_path)
@@ -52,4 +52,9 @@ def speak_message(message):
 
 if __name__ == "__main__":
     #speak_message("Our Father who art in heaven, hallowed be thy name. Thy kingdom come, your will be done, on earth as it is in heaven. Give us this day our daily bread, and forgive us our debts, as we also have forgiven our debtors. And lead us not into temptation, but deliver us from evil")
-    speak_message("My name is Jeanie G. How are you today? Why don't you come over to my place.")
+    msg = "My name is Natasha. How are you today? \
+        Why don't you come out and play. \
+        The weather is beautiful and the sun is shining. \
+            With daylight savings time we have an extra hour. \
+                Alexa, turn on hall."
+    speak_message(msg)
