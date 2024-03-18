@@ -98,8 +98,17 @@ class XFunction:
         xnet.disconnect_from_broker()               
         self.log.debug("sendDataToAgent: " + message + " to " + topic)
         return "OK"
-    #placeholders
-
+    
+    def sendErrorToClient(self, topic, message):
+        xnet = XNetwork(self.mqtt_broker_host, self.mqtt_broker_port)
+        xnet.connect_to_broker()
+        while xnet.connected == False:
+            pass
+        xnet.send_mqtt_event(topic, message)
+        xnet.disconnect_from_broker()               
+        self.log.debug("sendErrorToClient: " + message + " to " + topic)
+        return "OK"
+    
     def getNickname(self, location):
         self.log.debug("getNickname: " + location)
         return "A Sandy Place"

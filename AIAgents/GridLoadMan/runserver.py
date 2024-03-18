@@ -26,6 +26,7 @@ from xcachelib import data_cache_instance
 import openailib
 #from openailib import openailib_instance
 import config
+from xfunctionlib import XFunction
 
 agent_name = config.agent_name
 
@@ -131,8 +132,10 @@ def main_worker_thread():
                             log.debug("last_message: " + last_message)
                         else:
                             log.error("WORKER ERROR. Last message is null.")
+                            clientMQ.publish(MQTT_TOPIC_TOCLIENT,"ERROR")
                     else:
                         log.error("WORKER ERROR PROCESSING INPUT")
+                        clientMQ.publish(MQTT_TOPIC_TOCLIENT,"ERROR")
         except Exception as ex:
             log.error("Exception " + str(ex))
             print ("Exception " + str(ex))
