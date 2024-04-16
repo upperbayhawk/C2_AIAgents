@@ -63,6 +63,7 @@ SEPARATOR = "========================="
 
 #logbook.FileHandler(agent_log_file,level=logging_level).push_application()
 logHandler = logbook.TimedRotatingFileHandler(agent_log_file,level=logging_level,backup_count=30).push_application()
+logbook.set_datetime_format("local")
 log = logbook.Logger("runsink", 0)
 log.debug("Hello From Below: " + agent_name)
 

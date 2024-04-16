@@ -175,7 +175,8 @@ agent_tools=[{"type": "code_interpreter"},{
 #-----------------------------------------------------
 # Configure logging
 agent_log_file = "./logs/make_log.txt"
-logbook.FileHandler(agent_log_file).push_application()
+#logbook.FileHandler(agent_log_file,level=logging_level).push_application()
+logHandler = logbook.TimedRotatingFileHandler(agent_log_file,level=logbook.DEBUG,backup_count=30).push_application()
 log = logbook.Logger("makeagent")
 log.info("Hello From Below: " + agent_name)
 
