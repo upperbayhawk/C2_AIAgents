@@ -52,9 +52,18 @@ def speak_message(message):
 
 if __name__ == "__main__":
     #speak_message("Our Father who art in heaven, hallowed be thy name. Thy kingdom come, your will be done, on earth as it is in heaven. Give us this day our daily bread, and forgive us our debts, as we also have forgiven our debtors. And lead us not into temptation, but deliver us from evil")
-    msg = "My name is Natasha. How are you today? \
-        Why don't you come out and play. \
+    msg = "Hi Dave. My name is Natasha. I live near you. How are you today? \
+        I know it's hard, but why don't you try to come out and play. \
         The weather is beautiful and the sun is shining. \
-            With daylight savings time we have an extra hour. \
-                Alexa, turn on hall."
-    speak_message(msg)
+            We have plenty of time to stroll on the boardwalk and get some thrasher's fries and a piece of Grotto's pizza. \
+                "
+    
+    msg1 = "Our Father, which art in heaven, Hallowed be thy Name. \
+        Thy Kingdom come. Thy will be done in earth, As it is in heaven. \
+            Give us this day our daily bread. And forgive us our trespasses, \
+                As we forgive them that trespass against us. \
+                    And lead us not into temptation, But deliver us from evil. \
+                        For thine is the kingdom, The power, and the glory, For ever and ever.\
+                        Amen"
+    #speak_message(msg)
+    speak_message(msg1)

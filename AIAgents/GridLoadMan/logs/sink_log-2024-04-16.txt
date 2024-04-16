@@ -1,0 +1,4 @@
+[2024-04-16 16:10:00.859501] DEBUG: runsink: Hello From Below: GridLoadMan-1-0-0
+[2024-04-16 16:10:01.071123] DEBUG: runsink: =========================
+[2024-04-16 16:10:01.071123] DEBUG: runsink: Connected to MQTT
+[2024-04-16 16:10:01.072913] DEBUG: runsink: Connected with result code 0
