@@ -8,7 +8,7 @@
 # Notes: https://github.com/spectrshiv/python-weather_gov
 # 
 # ==============================================================================
-import nws_weather
+import nwsweatherlib
 import logbook
 
 class XWeather:
@@ -28,7 +28,7 @@ class XWeather:
             LON = -75.1571
             
             # Get forecast for the specified latitude and longitude
-            nws = nws_weather.NWSWeather()
+            nws = nwsweatherlib.NWSWeather()
             #forecast = nws.get_forecast(LAT, LON)
             forecast = nws.get_temperature_forecast(LAT, LON)
             print(forecast)     
