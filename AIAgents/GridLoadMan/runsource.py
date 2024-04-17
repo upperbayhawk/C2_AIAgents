@@ -6,7 +6,7 @@
 # Date: 1/2024
 # Description: Console app that periodically 
 #   sends tag/value data in JSON to the runserver.py cache.
-# Notes:
+# Notes: pip install weather-gov==0.1
 # ==============================================================================
 
 import os

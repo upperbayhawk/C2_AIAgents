@@ -1,25 +1,699 @@
-[2024-04-16 15:16:55.518112] DEBUG: runserver: Hello From Below: GridLoadMan-1-0-0
-[2024-04-16 15:16:55.959188] DEBUG: runserver: Connected with result code 0
-[2024-04-16 15:16:55.959188] DEBUG: openailib: Initializing OpenAILib...
-[2024-04-16 15:16:56.251493] DEBUG: openailib: Agent found!GridLoadMan-1-0-0
-[2024-04-16 15:16:56.363658] DEBUG: openailib: Thread Object: Thread(id='thread_xITVemmzqDRD5JlJS1CNE5fY', created_at=1713295020, metadata={}, object='thread')
+[2024-04-16 20:07:35.542117] DEBUG: runserver: Hello From Below: GridLoadMan-1-0-0
+[2024-04-16 20:07:35.953038] DEBUG: runserver: Connected with result code 0
+[2024-04-16 20:07:35.953038] DEBUG: openailib: Initializing OpenAILib...
+[2024-04-16 20:07:36.239936] DEBUG: openailib: Agent found!GridLoadMan-1-0-0
+[2024-04-16 20:07:36.404876] DEBUG: openailib: Thread Object: Thread(id='thread_RJas6yKzWYoPQSpc7009s0LL', created_at=1713312460, metadata={}, object='thread')
 
-[2024-04-16 15:16:56.364698] DEBUG: openailib: Hello. My name is Dave. What is your name?
-[2024-04-16 15:16:56.557264] DEBUG: openailib: Message Object: ThreadMessage(id='msg_ke8hBaKVGu72dVabtVc2kUx2', assistant_id=None, content=[MessageContentText(text=Text(annotations=[], value='Hello. My name is Dave. What is your name?'), type='text')], created_at=1713295020, file_ids=[], metadata={}, object='thread.message', role='user', run_id=None, thread_id='thread_xITVemmzqDRD5JlJS1CNE5fY') 
+[2024-04-16 20:07:36.405914] DEBUG: openailib: Hello. My name is Dave. What is your name?
+[2024-04-16 20:07:36.623296] DEBUG: openailib: Message Object: ThreadMessage(id='msg_N71y4PdPVJd119htUanyfNw7', assistant_id=None, content=[MessageContentText(text=Text(annotations=[], value='Hello. My name is Dave. What is your name?'), type='text')], created_at=1713312460, file_ids=[], metadata={}, object='thread.message', role='user', run_id=None, thread_id='thread_RJas6yKzWYoPQSpc7009s0LL') 
 
-[2024-04-16 15:16:56.966722] DEBUG: openailib: Run Object: Run(id='run_9Hz1sO9Ncz1z5U2hBss3XgbS', assistant_id='asst_3VeyTc4thRQVyP4LVpEtsova', cancelled_at=None, completed_at=None, created_at=1713295020, expires_at=1713295620, failed_at=None, file_ids=[], instructions='Act like an a very smart data analyst and provide answers that are concise. You have all the mathamatical algorithms available to you. I will be sending you new data, with the same instructions each time, periodically so continue to examine the data and provide results, even if the data has not changed. Call my functions each time you run the prompt.', last_error=None, metadata={}, model='gpt-4-0125-preview', object='thread.run', required_action=None, started_at=None, status='queued', thread_id='thread_xITVemmzqDRD5JlJS1CNE5fY', tools=[ToolAssistantToolsCode(type='code_interpreter'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendAlarmSignalToNetworkNode', description='Send an alarm signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alarm signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendControlSignalToNetworkNode', description='Send a control signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the control signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendNoticeSignalToNetworkNode', description='Send a notice signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the notice signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendCommandSignalToNetworkNode', description='Send a command signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the command signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendAlertSignalToNetworkNode', description='Send an alert signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alert signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getNickname', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getMagicNumber', description='This number is magical.', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the magic number'}}, 'required': ['tagname']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getSensorValuebyName', description='Get the value of a sensor by its name. The value is NOTFOUND if the sensor is not available', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the sensor.'}}, 'required': ['tagname']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendGridPeakDetected', description='Send a grid peak detected to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include C2Agent, AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The description of the peak detected.'}, 'start_date_time': {'type': 'string', 'description': 'The datetime of the peak detected.'}, 'duration_mins': {'type': 'string', 'description': 'The duration in minutes of the peak detected.'}, 'peak_lmp': {'type': 'string', 'description': 'The LMP for a megawatt-hour during the peak detected.'}, 'grid_node': {'type': 'string', 'description': 'The grid pricing node for the peak detected .'}, 'award_level': {'type': 'string', 'description': 'The award level of the game. Values can be BRONZE, SILVER and GOLD'}, 'game_type': {'type': 'string', 'description': 'The type of game that is being played. The values can be SHEDPOWER or HARVESTPOWER'}}, 'required': ['network_node', 'message', 'start_date_time', 'duration_mins', 'peak_lmp', 'grid_node', 'award_level', 'game_type']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getNickname3', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}), type='function')], usage=None, temperature=1.0, top_p=1.0, max_completion_tokens=None, max_prompt_tokens=None, truncation_strategy={'type': 'auto', 'last_messages': None}, incomplete_details=None, response_format='auto', tool_choice='auto') 
+[2024-04-16 20:07:36.979463] DEBUG: openailib: Run Object: Run(id='run_g5JgS0xUgSruHisNVuxnfOFy', assistant_id='asst_3VeyTc4thRQVyP4LVpEtsova', cancelled_at=None, completed_at=None, created_at=1713312460, expires_at=1713313060, failed_at=None, file_ids=[], instructions='Act like an a very smart data analyst and provide answers that are concise. You have all the mathamatical algorithms available to you. I will be sending you new data, with the same instructions each time, periodically so continue to examine the data and provide results, even if the data has not changed. Call my functions each time you run the prompt.', last_error=None, metadata={}, model='gpt-4-0125-preview', object='thread.run', required_action=None, started_at=None, status='queued', thread_id='thread_RJas6yKzWYoPQSpc7009s0LL', tools=[ToolAssistantToolsCode(type='code_interpreter'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendAlarmSignalToNetworkNode', description='Send an alarm signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alarm signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendControlSignalToNetworkNode', description='Send a control signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the control signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendNoticeSignalToNetworkNode', description='Send a notice signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the notice signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendCommandSignalToNetworkNode', description='Send a command signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the command signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendAlertSignalToNetworkNode', description='Send an alert signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alert signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getNickname', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getMagicNumber', description='This number is magical.', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the magic number'}}, 'required': ['tagname']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getSensorValuebyName', description='Get the value of a sensor by its name. The value is NOTFOUND if the sensor is not available', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the sensor.'}}, 'required': ['tagname']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendGridPeakDetected', description='Send a grid peak detected to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include C2Agent, AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The description of the peak detected.'}, 'start_date_time': {'type': 'string', 'description': 'The datetime of the peak detected.'}, 'duration_mins': {'type': 'string', 'description': 'The duration in minutes of the peak detected.'}, 'peak_lmp': {'type': 'string', 'description': 'The LMP for a megawatt-hour during the peak detected.'}, 'grid_node': {'type': 'string', 'description': 'The grid pricing node for the peak detected .'}, 'award_level': {'type': 'string', 'description': 'The award level of the game. Values can be BRONZE, SILVER and GOLD'}, 'game_type': {'type': 'string', 'description': 'The type of game that is being played. The values can be SHEDPOWER or HARVESTPOWER'}}, 'required': ['network_node', 'message', 'start_date_time', 'duration_mins', 'peak_lmp', 'grid_node', 'award_level', 'game_type']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getNickname3', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}), type='function')], usage=None, temperature=1.0, top_p=1.0, max_completion_tokens=None, max_prompt_tokens=None, truncation_strategy={'type': 'auto', 'last_messages': None}, incomplete_details=None, response_format='auto', tool_choice='auto') 
 
-[2024-04-16 15:16:59.636138] DEBUG: openailib: User: Hello. My name is Dave. What is your name?
-[2024-04-16 15:16:59.636138] DEBUG: openailib: Assistant: Hello, Dave. I am an AI Data Analyst. How can I assist you today?
-[2024-04-16 15:17:08.766899] DEBUG: runserver: Received message '{"name": "RANDO", "value": "0.45258024319422363", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
-[2024-04-16 15:17:08.766899] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "RANDO", "value": "0.45258024319422363", "status": "OK"}
-[2024-04-16 15:17:08.766899] DEBUG: runserver: value from cache = {"time": "2024-04-16T15:17:08.766899", "value": "0.45258024319422363", "status": "OK"}
-[2024-04-16 15:17:08.812329] DEBUG: runserver: Received message '{"name": "Dave", "value": "0.06560304551219687", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
-[2024-04-16 15:17:08.812329] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "Dave", "value": "0.06560304551219687", "status": "OK"}
-[2024-04-16 15:17:08.813270] DEBUG: runserver: value from cache = {"time": "2024-04-16T15:17:08.813270", "value": "0.06560304551219687", "status": "OK"}
-[2024-04-16 15:17:09.853324] DEBUG: runserver: Received message '{"name": "MasterSwitch", "value": "ON", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
-[2024-04-16 15:17:09.854272] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "MasterSwitch", "value": "ON", "status": "OK"}
-[2024-04-16 15:17:09.854272] DEBUG: runserver: value from cache = {"time": "2024-04-16T15:17:09.854272", "value": "ON", "status": "OK"}
-[2024-04-16 15:17:09.898745] DEBUG: runserver: Received message '{"name": "TemperatureInLewes", "value": "69", "status": "OK"}' on topic 'openai/assistant/GridLoadMan-1-0-0/DataFeed'
-[2024-04-16 15:17:09.898745] DEBUG: runserver: To DataFeed: openai/assistant/GridLoadMan-1-0-0/DataFeed {"name": "TemperatureInLewes", "value": "69", "status": "OK"}
-[2024-04-16 15:17:09.899753] DEBUG: runserver: value from cache = {"time": "2024-04-16T15:17:09.899753", "value": "69", "status": "OK"}
+[2024-04-16 20:07:39.613515] DEBUG: openailib: User: Hello. My name is Dave. What is your name?
+[2024-04-16 20:07:39.613515] DEBUG: openailib: Assistant: Hello, Dave. I'm a data analysis AI assistant. How can I assist you today?
+[2024-04-16 20:07:51.928402] DEBUG: runserver: Received message 'The data below is the seven day hourly temperature forecast. It is in CSV format and contains datetime, temperature in degrees F and the weather forecast. Analyze the data using average, minumum, maximum, and standard deviation to give insights into the near-term behavior of the weather. The data follows:2024-04-16T19:00:00-04:00,69,Mostly Clear
+2024-04-16T20:00:00-04:00,67,Mostly Clear
+2024-04-16T21:00:00-04:00,64,Mostly Clear
+2024-04-16T22:00:00-04:00,60,Mostly Clear
+2024-04-16T23:00:00-04:00,57,Mostly Clear
+2024-04-17T00:00:00-04:00,56,Mostly Clear
+2024-04-17T01:00:00-04:00,54,Mostly Clear
+2024-04-17T02:00:00-04:00,53,Mostly Clear
+2024-04-17T03:00:00-04:00,52,Mostly Clear
+2024-04-17T04:00:00-04:00,51,Partly Cloudy
+2024-04-17T05:00:00-04:00,51,Partly Cloudy
+2024-04-17T06:00:00-04:00,51,Mostly Sunny
+2024-04-17T07:00:00-04:00,52,Partly Sunny
+2024-04-17T08:00:00-04:00,53,Partly Sunny
+2024-04-17T09:00:00-04:00,56,Mostly Cloudy
+2024-04-17T10:00:00-04:00,60,Slight Chance Rain Showers
+2024-04-17T11:00:00-04:00,63,Slight Chance Rain Showers
+2024-04-17T12:00:00-04:00,64,Chance Rain Showers
+2024-04-17T13:00:00-04:00,65,Chance Rain Showers
+2024-04-17T14:00:00-04:00,66,Rain Showers Likely
+2024-04-17T15:00:00-04:00,64,Rain Showers Likely
+2024-04-17T16:00:00-04:00,63,Rain Showers Likely
+2024-04-17T17:00:00-04:00,61,Chance Rain Showers
+2024-04-17T18:00:00-04:00,59,Chance Rain Showers
+2024-04-17T19:00:00-04:00,57,Chance Rain Showers
+2024-04-17T20:00:00-04:00,55,Showers And Thunderstorms
+2024-04-17T21:00:00-04:00,54,Showers And Thunderstorms
+2024-04-17T22:00:00-04:00,54,Showers And Thunderstorms
+2024-04-17T23:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T00:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T01:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T02:00:00-04:00,52,Showers And Thunderstorms Likely
+2024-04-18T03:00:00-04:00,51,Showers And Thunderstorms Likely
+2024-04-18T04:00:00-04:00,51,Showers And Thunderstorms Likely
+2024-04-18T05:00:00-04:00,52,Rain Showers Likely
+2024-04-18T06:00:00-04:00,52,Rain Showers Likely
+2024-04-18T07:00:00-04:00,52,Rain Showers Likely
+2024-04-18T08:00:00-04:00,52,Chance Rain Showers
+2024-04-18T09:00:00-04:00,53,Chance Rain Showers
+2024-04-18T10:00:00-04:00,54,Chance Rain Showers
+2024-04-18T11:00:00-04:00,55,Chance Rain Showers
+2024-04-18T12:00:00-04:00,56,Chance Rain Showers
+2024-04-18T13:00:00-04:00,56,Chance Rain Showers
+2024-04-18T14:00:00-04:00,56,Slight Chance Rain Showers
+2024-04-18T15:00:00-04:00,55,Slight Chance Rain Showers
+2024-04-18T16:00:00-04:00,54,Slight Chance Rain Showers
+2024-04-18T17:00:00-04:00,54,Slight Chance Rain Showers
+2024-04-18T18:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-18T19:00:00-04:00,50,Slight Chance Rain Showers
+2024-04-18T20:00:00-04:00,48,Mostly Cloudy
+2024-04-18T21:00:00-04:00,48,Mostly Cloudy
+2024-04-18T22:00:00-04:00,47,Mostly Cloudy
+2024-04-18T23:00:00-04:00,47,Mostly Cloudy
+2024-04-19T00:00:00-04:00,46,Mostly Cloudy
+2024-04-19T01:00:00-04:00,46,Mostly Cloudy
+2024-04-19T02:00:00-04:00,46,Mostly Cloudy
+2024-04-19T03:00:00-04:00,46,Mostly Cloudy
+2024-04-19T04:00:00-04:00,46,Mostly Cloudy
+2024-04-19T05:00:00-04:00,46,Cloudy
+2024-04-19T06:00:00-04:00,46,Cloudy
+2024-04-19T07:00:00-04:00,46,Cloudy
+2024-04-19T08:00:00-04:00,47,Cloudy
+2024-04-19T09:00:00-04:00,50,Mostly Cloudy
+2024-04-19T10:00:00-04:00,52,Mostly Cloudy
+2024-04-19T11:00:00-04:00,54,Mostly Cloudy
+2024-04-19T12:00:00-04:00,55,Mostly Cloudy
+2024-04-19T13:00:00-04:00,57,Mostly Cloudy
+2024-04-19T14:00:00-04:00,60,Chance Rain Showers
+2024-04-19T15:00:00-04:00,60,Chance Rain Showers
+2024-04-19T16:00:00-04:00,60,Chance Rain Showers
+2024-04-19T17:00:00-04:00,61,Chance Rain Showers
+2024-04-19T18:00:00-04:00,59,Chance Rain Showers
+2024-04-19T19:00:00-04:00,58,Chance Rain Showers
+2024-04-19T20:00:00-04:00,56,Chance Rain Showers
+2024-04-19T21:00:00-04:00,55,Chance Rain Showers
+2024-04-19T22:00:00-04:00,54,Chance Rain Showers
+2024-04-19T23:00:00-04:00,53,Chance Rain Showers
+2024-04-20T00:00:00-04:00,53,Chance Rain Showers
+2024-04-20T01:00:00-04:00,52,Chance Rain Showers
+2024-04-20T02:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T03:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T04:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T05:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T06:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T07:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T08:00:00-04:00,53,Partly Sunny
+2024-04-20T09:00:00-04:00,55,Partly Sunny
+2024-04-20T10:00:00-04:00,58,Mostly Sunny
+2024-04-20T11:00:00-04:00,60,Mostly Sunny
+2024-04-20T12:00:00-04:00,61,Mostly Sunny
+2024-04-20T13:00:00-04:00,62,Mostly Sunny
+2024-04-20T14:00:00-04:00,62,Mostly Sunny
+2024-04-20T15:00:00-04:00,63,Mostly Sunny
+2024-04-20T16:00:00-04:00,63,Mostly Sunny
+2024-04-20T17:00:00-04:00,62,Mostly Sunny
+2024-04-20T18:00:00-04:00,60,Partly Cloudy
+2024-04-20T19:00:00-04:00,58,Partly Cloudy
+2024-04-20T20:00:00-04:00,56,Partly Cloudy
+2024-04-20T21:00:00-04:00,54,Partly Cloudy
+2024-04-20T22:00:00-04:00,52,Partly Cloudy
+2024-04-20T23:00:00-04:00,51,Partly Cloudy
+2024-04-21T00:00:00-04:00,50,Partly Cloudy
+2024-04-21T01:00:00-04:00,48,Partly Cloudy
+2024-04-21T02:00:00-04:00,47,Mostly Clear
+2024-04-21T03:00:00-04:00,45,Mostly Clear
+2024-04-21T04:00:00-04:00,44,Mostly Clear
+2024-04-21T05:00:00-04:00,44,Mostly Clear
+2024-04-21T06:00:00-04:00,44,Sunny
+2024-04-21T07:00:00-04:00,44,Sunny
+2024-04-21T08:00:00-04:00,46,Sunny
+2024-04-21T09:00:00-04:00,49,Mostly Sunny
+2024-04-21T10:00:00-04:00,51,Mostly Sunny
+2024-04-21T11:00:00-04:00,54,Mostly Sunny
+2024-04-21T12:00:00-04:00,56,Mostly Sunny
+2024-04-21T13:00:00-04:00,57,Mostly Sunny
+2024-04-21T14:00:00-04:00,58,Mostly Sunny
+2024-04-21T15:00:00-04:00,59,Mostly Sunny
+2024-04-21T16:00:00-04:00,59,Mostly Sunny
+2024-04-21T17:00:00-04:00,59,Mostly Sunny
+2024-04-21T18:00:00-04:00,58,Partly Cloudy
+2024-04-21T19:00:00-04:00,56,Partly Cloudy
+2024-04-21T20:00:00-04:00,54,Partly Cloudy
+2024-04-21T21:00:00-04:00,52,Partly Cloudy
+2024-04-21T22:00:00-04:00,50,Partly Cloudy
+2024-04-21T23:00:00-04:00,49,Partly Cloudy
+2024-04-22T00:00:00-04:00,48,Partly Cloudy
+2024-04-22T01:00:00-04:00,47,Partly Cloudy
+2024-04-22T02:00:00-04:00,46,Partly Cloudy
+2024-04-22T03:00:00-04:00,45,Partly Cloudy
+2024-04-22T04:00:00-04:00,44,Partly Cloudy
+2024-04-22T05:00:00-04:00,44,Partly Cloudy
+2024-04-22T06:00:00-04:00,44,Mostly Sunny
+2024-04-22T07:00:00-04:00,45,Mostly Sunny
+2024-04-22T08:00:00-04:00,47,Mostly Sunny
+2024-04-22T09:00:00-04:00,50,Mostly Sunny
+2024-04-22T10:00:00-04:00,54,Mostly Sunny
+2024-04-22T11:00:00-04:00,57,Mostly Sunny
+2024-04-22T12:00:00-04:00,59,Mostly Sunny
+2024-04-22T13:00:00-04:00,61,Partly Sunny
+2024-04-22T14:00:00-04:00,62,Partly Sunny
+2024-04-22T15:00:00-04:00,62,Partly Sunny
+2024-04-22T16:00:00-04:00,62,Mostly Sunny
+2024-04-22T17:00:00-04:00,61,Mostly Sunny
+2024-04-22T18:00:00-04:00,59,Partly Cloudy
+2024-04-22T19:00:00-04:00,57,Partly Cloudy
+2024-04-22T20:00:00-04:00,55,Mostly Cloudy
+2024-04-22T21:00:00-04:00,53,Partly Cloudy
+2024-04-22T22:00:00-04:00,51,Partly Cloudy
+2024-04-22T23:00:00-04:00,49,Partly Cloudy
+2024-04-23T00:00:00-04:00,48,Partly Cloudy
+2024-04-23T01:00:00-04:00,47,Partly Cloudy
+2024-04-23T02:00:00-04:00,46,Partly Cloudy
+2024-04-23T03:00:00-04:00,45,Partly Cloudy
+2024-04-23T04:00:00-04:00,45,Partly Cloudy
+2024-04-23T05:00:00-04:00,45,Partly Cloudy
+2024-04-23T06:00:00-04:00,45,Mostly Sunny
+' on topic 'openai/assistant/GridLoadMan-1-0-0/ToAssistant'
+[2024-04-16 20:07:51.928402] DEBUG: runserver: To Assistant Inbound: openai/assistant/GridLoadMan-1-0-0/ToAssistant The data below is the seven day hourly temperature forecast. It is in CSV format and contains datetime, temperature in degrees F and the weather forecast. Analyze the data using average, minumum, maximum, and standard deviation to give insights into the near-term behavior of the weather. The data follows:2024-04-16T19:00:00-04:00,69,Mostly Clear
+2024-04-16T20:00:00-04:00,67,Mostly Clear
+2024-04-16T21:00:00-04:00,64,Mostly Clear
+2024-04-16T22:00:00-04:00,60,Mostly Clear
+2024-04-16T23:00:00-04:00,57,Mostly Clear
+2024-04-17T00:00:00-04:00,56,Mostly Clear
+2024-04-17T01:00:00-04:00,54,Mostly Clear
+2024-04-17T02:00:00-04:00,53,Mostly Clear
+2024-04-17T03:00:00-04:00,52,Mostly Clear
+2024-04-17T04:00:00-04:00,51,Partly Cloudy
+2024-04-17T05:00:00-04:00,51,Partly Cloudy
+2024-04-17T06:00:00-04:00,51,Mostly Sunny
+2024-04-17T07:00:00-04:00,52,Partly Sunny
+2024-04-17T08:00:00-04:00,53,Partly Sunny
+2024-04-17T09:00:00-04:00,56,Mostly Cloudy
+2024-04-17T10:00:00-04:00,60,Slight Chance Rain Showers
+2024-04-17T11:00:00-04:00,63,Slight Chance Rain Showers
+2024-04-17T12:00:00-04:00,64,Chance Rain Showers
+2024-04-17T13:00:00-04:00,65,Chance Rain Showers
+2024-04-17T14:00:00-04:00,66,Rain Showers Likely
+2024-04-17T15:00:00-04:00,64,Rain Showers Likely
+2024-04-17T16:00:00-04:00,63,Rain Showers Likely
+2024-04-17T17:00:00-04:00,61,Chance Rain Showers
+2024-04-17T18:00:00-04:00,59,Chance Rain Showers
+2024-04-17T19:00:00-04:00,57,Chance Rain Showers
+2024-04-17T20:00:00-04:00,55,Showers And Thunderstorms
+2024-04-17T21:00:00-04:00,54,Showers And Thunderstorms
+2024-04-17T22:00:00-04:00,54,Showers And Thunderstorms
+2024-04-17T23:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T00:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T01:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T02:00:00-04:00,52,Showers And Thunderstorms Likely
+2024-04-18T03:00:00-04:00,51,Showers And Thunderstorms Likely
+2024-04-18T04:00:00-04:00,51,Showers And Thunderstorms Likely
+2024-04-18T05:00:00-04:00,52,Rain Showers Likely
+2024-04-18T06:00:00-04:00,52,Rain Showers Likely
+2024-04-18T07:00:00-04:00,52,Rain Showers Likely
+2024-04-18T08:00:00-04:00,52,Chance Rain Showers
+2024-04-18T09:00:00-04:00,53,Chance Rain Showers
+2024-04-18T10:00:00-04:00,54,Chance Rain Showers
+2024-04-18T11:00:00-04:00,55,Chance Rain Showers
+2024-04-18T12:00:00-04:00,56,Chance Rain Showers
+2024-04-18T13:00:00-04:00,56,Chance Rain Showers
+2024-04-18T14:00:00-04:00,56,Slight Chance Rain Showers
+2024-04-18T15:00:00-04:00,55,Slight Chance Rain Showers
+2024-04-18T16:00:00-04:00,54,Slight Chance Rain Showers
+2024-04-18T17:00:00-04:00,54,Slight Chance Rain Showers
+2024-04-18T18:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-18T19:00:00-04:00,50,Slight Chance Rain Showers
+2024-04-18T20:00:00-04:00,48,Mostly Cloudy
+2024-04-18T21:00:00-04:00,48,Mostly Cloudy
+2024-04-18T22:00:00-04:00,47,Mostly Cloudy
+2024-04-18T23:00:00-04:00,47,Mostly Cloudy
+2024-04-19T00:00:00-04:00,46,Mostly Cloudy
+2024-04-19T01:00:00-04:00,46,Mostly Cloudy
+2024-04-19T02:00:00-04:00,46,Mostly Cloudy
+2024-04-19T03:00:00-04:00,46,Mostly Cloudy
+2024-04-19T04:00:00-04:00,46,Mostly Cloudy
+2024-04-19T05:00:00-04:00,46,Cloudy
+2024-04-19T06:00:00-04:00,46,Cloudy
+2024-04-19T07:00:00-04:00,46,Cloudy
+2024-04-19T08:00:00-04:00,47,Cloudy
+2024-04-19T09:00:00-04:00,50,Mostly Cloudy
+2024-04-19T10:00:00-04:00,52,Mostly Cloudy
+2024-04-19T11:00:00-04:00,54,Mostly Cloudy
+2024-04-19T12:00:00-04:00,55,Mostly Cloudy
+2024-04-19T13:00:00-04:00,57,Mostly Cloudy
+2024-04-19T14:00:00-04:00,60,Chance Rain Showers
+2024-04-19T15:00:00-04:00,60,Chance Rain Showers
+2024-04-19T16:00:00-04:00,60,Chance Rain Showers
+2024-04-19T17:00:00-04:00,61,Chance Rain Showers
+2024-04-19T18:00:00-04:00,59,Chance Rain Showers
+2024-04-19T19:00:00-04:00,58,Chance Rain Showers
+2024-04-19T20:00:00-04:00,56,Chance Rain Showers
+2024-04-19T21:00:00-04:00,55,Chance Rain Showers
+2024-04-19T22:00:00-04:00,54,Chance Rain Showers
+2024-04-19T23:00:00-04:00,53,Chance Rain Showers
+2024-04-20T00:00:00-04:00,53,Chance Rain Showers
+2024-04-20T01:00:00-04:00,52,Chance Rain Showers
+2024-04-20T02:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T03:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T04:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T05:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T06:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T07:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T08:00:00-04:00,53,Partly Sunny
+2024-04-20T09:00:00-04:00,55,Partly Sunny
+2024-04-20T10:00:00-04:00,58,Mostly Sunny
+2024-04-20T11:00:00-04:00,60,Mostly Sunny
+2024-04-20T12:00:00-04:00,61,Mostly Sunny
+2024-04-20T13:00:00-04:00,62,Mostly Sunny
+2024-04-20T14:00:00-04:00,62,Mostly Sunny
+2024-04-20T15:00:00-04:00,63,Mostly Sunny
+2024-04-20T16:00:00-04:00,63,Mostly Sunny
+2024-04-20T17:00:00-04:00,62,Mostly Sunny
+2024-04-20T18:00:00-04:00,60,Partly Cloudy
+2024-04-20T19:00:00-04:00,58,Partly Cloudy
+2024-04-20T20:00:00-04:00,56,Partly Cloudy
+2024-04-20T21:00:00-04:00,54,Partly Cloudy
+2024-04-20T22:00:00-04:00,52,Partly Cloudy
+2024-04-20T23:00:00-04:00,51,Partly Cloudy
+2024-04-21T00:00:00-04:00,50,Partly Cloudy
+2024-04-21T01:00:00-04:00,48,Partly Cloudy
+2024-04-21T02:00:00-04:00,47,Mostly Clear
+2024-04-21T03:00:00-04:00,45,Mostly Clear
+2024-04-21T04:00:00-04:00,44,Mostly Clear
+2024-04-21T05:00:00-04:00,44,Mostly Clear
+2024-04-21T06:00:00-04:00,44,Sunny
+2024-04-21T07:00:00-04:00,44,Sunny
+2024-04-21T08:00:00-04:00,46,Sunny
+2024-04-21T09:00:00-04:00,49,Mostly Sunny
+2024-04-21T10:00:00-04:00,51,Mostly Sunny
+2024-04-21T11:00:00-04:00,54,Mostly Sunny
+2024-04-21T12:00:00-04:00,56,Mostly Sunny
+2024-04-21T13:00:00-04:00,57,Mostly Sunny
+2024-04-21T14:00:00-04:00,58,Mostly Sunny
+2024-04-21T15:00:00-04:00,59,Mostly Sunny
+2024-04-21T16:00:00-04:00,59,Mostly Sunny
+2024-04-21T17:00:00-04:00,59,Mostly Sunny
+2024-04-21T18:00:00-04:00,58,Partly Cloudy
+2024-04-21T19:00:00-04:00,56,Partly Cloudy
+2024-04-21T20:00:00-04:00,54,Partly Cloudy
+2024-04-21T21:00:00-04:00,52,Partly Cloudy
+2024-04-21T22:00:00-04:00,50,Partly Cloudy
+2024-04-21T23:00:00-04:00,49,Partly Cloudy
+2024-04-22T00:00:00-04:00,48,Partly Cloudy
+2024-04-22T01:00:00-04:00,47,Partly Cloudy
+2024-04-22T02:00:00-04:00,46,Partly Cloudy
+2024-04-22T03:00:00-04:00,45,Partly Cloudy
+2024-04-22T04:00:00-04:00,44,Partly Cloudy
+2024-04-22T05:00:00-04:00,44,Partly Cloudy
+2024-04-22T06:00:00-04:00,44,Mostly Sunny
+2024-04-22T07:00:00-04:00,45,Mostly Sunny
+2024-04-22T08:00:00-04:00,47,Mostly Sunny
+2024-04-22T09:00:00-04:00,50,Mostly Sunny
+2024-04-22T10:00:00-04:00,54,Mostly Sunny
+2024-04-22T11:00:00-04:00,57,Mostly Sunny
+2024-04-22T12:00:00-04:00,59,Mostly Sunny
+2024-04-22T13:00:00-04:00,61,Partly Sunny
+2024-04-22T14:00:00-04:00,62,Partly Sunny
+2024-04-22T15:00:00-04:00,62,Partly Sunny
+2024-04-22T16:00:00-04:00,62,Mostly Sunny
+2024-04-22T17:00:00-04:00,61,Mostly Sunny
+2024-04-22T18:00:00-04:00,59,Partly Cloudy
+2024-04-22T19:00:00-04:00,57,Partly Cloudy
+2024-04-22T20:00:00-04:00,55,Mostly Cloudy
+2024-04-22T21:00:00-04:00,53,Partly Cloudy
+2024-04-22T22:00:00-04:00,51,Partly Cloudy
+2024-04-22T23:00:00-04:00,49,Partly Cloudy
+2024-04-23T00:00:00-04:00,48,Partly Cloudy
+2024-04-23T01:00:00-04:00,47,Partly Cloudy
+2024-04-23T02:00:00-04:00,46,Partly Cloudy
+2024-04-23T03:00:00-04:00,45,Partly Cloudy
+2024-04-23T04:00:00-04:00,45,Partly Cloudy
+2024-04-23T05:00:00-04:00,45,Partly Cloudy
+2024-04-23T06:00:00-04:00,45,Mostly Sunny
+
+[2024-04-16 20:07:51.929522] DEBUG: openailib: Input Message: The data below is the seven day hourly temperature forecast. It is in CSV format and contains datetime, temperature in degrees F and the weather forecast. Analyze the data using average, minumum, maximum, and standard deviation to give insights into the near-term behavior of the weather. The data follows:2024-04-16T19:00:00-04:00,69,Mostly Clear
+2024-04-16T20:00:00-04:00,67,Mostly Clear
+2024-04-16T21:00:00-04:00,64,Mostly Clear
+2024-04-16T22:00:00-04:00,60,Mostly Clear
+2024-04-16T23:00:00-04:00,57,Mostly Clear
+2024-04-17T00:00:00-04:00,56,Mostly Clear
+2024-04-17T01:00:00-04:00,54,Mostly Clear
+2024-04-17T02:00:00-04:00,53,Mostly Clear
+2024-04-17T03:00:00-04:00,52,Mostly Clear
+2024-04-17T04:00:00-04:00,51,Partly Cloudy
+2024-04-17T05:00:00-04:00,51,Partly Cloudy
+2024-04-17T06:00:00-04:00,51,Mostly Sunny
+2024-04-17T07:00:00-04:00,52,Partly Sunny
+2024-04-17T08:00:00-04:00,53,Partly Sunny
+2024-04-17T09:00:00-04:00,56,Mostly Cloudy
+2024-04-17T10:00:00-04:00,60,Slight Chance Rain Showers
+2024-04-17T11:00:00-04:00,63,Slight Chance Rain Showers
+2024-04-17T12:00:00-04:00,64,Chance Rain Showers
+2024-04-17T13:00:00-04:00,65,Chance Rain Showers
+2024-04-17T14:00:00-04:00,66,Rain Showers Likely
+2024-04-17T15:00:00-04:00,64,Rain Showers Likely
+2024-04-17T16:00:00-04:00,63,Rain Showers Likely
+2024-04-17T17:00:00-04:00,61,Chance Rain Showers
+2024-04-17T18:00:00-04:00,59,Chance Rain Showers
+2024-04-17T19:00:00-04:00,57,Chance Rain Showers
+2024-04-17T20:00:00-04:00,55,Showers And Thunderstorms
+2024-04-17T21:00:00-04:00,54,Showers And Thunderstorms
+2024-04-17T22:00:00-04:00,54,Showers And Thunderstorms
+2024-04-17T23:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T00:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T01:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T02:00:00-04:00,52,Showers And Thunderstorms Likely
+2024-04-18T03:00:00-04:00,51,Showers And Thunderstorms Likely
+2024-04-18T04:00:00-04:00,51,Showers And Thunderstorms Likely
+2024-04-18T05:00:00-04:00,52,Rain Showers Likely
+2024-04-18T06:00:00-04:00,52,Rain Showers Likely
+2024-04-18T07:00:00-04:00,52,Rain Showers Likely
+2024-04-18T08:00:00-04:00,52,Chance Rain Showers
+2024-04-18T09:00:00-04:00,53,Chance Rain Showers
+2024-04-18T10:00:00-04:00,54,Chance Rain Showers
+2024-04-18T11:00:00-04:00,55,Chance Rain Showers
+2024-04-18T12:00:00-04:00,56,Chance Rain Showers
+2024-04-18T13:00:00-04:00,56,Chance Rain Showers
+2024-04-18T14:00:00-04:00,56,Slight Chance Rain Showers
+2024-04-18T15:00:00-04:00,55,Slight Chance Rain Showers
+2024-04-18T16:00:00-04:00,54,Slight Chance Rain Showers
+2024-04-18T17:00:00-04:00,54,Slight Chance Rain Showers
+2024-04-18T18:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-18T19:00:00-04:00,50,Slight Chance Rain Showers
+2024-04-18T20:00:00-04:00,48,Mostly Cloudy
+2024-04-18T21:00:00-04:00,48,Mostly Cloudy
+2024-04-18T22:00:00-04:00,47,Mostly Cloudy
+2024-04-18T23:00:00-04:00,47,Mostly Cloudy
+2024-04-19T00:00:00-04:00,46,Mostly Cloudy
+2024-04-19T01:00:00-04:00,46,Mostly Cloudy
+2024-04-19T02:00:00-04:00,46,Mostly Cloudy
+2024-04-19T03:00:00-04:00,46,Mostly Cloudy
+2024-04-19T04:00:00-04:00,46,Mostly Cloudy
+2024-04-19T05:00:00-04:00,46,Cloudy
+2024-04-19T06:00:00-04:00,46,Cloudy
+2024-04-19T07:00:00-04:00,46,Cloudy
+2024-04-19T08:00:00-04:00,47,Cloudy
+2024-04-19T09:00:00-04:00,50,Mostly Cloudy
+2024-04-19T10:00:00-04:00,52,Mostly Cloudy
+2024-04-19T11:00:00-04:00,54,Mostly Cloudy
+2024-04-19T12:00:00-04:00,55,Mostly Cloudy
+2024-04-19T13:00:00-04:00,57,Mostly Cloudy
+2024-04-19T14:00:00-04:00,60,Chance Rain Showers
+2024-04-19T15:00:00-04:00,60,Chance Rain Showers
+2024-04-19T16:00:00-04:00,60,Chance Rain Showers
+2024-04-19T17:00:00-04:00,61,Chance Rain Showers
+2024-04-19T18:00:00-04:00,59,Chance Rain Showers
+2024-04-19T19:00:00-04:00,58,Chance Rain Showers
+2024-04-19T20:00:00-04:00,56,Chance Rain Showers
+2024-04-19T21:00:00-04:00,55,Chance Rain Showers
+2024-04-19T22:00:00-04:00,54,Chance Rain Showers
+2024-04-19T23:00:00-04:00,53,Chance Rain Showers
+2024-04-20T00:00:00-04:00,53,Chance Rain Showers
+2024-04-20T01:00:00-04:00,52,Chance Rain Showers
+2024-04-20T02:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T03:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T04:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T05:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T06:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T07:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T08:00:00-04:00,53,Partly Sunny
+2024-04-20T09:00:00-04:00,55,Partly Sunny
+2024-04-20T10:00:00-04:00,58,Mostly Sunny
+2024-04-20T11:00:00-04:00,60,Mostly Sunny
+2024-04-20T12:00:00-04:00,61,Mostly Sunny
+2024-04-20T13:00:00-04:00,62,Mostly Sunny
+2024-04-20T14:00:00-04:00,62,Mostly Sunny
+2024-04-20T15:00:00-04:00,63,Mostly Sunny
+2024-04-20T16:00:00-04:00,63,Mostly Sunny
+2024-04-20T17:00:00-04:00,62,Mostly Sunny
+2024-04-20T18:00:00-04:00,60,Partly Cloudy
+2024-04-20T19:00:00-04:00,58,Partly Cloudy
+2024-04-20T20:00:00-04:00,56,Partly Cloudy
+2024-04-20T21:00:00-04:00,54,Partly Cloudy
+2024-04-20T22:00:00-04:00,52,Partly Cloudy
+2024-04-20T23:00:00-04:00,51,Partly Cloudy
+2024-04-21T00:00:00-04:00,50,Partly Cloudy
+2024-04-21T01:00:00-04:00,48,Partly Cloudy
+2024-04-21T02:00:00-04:00,47,Mostly Clear
+2024-04-21T03:00:00-04:00,45,Mostly Clear
+2024-04-21T04:00:00-04:00,44,Mostly Clear
+2024-04-21T05:00:00-04:00,44,Mostly Clear
+2024-04-21T06:00:00-04:00,44,Sunny
+2024-04-21T07:00:00-04:00,44,Sunny
+2024-04-21T08:00:00-04:00,46,Sunny
+2024-04-21T09:00:00-04:00,49,Mostly Sunny
+2024-04-21T10:00:00-04:00,51,Mostly Sunny
+2024-04-21T11:00:00-04:00,54,Mostly Sunny
+2024-04-21T12:00:00-04:00,56,Mostly Sunny
+2024-04-21T13:00:00-04:00,57,Mostly Sunny
+2024-04-21T14:00:00-04:00,58,Mostly Sunny
+2024-04-21T15:00:00-04:00,59,Mostly Sunny
+2024-04-21T16:00:00-04:00,59,Mostly Sunny
+2024-04-21T17:00:00-04:00,59,Mostly Sunny
+2024-04-21T18:00:00-04:00,58,Partly Cloudy
+2024-04-21T19:00:00-04:00,56,Partly Cloudy
+2024-04-21T20:00:00-04:00,54,Partly Cloudy
+2024-04-21T21:00:00-04:00,52,Partly Cloudy
+2024-04-21T22:00:00-04:00,50,Partly Cloudy
+2024-04-21T23:00:00-04:00,49,Partly Cloudy
+2024-04-22T00:00:00-04:00,48,Partly Cloudy
+2024-04-22T01:00:00-04:00,47,Partly Cloudy
+2024-04-22T02:00:00-04:00,46,Partly Cloudy
+2024-04-22T03:00:00-04:00,45,Partly Cloudy
+2024-04-22T04:00:00-04:00,44,Partly Cloudy
+2024-04-22T05:00:00-04:00,44,Partly Cloudy
+2024-04-22T06:00:00-04:00,44,Mostly Sunny
+2024-04-22T07:00:00-04:00,45,Mostly Sunny
+2024-04-22T08:00:00-04:00,47,Mostly Sunny
+2024-04-22T09:00:00-04:00,50,Mostly Sunny
+2024-04-22T10:00:00-04:00,54,Mostly Sunny
+2024-04-22T11:00:00-04:00,57,Mostly Sunny
+2024-04-22T12:00:00-04:00,59,Mostly Sunny
+2024-04-22T13:00:00-04:00,61,Partly Sunny
+2024-04-22T14:00:00-04:00,62,Partly Sunny
+2024-04-22T15:00:00-04:00,62,Partly Sunny
+2024-04-22T16:00:00-04:00,62,Mostly Sunny
+2024-04-22T17:00:00-04:00,61,Mostly Sunny
+2024-04-22T18:00:00-04:00,59,Partly Cloudy
+2024-04-22T19:00:00-04:00,57,Partly Cloudy
+2024-04-22T20:00:00-04:00,55,Mostly Cloudy
+2024-04-22T21:00:00-04:00,53,Partly Cloudy
+2024-04-22T22:00:00-04:00,51,Partly Cloudy
+2024-04-22T23:00:00-04:00,49,Partly Cloudy
+2024-04-23T00:00:00-04:00,48,Partly Cloudy
+2024-04-23T01:00:00-04:00,47,Partly Cloudy
+2024-04-23T02:00:00-04:00,46,Partly Cloudy
+2024-04-23T03:00:00-04:00,45,Partly Cloudy
+2024-04-23T04:00:00-04:00,45,Partly Cloudy
+2024-04-23T05:00:00-04:00,45,Partly Cloudy
+2024-04-23T06:00:00-04:00,45,Mostly Sunny
+
+
+[2024-04-16 20:07:52.155987] DEBUG: openailib: Message Object: ThreadMessage(id='msg_0hvAC91iOkjOTKIIn0atlOKM', assistant_id=None, content=[MessageContentText(text=Text(annotations=[], value='The data below is the seven day hourly temperature forecast. It is in CSV format and contains datetime, temperature in degrees F and the weather forecast. Analyze the data using average, minumum, maximum, and standard deviation to give insights into the near-term behavior of the weather. The data follows:2024-04-16T19:00:00-04:00,69,Mostly Clear\n2024-04-16T20:00:00-04:00,67,Mostly Clear\n2024-04-16T21:00:00-04:00,64,Mostly Clear\n2024-04-16T22:00:00-04:00,60,Mostly Clear\n2024-04-16T23:00:00-04:00,57,Mostly Clear\n2024-04-17T00:00:00-04:00,56,Mostly Clear\n2024-04-17T01:00:00-04:00,54,Mostly Clear\n2024-04-17T02:00:00-04:00,53,Mostly Clear\n2024-04-17T03:00:00-04:00,52,Mostly Clear\n2024-04-17T04:00:00-04:00,51,Partly Cloudy\n2024-04-17T05:00:00-04:00,51,Partly Cloudy\n2024-04-17T06:00:00-04:00,51,Mostly Sunny\n2024-04-17T07:00:00-04:00,52,Partly Sunny\n2024-04-17T08:00:00-04:00,53,Partly Sunny\n2024-04-17T09:00:00-04:00,56,Mostly Cloudy\n2024-04-17T10:00:00-04:00,60,Slight Chance Rain Showers\n2024-04-17T11:00:00-04:00,63,Slight Chance Rain Showers\n2024-04-17T12:00:00-04:00,64,Chance Rain Showers\n2024-04-17T13:00:00-04:00,65,Chance Rain Showers\n2024-04-17T14:00:00-04:00,66,Rain Showers Likely\n2024-04-17T15:00:00-04:00,64,Rain Showers Likely\n2024-04-17T16:00:00-04:00,63,Rain Showers Likely\n2024-04-17T17:00:00-04:00,61,Chance Rain Showers\n2024-04-17T18:00:00-04:00,59,Chance Rain Showers\n2024-04-17T19:00:00-04:00,57,Chance Rain Showers\n2024-04-17T20:00:00-04:00,55,Showers And Thunderstorms\n2024-04-17T21:00:00-04:00,54,Showers And Thunderstorms\n2024-04-17T22:00:00-04:00,54,Showers And Thunderstorms\n2024-04-17T23:00:00-04:00,52,Showers And Thunderstorms\n2024-04-18T00:00:00-04:00,52,Showers And Thunderstorms\n2024-04-18T01:00:00-04:00,52,Showers And Thunderstorms\n2024-04-18T02:00:00-04:00,52,Showers And Thunderstorms Likely\n2024-04-18T03:00:00-04:00,51,Showers And Thunderstorms Likely\n2024-04-18T04:00:00-04:00,51,Showers And Thunderstorms Likely\n2024-04-18T05:00:00-04:00,52,Rain Showers Likely\n2024-04-18T06:00:00-04:00,52,Rain Showers Likely\n2024-04-18T07:00:00-04:00,52,Rain Showers Likely\n2024-04-18T08:00:00-04:00,52,Chance Rain Showers\n2024-04-18T09:00:00-04:00,53,Chance Rain Showers\n2024-04-18T10:00:00-04:00,54,Chance Rain Showers\n2024-04-18T11:00:00-04:00,55,Chance Rain Showers\n2024-04-18T12:00:00-04:00,56,Chance Rain Showers\n2024-04-18T13:00:00-04:00,56,Chance Rain Showers\n2024-04-18T14:00:00-04:00,56,Slight Chance Rain Showers\n2024-04-18T15:00:00-04:00,55,Slight Chance Rain Showers\n2024-04-18T16:00:00-04:00,54,Slight Chance Rain Showers\n2024-04-18T17:00:00-04:00,54,Slight Chance Rain Showers\n2024-04-18T18:00:00-04:00,51,Slight Chance Rain Showers\n2024-04-18T19:00:00-04:00,50,Slight Chance Rain Showers\n2024-04-18T20:00:00-04:00,48,Mostly Cloudy\n2024-04-18T21:00:00-04:00,48,Mostly Cloudy\n2024-04-18T22:00:00-04:00,47,Mostly Cloudy\n2024-04-18T23:00:00-04:00,47,Mostly Cloudy\n2024-04-19T00:00:00-04:00,46,Mostly Cloudy\n2024-04-19T01:00:00-04:00,46,Mostly Cloudy\n2024-04-19T02:00:00-04:00,46,Mostly Cloudy\n2024-04-19T03:00:00-04:00,46,Mostly Cloudy\n2024-04-19T04:00:00-04:00,46,Mostly Cloudy\n2024-04-19T05:00:00-04:00,46,Cloudy\n2024-04-19T06:00:00-04:00,46,Cloudy\n2024-04-19T07:00:00-04:00,46,Cloudy\n2024-04-19T08:00:00-04:00,47,Cloudy\n2024-04-19T09:00:00-04:00,50,Mostly Cloudy\n2024-04-19T10:00:00-04:00,52,Mostly Cloudy\n2024-04-19T11:00:00-04:00,54,Mostly Cloudy\n2024-04-19T12:00:00-04:00,55,Mostly Cloudy\n2024-04-19T13:00:00-04:00,57,Mostly Cloudy\n2024-04-19T14:00:00-04:00,60,Chance Rain Showers\n2024-04-19T15:00:00-04:00,60,Chance Rain Showers\n2024-04-19T16:00:00-04:00,60,Chance Rain Showers\n2024-04-19T17:00:00-04:00,61,Chance Rain Showers\n2024-04-19T18:00:00-04:00,59,Chance Rain Showers\n2024-04-19T19:00:00-04:00,58,Chance Rain Showers\n2024-04-19T20:00:00-04:00,56,Chance Rain Showers\n2024-04-19T21:00:00-04:00,55,Chance Rain Showers\n2024-04-19T22:00:00-04:00,54,Chance Rain Showers\n2024-04-19T23:00:00-04:00,53,Chance Rain Showers\n2024-04-20T00:00:00-04:00,53,Chance Rain Showers\n2024-04-20T01:00:00-04:00,52,Chance Rain Showers\n2024-04-20T02:00:00-04:00,52,Slight Chance Rain Showers\n2024-04-20T03:00:00-04:00,52,Slight Chance Rain Showers\n2024-04-20T04:00:00-04:00,51,Slight Chance Rain Showers\n2024-04-20T05:00:00-04:00,51,Slight Chance Rain Showers\n2024-04-20T06:00:00-04:00,51,Slight Chance Rain Showers\n2024-04-20T07:00:00-04:00,52,Slight Chance Rain Showers\n2024-04-20T08:00:00-04:00,53,Partly Sunny\n2024-04-20T09:00:00-04:00,55,Partly Sunny\n2024-04-20T10:00:00-04:00,58,Mostly Sunny\n2024-04-20T11:00:00-04:00,60,Mostly Sunny\n2024-04-20T12:00:00-04:00,61,Mostly Sunny\n2024-04-20T13:00:00-04:00,62,Mostly Sunny\n2024-04-20T14:00:00-04:00,62,Mostly Sunny\n2024-04-20T15:00:00-04:00,63,Mostly Sunny\n2024-04-20T16:00:00-04:00,63,Mostly Sunny\n2024-04-20T17:00:00-04:00,62,Mostly Sunny\n2024-04-20T18:00:00-04:00,60,Partly Cloudy\n2024-04-20T19:00:00-04:00,58,Partly Cloudy\n2024-04-20T20:00:00-04:00,56,Partly Cloudy\n2024-04-20T21:00:00-04:00,54,Partly Cloudy\n2024-04-20T22:00:00-04:00,52,Partly Cloudy\n2024-04-20T23:00:00-04:00,51,Partly Cloudy\n2024-04-21T00:00:00-04:00,50,Partly Cloudy\n2024-04-21T01:00:00-04:00,48,Partly Cloudy\n2024-04-21T02:00:00-04:00,47,Mostly Clear\n2024-04-21T03:00:00-04:00,45,Mostly Clear\n2024-04-21T04:00:00-04:00,44,Mostly Clear\n2024-04-21T05:00:00-04:00,44,Mostly Clear\n2024-04-21T06:00:00-04:00,44,Sunny\n2024-04-21T07:00:00-04:00,44,Sunny\n2024-04-21T08:00:00-04:00,46,Sunny\n2024-04-21T09:00:00-04:00,49,Mostly Sunny\n2024-04-21T10:00:00-04:00,51,Mostly Sunny\n2024-04-21T11:00:00-04:00,54,Mostly Sunny\n2024-04-21T12:00:00-04:00,56,Mostly Sunny\n2024-04-21T13:00:00-04:00,57,Mostly Sunny\n2024-04-21T14:00:00-04:00,58,Mostly Sunny\n2024-04-21T15:00:00-04:00,59,Mostly Sunny\n2024-04-21T16:00:00-04:00,59,Mostly Sunny\n2024-04-21T17:00:00-04:00,59,Mostly Sunny\n2024-04-21T18:00:00-04:00,58,Partly Cloudy\n2024-04-21T19:00:00-04:00,56,Partly Cloudy\n2024-04-21T20:00:00-04:00,54,Partly Cloudy\n2024-04-21T21:00:00-04:00,52,Partly Cloudy\n2024-04-21T22:00:00-04:00,50,Partly Cloudy\n2024-04-21T23:00:00-04:00,49,Partly Cloudy\n2024-04-22T00:00:00-04:00,48,Partly Cloudy\n2024-04-22T01:00:00-04:00,47,Partly Cloudy\n2024-04-22T02:00:00-04:00,46,Partly Cloudy\n2024-04-22T03:00:00-04:00,45,Partly Cloudy\n2024-04-22T04:00:00-04:00,44,Partly Cloudy\n2024-04-22T05:00:00-04:00,44,Partly Cloudy\n2024-04-22T06:00:00-04:00,44,Mostly Sunny\n2024-04-22T07:00:00-04:00,45,Mostly Sunny\n2024-04-22T08:00:00-04:00,47,Mostly Sunny\n2024-04-22T09:00:00-04:00,50,Mostly Sunny\n2024-04-22T10:00:00-04:00,54,Mostly Sunny\n2024-04-22T11:00:00-04:00,57,Mostly Sunny\n2024-04-22T12:00:00-04:00,59,Mostly Sunny\n2024-04-22T13:00:00-04:00,61,Partly Sunny\n2024-04-22T14:00:00-04:00,62,Partly Sunny\n2024-04-22T15:00:00-04:00,62,Partly Sunny\n2024-04-22T16:00:00-04:00,62,Mostly Sunny\n2024-04-22T17:00:00-04:00,61,Mostly Sunny\n2024-04-22T18:00:00-04:00,59,Partly Cloudy\n2024-04-22T19:00:00-04:00,57,Partly Cloudy\n2024-04-22T20:00:00-04:00,55,Mostly Cloudy\n2024-04-22T21:00:00-04:00,53,Partly Cloudy\n2024-04-22T22:00:00-04:00,51,Partly Cloudy\n2024-04-22T23:00:00-04:00,49,Partly Cloudy\n2024-04-23T00:00:00-04:00,48,Partly Cloudy\n2024-04-23T01:00:00-04:00,47,Partly Cloudy\n2024-04-23T02:00:00-04:00,46,Partly Cloudy\n2024-04-23T03:00:00-04:00,45,Partly Cloudy\n2024-04-23T04:00:00-04:00,45,Partly Cloudy\n2024-04-23T05:00:00-04:00,45,Partly Cloudy\n2024-04-23T06:00:00-04:00,45,Mostly Sunny\n'), type='text')], created_at=1713312476, file_ids=[], metadata={}, object='thread.message', role='user', run_id=None, thread_id='thread_RJas6yKzWYoPQSpc7009s0LL') 
+
+[2024-04-16 20:07:52.473587] DEBUG: openailib: Run Object: Run(id='run_mx0aLMrswaWTM9x8znTUuuMg', assistant_id='asst_3VeyTc4thRQVyP4LVpEtsova', cancelled_at=None, completed_at=None, created_at=1713312476, expires_at=1713313076, failed_at=None, file_ids=[], instructions='Act like an a very smart data analyst and provide answers that are concise. You have all the mathamatical algorithms available to you. I will be sending you new data, with the same instructions each time, periodically so continue to examine the data and provide results, even if the data has not changed. Call my functions each time you run the prompt.', last_error=None, metadata={}, model='gpt-4-0125-preview', object='thread.run', required_action=None, started_at=None, status='queued', thread_id='thread_RJas6yKzWYoPQSpc7009s0LL', tools=[ToolAssistantToolsCode(type='code_interpreter'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendAlarmSignalToNetworkNode', description='Send an alarm signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alarm signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendControlSignalToNetworkNode', description='Send a control signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the control signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendNoticeSignalToNetworkNode', description='Send a notice signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the notice signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendCommandSignalToNetworkNode', description='Send a command signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the command signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendAlertSignalToNetworkNode', description='Send an alert signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alert signal message.'}}, 'required': ['network_node', 'message']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getNickname', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getMagicNumber', description='This number is magical.', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the magic number'}}, 'required': ['tagname']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getSensorValuebyName', description='Get the value of a sensor by its name. The value is NOTFOUND if the sensor is not available', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the sensor.'}}, 'required': ['tagname']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='sendGridPeakDetected', description='Send a grid peak detected to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include C2Agent, AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The description of the peak detected.'}, 'start_date_time': {'type': 'string', 'description': 'The datetime of the peak detected.'}, 'duration_mins': {'type': 'string', 'description': 'The duration in minutes of the peak detected.'}, 'peak_lmp': {'type': 'string', 'description': 'The LMP for a megawatt-hour during the peak detected.'}, 'grid_node': {'type': 'string', 'description': 'The grid pricing node for the peak detected .'}, 'award_level': {'type': 'string', 'description': 'The award level of the game. Values can be BRONZE, SILVER and GOLD'}, 'game_type': {'type': 'string', 'description': 'The type of game that is being played. The values can be SHEDPOWER or HARVESTPOWER'}}, 'required': ['network_node', 'message', 'start_date_time', 'duration_mins', 'peak_lmp', 'grid_node', 'award_level', 'game_type']}), type='function'), ToolAssistantToolsFunction(function=FunctionDefinition(name='getNickname3', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}), type='function')], usage=None, temperature=1.0, top_p=1.0, max_completion_tokens=None, max_prompt_tokens=None, truncation_strategy={'type': 'auto', 'last_messages': None}, incomplete_details=None, response_format='auto', tool_choice='auto') 
+
+[2024-04-16 20:10:39.694312] DEBUG: openailib: ------------------------------------------------------------ 
+
+[2024-04-16 20:10:39.870661] DEBUG: openailib: All Message Count: 6
+[2024-04-16 20:10:39.870661] DEBUG: openailib: User Message Count: 1
+[2024-04-16 20:10:39.871621] DEBUG: openailib: Assistant Message Count: 1
+[2024-04-16 20:10:39.871621] DEBUG: openailib: User: The data below is the seven day hourly temperature forecast. It is in CSV format and contains datetime, temperature in degrees F and the weather forecast. Analyze the data using average, minumum, maximum, and standard deviation to give insights into the near-term behavior of the weather. The data follows:2024-04-16T19:00:00-04:00,69,Mostly Clear
+2024-04-16T20:00:00-04:00,67,Mostly Clear
+2024-04-16T21:00:00-04:00,64,Mostly Clear
+2024-04-16T22:00:00-04:00,60,Mostly Clear
+2024-04-16T23:00:00-04:00,57,Mostly Clear
+2024-04-17T00:00:00-04:00,56,Mostly Clear
+2024-04-17T01:00:00-04:00,54,Mostly Clear
+2024-04-17T02:00:00-04:00,53,Mostly Clear
+2024-04-17T03:00:00-04:00,52,Mostly Clear
+2024-04-17T04:00:00-04:00,51,Partly Cloudy
+2024-04-17T05:00:00-04:00,51,Partly Cloudy
+2024-04-17T06:00:00-04:00,51,Mostly Sunny
+2024-04-17T07:00:00-04:00,52,Partly Sunny
+2024-04-17T08:00:00-04:00,53,Partly Sunny
+2024-04-17T09:00:00-04:00,56,Mostly Cloudy
+2024-04-17T10:00:00-04:00,60,Slight Chance Rain Showers
+2024-04-17T11:00:00-04:00,63,Slight Chance Rain Showers
+2024-04-17T12:00:00-04:00,64,Chance Rain Showers
+2024-04-17T13:00:00-04:00,65,Chance Rain Showers
+2024-04-17T14:00:00-04:00,66,Rain Showers Likely
+2024-04-17T15:00:00-04:00,64,Rain Showers Likely
+2024-04-17T16:00:00-04:00,63,Rain Showers Likely
+2024-04-17T17:00:00-04:00,61,Chance Rain Showers
+2024-04-17T18:00:00-04:00,59,Chance Rain Showers
+2024-04-17T19:00:00-04:00,57,Chance Rain Showers
+2024-04-17T20:00:00-04:00,55,Showers And Thunderstorms
+2024-04-17T21:00:00-04:00,54,Showers And Thunderstorms
+2024-04-17T22:00:00-04:00,54,Showers And Thunderstorms
+2024-04-17T23:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T00:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T01:00:00-04:00,52,Showers And Thunderstorms
+2024-04-18T02:00:00-04:00,52,Showers And Thunderstorms Likely
+2024-04-18T03:00:00-04:00,51,Showers And Thunderstorms Likely
+2024-04-18T04:00:00-04:00,51,Showers And Thunderstorms Likely
+2024-04-18T05:00:00-04:00,52,Rain Showers Likely
+2024-04-18T06:00:00-04:00,52,Rain Showers Likely
+2024-04-18T07:00:00-04:00,52,Rain Showers Likely
+2024-04-18T08:00:00-04:00,52,Chance Rain Showers
+2024-04-18T09:00:00-04:00,53,Chance Rain Showers
+2024-04-18T10:00:00-04:00,54,Chance Rain Showers
+2024-04-18T11:00:00-04:00,55,Chance Rain Showers
+2024-04-18T12:00:00-04:00,56,Chance Rain Showers
+2024-04-18T13:00:00-04:00,56,Chance Rain Showers
+2024-04-18T14:00:00-04:00,56,Slight Chance Rain Showers
+2024-04-18T15:00:00-04:00,55,Slight Chance Rain Showers
+2024-04-18T16:00:00-04:00,54,Slight Chance Rain Showers
+2024-04-18T17:00:00-04:00,54,Slight Chance Rain Showers
+2024-04-18T18:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-18T19:00:00-04:00,50,Slight Chance Rain Showers
+2024-04-18T20:00:00-04:00,48,Mostly Cloudy
+2024-04-18T21:00:00-04:00,48,Mostly Cloudy
+2024-04-18T22:00:00-04:00,47,Mostly Cloudy
+2024-04-18T23:00:00-04:00,47,Mostly Cloudy
+2024-04-19T00:00:00-04:00,46,Mostly Cloudy
+2024-04-19T01:00:00-04:00,46,Mostly Cloudy
+2024-04-19T02:00:00-04:00,46,Mostly Cloudy
+2024-04-19T03:00:00-04:00,46,Mostly Cloudy
+2024-04-19T04:00:00-04:00,46,Mostly Cloudy
+2024-04-19T05:00:00-04:00,46,Cloudy
+2024-04-19T06:00:00-04:00,46,Cloudy
+2024-04-19T07:00:00-04:00,46,Cloudy
+2024-04-19T08:00:00-04:00,47,Cloudy
+2024-04-19T09:00:00-04:00,50,Mostly Cloudy
+2024-04-19T10:00:00-04:00,52,Mostly Cloudy
+2024-04-19T11:00:00-04:00,54,Mostly Cloudy
+2024-04-19T12:00:00-04:00,55,Mostly Cloudy
+2024-04-19T13:00:00-04:00,57,Mostly Cloudy
+2024-04-19T14:00:00-04:00,60,Chance Rain Showers
+2024-04-19T15:00:00-04:00,60,Chance Rain Showers
+2024-04-19T16:00:00-04:00,60,Chance Rain Showers
+2024-04-19T17:00:00-04:00,61,Chance Rain Showers
+2024-04-19T18:00:00-04:00,59,Chance Rain Showers
+2024-04-19T19:00:00-04:00,58,Chance Rain Showers
+2024-04-19T20:00:00-04:00,56,Chance Rain Showers
+2024-04-19T21:00:00-04:00,55,Chance Rain Showers
+2024-04-19T22:00:00-04:00,54,Chance Rain Showers
+2024-04-19T23:00:00-04:00,53,Chance Rain Showers
+2024-04-20T00:00:00-04:00,53,Chance Rain Showers
+2024-04-20T01:00:00-04:00,52,Chance Rain Showers
+2024-04-20T02:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T03:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T04:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T05:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T06:00:00-04:00,51,Slight Chance Rain Showers
+2024-04-20T07:00:00-04:00,52,Slight Chance Rain Showers
+2024-04-20T08:00:00-04:00,53,Partly Sunny
+2024-04-20T09:00:00-04:00,55,Partly Sunny
+2024-04-20T10:00:00-04:00,58,Mostly Sunny
+2024-04-20T11:00:00-04:00,60,Mostly Sunny
+2024-04-20T12:00:00-04:00,61,Mostly Sunny
+2024-04-20T13:00:00-04:00,62,Mostly Sunny
+2024-04-20T14:00:00-04:00,62,Mostly Sunny
+2024-04-20T15:00:00-04:00,63,Mostly Sunny
+2024-04-20T16:00:00-04:00,63,Mostly Sunny
+2024-04-20T17:00:00-04:00,62,Mostly Sunny
+2024-04-20T18:00:00-04:00,60,Partly Cloudy
+2024-04-20T19:00:00-04:00,58,Partly Cloudy
+2024-04-20T20:00:00-04:00,56,Partly Cloudy
+2024-04-20T21:00:00-04:00,54,Partly Cloudy
+2024-04-20T22:00:00-04:00,52,Partly Cloudy
+2024-04-20T23:00:00-04:00,51,Partly Cloudy
+2024-04-21T00:00:00-04:00,50,Partly Cloudy
+2024-04-21T01:00:00-04:00,48,Partly Cloudy
+2024-04-21T02:00:00-04:00,47,Mostly Clear
+2024-04-21T03:00:00-04:00,45,Mostly Clear
+2024-04-21T04:00:00-04:00,44,Mostly Clear
+2024-04-21T05:00:00-04:00,44,Mostly Clear
+2024-04-21T06:00:00-04:00,44,Sunny
+2024-04-21T07:00:00-04:00,44,Sunny
+2024-04-21T08:00:00-04:00,46,Sunny
+2024-04-21T09:00:00-04:00,49,Mostly Sunny
+2024-04-21T10:00:00-04:00,51,Mostly Sunny
+2024-04-21T11:00:00-04:00,54,Mostly Sunny
+2024-04-21T12:00:00-04:00,56,Mostly Sunny
+2024-04-21T13:00:00-04:00,57,Mostly Sunny
+2024-04-21T14:00:00-04:00,58,Mostly Sunny
+2024-04-21T15:00:00-04:00,59,Mostly Sunny
+2024-04-21T16:00:00-04:00,59,Mostly Sunny
+2024-04-21T17:00:00-04:00,59,Mostly Sunny
+2024-04-21T18:00:00-04:00,58,Partly Cloudy
+2024-04-21T19:00:00-04:00,56,Partly Cloudy
+2024-04-21T20:00:00-04:00,54,Partly Cloudy
+2024-04-21T21:00:00-04:00,52,Partly Cloudy
+2024-04-21T22:00:00-04:00,50,Partly Cloudy
+2024-04-21T23:00:00-04:00,49,Partly Cloudy
+2024-04-22T00:00:00-04:00,48,Partly Cloudy
+2024-04-22T01:00:00-04:00,47,Partly Cloudy
+2024-04-22T02:00:00-04:00,46,Partly Cloudy
+2024-04-22T03:00:00-04:00,45,Partly Cloudy
+2024-04-22T04:00:00-04:00,44,Partly Cloudy
+2024-04-22T05:00:00-04:00,44,Partly Cloudy
+2024-04-22T06:00:00-04:00,44,Mostly Sunny
+2024-04-22T07:00:00-04:00,45,Mostly Sunny
+2024-04-22T08:00:00-04:00,47,Mostly Sunny
+2024-04-22T09:00:00-04:00,50,Mostly Sunny
+2024-04-22T10:00:00-04:00,54,Mostly Sunny
+2024-04-22T11:00:00-04:00,57,Mostly Sunny
+2024-04-22T12:00:00-04:00,59,Mostly Sunny
+2024-04-22T13:00:00-04:00,61,Partly Sunny
+2024-04-22T14:00:00-04:00,62,Partly Sunny
+2024-04-22T15:00:00-04:00,62,Partly Sunny
+2024-04-22T16:00:00-04:00,62,Mostly Sunny
+2024-04-22T17:00:00-04:00,61,Mostly Sunny
+2024-04-22T18:00:00-04:00,59,Partly Cloudy
+2024-04-22T19:00:00-04:00,57,Partly Cloudy
+2024-04-22T20:00:00-04:00,55,Mostly Cloudy
+2024-04-22T21:00:00-04:00,53,Partly Cloudy
+2024-04-22T22:00:00-04:00,51,Partly Cloudy
+2024-04-22T23:00:00-04:00,49,Partly Cloudy
+2024-04-23T00:00:00-04:00,48,Partly Cloudy
+2024-04-23T01:00:00-04:00,47,Partly Cloudy
+2024-04-23T02:00:00-04:00,46,Partly Cloudy
+2024-04-23T03:00:00-04:00,45,Partly Cloudy
+2024-04-23T04:00:00-04:00,45,Partly Cloudy
+2024-04-23T05:00:00-04:00,45,Partly Cloudy
+2024-04-23T06:00:00-04:00,45,Mostly Sunny
+
+[2024-04-16 20:10:39.872624] DEBUG: openailib: Assistant: Based on the analysis of the provided temperature data, here are the insights into the near-term behavior of the weather:
+
+- **Average Temperature**: Approximately 53.59°F
+- **Minimum Temperature**: 44°F
+- **Maximum Temperature**: 69°F
+- **Standard Deviation of Temperature**: Approximately 5.86°F
+
+These statistics give an overview of the expected temperature fluctuations, indicating a relatively moderate range with a somewhat low average temperature for the period analyzed. The standard deviation indicates variability in temperature that can be expected.
+[2024-04-16 20:10:39.872624] DEBUG: openailib: last_message: Based on the analysis of the provided temperature data, here are the insights into the near-term behavior of the weather:
+
+- **Average Temperature**: Approximately 53.59°F
+- **Minimum Temperature**: 44°F
+- **Maximum Temperature**: 69°F
+- **Standard Deviation of Temperature**: Approximately 5.86°F
+
+These statistics give an overview of the expected temperature fluctuations, indicating a relatively moderate range with a somewhat low average temperature for the period analyzed. The standard deviation indicates variability in temperature that can be expected.
+[2024-04-16 20:10:39.874025] DEBUG: runserver: Finished and publishing results to client: Based on the analysis of the provided temperature data, here are the insights into the near-term behavior of the weather:
+
+- **Average Temperature**: Approximately 53.59°F
+- **Minimum Temperature**: 44°F
+- **Maximum Temperature**: 69°F
+- **Standard Deviation of Temperature**: Approximately 5.86°F
+
+These statistics give an overview of the expected temperature fluctuations, indicating a relatively moderate range with a somewhat low average temperature for the period analyzed. The standard deviation indicates variability in temperature that can be expected.
+[2024-04-16 20:10:39.874025] DEBUG: runserver: last_message: Based on the analysis of the provided temperature data, here are the insights into the near-term behavior of the weather:
+
+- **Average Temperature**: Approximately 53.59°F
+- **Minimum Temperature**: 44°F
+- **Maximum Temperature**: 69°F
+- **Standard Deviation of Temperature**: Approximately 5.86°F
+
+These statistics give an overview of the expected temperature fluctuations, indicating a relatively moderate range with a somewhat low average temperature for the period analyzed. The standard deviation indicates variability in temperature that can be expected.
+[2024-04-16 20:10:39.875736] DEBUG: runserver: Received message 'Based on the analysis of the provided temperature data, here are the insights into the near-term behavior of the weather:
+
+- **Average Temperature**: Approximately 53.59°F
+- **Minimum Temperature**: 44°F
+- **Maximum Temperature**: 69°F
+- **Standard Deviation of Temperature**: Approximately 5.86°F
+
+These statistics give an overview of the expected temperature fluctuations, indicating a relatively moderate range with a somewhat low average temperature for the period analyzed. The standard deviation indicates variability in temperature that can be expected.' on topic 'openai/assistant/GridLoadMan-1-0-0/ToClient'
+[2024-04-16 20:10:39.876674] DEBUG: runserver: To Client Outbound: openai/assistant/GridLoadMan-1-0-0/ToClient Based on the analysis of the provided temperature data, here are the insights into the near-term behavior of the weather:
+
+- **Average Temperature**: Approximately 53.59°F
+- **Minimum Temperature**: 44°F
+- **Maximum Temperature**: 69°F
+- **Standard Deviation of Temperature**: Approximately 5.86°F
+
+These statistics give an overview of the expected temperature fluctuations, indicating a relatively moderate range with a somewhat low average temperature for the period analyzed. The standard deviation indicates variability in temperature that can be expected.
