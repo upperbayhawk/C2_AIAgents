@@ -139,6 +139,20 @@ agent_tools=[{"type": "code_interpreter"},{
   },{
     "type": "function",
     "function": {
+      "name": "putSensorValuebyName",
+      "description": "Put the value of a sensor into the cache using its name.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "tagname": {"type": "string", "description": "The name of the sensor."},
+          "value": {"type": "string", "description": "The value of the sensor."},
+        },
+        "required": ["tagname","value"]
+      }
+    } 
+  },{
+    "type": "function",
+    "function": {
       "name": "sendGridPeakDetected",
       "description": "Send a grid peak detected to a destination network node.",
       "parameters": {

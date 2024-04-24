@@ -137,6 +137,10 @@ class XFunction:
         else:
             return "NOTFOUND"
     
+    def putSensorValuebyName(self, name, value):
+        self.log.debug("putSensorValuebyName: " + name)
+        data_cache_instance.write(name,value, "OK")
+        
     def getNickname3(self, location):
         self.log.debug("getNickname: " + location)
         return "SandyPlace3"
