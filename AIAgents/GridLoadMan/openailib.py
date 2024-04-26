@@ -506,6 +506,40 @@ class OpenAILib:
                             except Exception as e:
                                 self.log.error("FUNCTION WRAPPER ERROR: {e}:" + function_name)
                         #////////////////////////////////////////////////////////
+                        if function_name == "putSensorValuebyName":
+                            try:
+                                my_args = json.loads(arguments)
+                                if "tagname" in my_args:
+                                    print("From Json tagname = " + my_args["tagname"])
+                                    tagname = my_args["tagname"]
+                                    tagvalue = my_args["value"]
+                                    return_value = "ERROR"
+                                    try:
+                                        xfunc = XFunction()
+                                        return_value = xfunc.putSensorValuebyName(tagname,tagvalue)
+                                    except Exception as e1:
+                                        self.log.error("FUNCTION ERROR: {e1}: " + function_name)
+
+                                    tool_return = json.loads('{"tool_call_id": "hello", "output": "return_value"}')
+                                    
+                                    tool_return["tool_call_id"] = tool_call.id
+                                    tool_return["output"] = return_value
+
+                                    print("function: " + function_name + " = " + tool_return["output"])
+                                    tool_returns.append(tool_return)
+                                else:
+                                    self.log.error("location argument is missing: {e}:" + function_name)    
+                                    return_value = "ERROR"
+                                    tool_return = json.loads('{"tool_call_id": "hello", "output": "return_value"}')
+
+                                    tool_return["tool_call_id"] = tool_call.id
+                                    tool_return["output"] = return_value
+
+                                    print("function: " + function_name + " = " + tool_return["output"])
+                                    tool_returns.append(tool_return)
+                            except Exception as e:
+                                self.log.error("FUNCTION WRAPPER ERROR: {e}:" + function_name)
+                        #////////////////////////////////////////////////////////
                         if function_name == "getNickname3":
                             try:
                                 if "location" in my_args:
