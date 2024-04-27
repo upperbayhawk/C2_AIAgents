@@ -200,6 +200,10 @@ async def main():
    
     try:
         speak_message("Hello. The server agent is starting")
+        if os.path.exists("prompts/VirginPrompt.txt"):
+            with open("prompts/VirginPrompt.txt", 'r', encoding='utf-8') as virgin_file:
+                virgin__file_contents = virgin_file.read()
+                process_local_message(virgin__file_contents)
         while True:
             user_input = await async_input("Enter message (or type 'x' to quit): ")
             if user_input.lower() == 'x':
