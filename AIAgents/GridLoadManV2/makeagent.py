@@ -18,13 +18,14 @@ agent_name = config.agent_name
 
 # RETRIEVAL: These files are uploaded when agent is born if Assistant has retrieval
 #agent_base_file = "./data/AgentBase.txt"
-agent_data_file = "./data/LMP_LOAD.csv"
+#agent_data_file = "./data/LMP_LOAD.csv"
 #
 agent_instructions_file = "./prompts/AgentInstructions.txt"
-agent_model="gpt-4-0125-preview"
+#agent_model="gpt-4-0125-preview"
+agent_model="gpt-4o"
 #agent_model="gpt-3.5-turbo-0125"
-#agent_tools=[{"type": "code_interpreter"},{"type":"retrieval"},{
-#agent_tools=[{"type": "retrieval"}]
+#agent_tools=[{"type": "code_interpreter"},{"type":"file_search"}],
+#agent_tools=[{"type": "file_search"}]
 #agent_tools=[{"type": "code_interpreter"}]
 # code_interpreter with function callbacks
 agent_tools=[{"type": "code_interpreter"},{
@@ -194,7 +195,7 @@ logHandler = logbook.TimedRotatingFileHandler(agent_log_file,level=logbook.DEBUG
 log = logbook.Logger("makeagent")
 log.info("Hello From Below: " + agent_name)
 
-client = OpenAI()
+client = OpenAI(default_headers={"OpenAI-Beta": "assistants=v2"})
 
 #-----------------------------------------------------
 # Upload files for Retieval Agent
@@ -205,11 +206,11 @@ client = OpenAI()
    file=open(agent_base_file, "rb"),
    purpose='assistants'
 )
-"""
+
 AgentData = client.files.create(
     file=open(agent_data_file, "rb"),
     purpose='assistants'
-)
+) """
 
 #-----------------------------------------------------
 
@@ -225,7 +226,6 @@ my_assistant = client.beta.assistants.create(
     model=agent_model,
     tools=agent_tools,
     # File IDS here for Retrieval assistant
-    file_ids=[AgentData.id]
     #file_ids=[AgentBase.id,AgentData.id]
 )
 

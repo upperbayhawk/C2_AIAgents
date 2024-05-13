@@ -1,0 +1,108 @@
+[2024-04-27 15:46:55.097958] DEBUG: runsink: Hello From Below: GridLoadMan-2-0-0
+[2024-04-27 15:46:55.349211] DEBUG: runsink: =========================
+[2024-04-27 15:46:55.349211] DEBUG: runsink: Connected to MQTT
+[2024-04-27 15:46:55.351587] DEBUG: runsink: Connected with result code 0
+[2024-04-27 15:47:20.429072] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values of the Load and Price data and for the LocalLoad and LocalPrice data for all the data values and save the time of the maximum Load value and the Price at that time and the LocalLoad and LocalPrice. Store the maximum temperature using the function putSensorValueByName with the name "MaxTempForecast". Use the value you remembered as PeakLoadThreshold. If you don't remember this value, use the value 130,000 for PeakThresholdLoad. If the maximum load value is greater than PeakThresholdLoad, then the game_type is "SHEDPOWER" and the award_level is "GOLD". If the LocalLoad is greater than 3500, then the game_type is "SHEDPOWER" and the award_level is "GOLD". If the maximum price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER". If the value is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE". If the value is less than 20, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". Set the LMP to the price when the Load value is maximum. Set the startime to the datetime when the Load or Price value was selected minus 1 hour and set the duration to 120 mins. If the projected_peak_datetime_ept and pjm_load_forecast in the operations report JSON data is the same as the maximun load then display "MAX LOAD CONFIRMED".
+
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+04/27/2024 16:00:00,78838,19.32971,59,Isolated Rain Showers,1530,16.58208
+04/27/2024 17:00:00,79863,22.55054,58,Isolated Rain Showers,1587,16.85144
+04/27/2024 18:00:00,80539,24.69745,57,Isolated Rain Showers,1644,19.98457
+04/27/2024 19:00:00,81166,30.30865,54,Cloudy,1709,24.9413
+04/27/2024 20:00:00,81392,33.81297,54,Cloudy,1775,29.19905
+04/27/2024 21:00:00,79252,28.31243,52,Mostly Cloudy,1730,23.99215
+04/27/2024 22:00:00,75495,22.45706,50,Mostly Cloudy,1647,21.18798
+04/27/2024 23:00:00,71878,17.29542,50,Mostly Cloudy,1563,17.21783
+
+Operations Summary in JSON follows: 
+{"links":[{"rel":"self","href":"https://api.pjm.com/api/v1/ops_sum_frcst_peak_rto?RowCount=1&Order=Asc&StartRow=1&IsActiveMetadata=True&Fields=area%2Ccapacity_adjustments%2Cgenerated_at_ept%2Cinternal_scheduled_capacity%2Cload_forecast%2Coperating_reserve%2Cprojected_peak_datetime_ept%2Cprojected_peak_datetime_utc%2Cscheduled_tie_flow_total%2Ctotal_scheduled_capacity%2Cunscheduled_steam_capacity&projected_peak_datetime_ept=2024-04-27T00%3A00%3A00.0000000"},{"rel":"metadata","href":"https://api.pjm.com/api/v1/ops_sum_frcst_peak_rto/metadata"}],"items":[{"projected_peak_datetime_utc":"2024-04-28T00:00:00","projected_peak_datetime_ept":"2024-04-27T20:00:00","generated_at_ept":"2024-04-27T08:00:56","area":"PJM RTO","internal_scheduled_capacity":114605.00,"scheduled_tie_flow_total":-4172.00,"capacity_adjustments":0.00,"total_scheduled_capacity":110433.00,"load_forecast":80473.00,"operating_reserve":29960.00,"unscheduled_steam_capacity":18408.00}],"searchSpecification":{"rowCount":1,"order":"Asc","startRow":1,"isActiveMetadata":true,"fields":["area","capacity_adjustments","generated_at_ept","internal_scheduled_capacity","load_forecast","operating_reserve","projected_peak_datetime_ept","projected_peak_datetime_utc","scheduled_tie_flow_total","total_scheduled_capacity","unscheduled_steam_capacity"],"filters":[{"projected_peak_datetime_ept":"2024-04-27T00:00:00.0000000"}]},"totalRows":1}
+[2024-04-27 15:47:55.503567] DEBUG: runsink: Peak Load detected.
+[2024-04-27 15:47:55.503567] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-2-0-0", "message": "Peak Load detected.", "start_date_time": "2024-04-27 19:00:00", "duration_mins": "120", "peak_lmp": "33.81", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2024-04-27 15:47:55.551278] DEBUG: runsink: Peak Load detected.
+[2024-04-27 15:48:07.214414] DEBUG: runsink: I have analyzed the data and performed the necessary calculations. Here are the summary results for the time series data.
+
+### Average Values
+- **Load**: 78,552.88 MW
+- **Price**: $24.85 /MWh
+- **Local Load**: 1,648.12 MW
+- **Local Price**: $21.24 /MWh
+
+### Maximum Values
+- **Load**: 81,392 MW
+- **Price**: $33.81 /MWh
+- **Local Load**: 1,775 MW
+- **Local Price**: $29.20 /MWh
+- **Temperature**: 59°F
+
+### Minimum Values
+- **Load**: 71,878 MW
+- **Price**: $17.30 /MWh
+- **Local Load**: 1,530 MW
+- **Local Price**: $16.58 /MWh
+
+The maximum load occurred at **2024-04-27 20:00:00**, with a price of **$33.81** at that time.
+
+The maximum temperature forecasted has been stored as **59°F**.
+
+Given the criteria provided:
+- The **game type** is determined to be **"SHEDPOWER"**.
+- The **award level** is **"SILVER"** based on the criteria regarding price levels.
+
+**Messages have been sent accordingly**:
+- A **Grid Peak Detected** message has been sent to **C2Agent**.
+- **Notice** messages have also been sent to **CommandCenter** and **ControlPanel** indicating the detected peak load.
+
+Please let me know if there's anything else you need!
+[2024-04-27 15:52:27.289535] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values of the Load and Price data and for the LocalLoad and LocalPrice data for all the data values and save the time of the maximum Load value and the Price at that time and the LocalLoad and LocalPrice. Store the maximum temperature using the function putSensorValueByName with the name "MaxTempForecast". Use the value you remembered as PeakLoadThreshold. If you don't remember this value, use the value 130,000 for PeakThresholdLoad. If the maximum load value is greater than PeakThresholdLoad, then the game_type is "SHEDPOWER" and the award_level is "GOLD". If the LocalLoad is greater than 3500, then the game_type is "SHEDPOWER" and the award_level is "GOLD". If the maximum price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER". If the value is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE". If the value is less than 20, then it is "NOGAME". If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". Set the LMP to the price when the Load value is maximum. Set the startime to the datetime when the Load or Price value was selected minus 1 hour and set the duration to 120 mins. If the projected_peak_datetime_ept and pjm_load_forecast in the operations report JSON data is the same as the maximun load then display "MAX LOAD CONFIRMED".
+
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+04/27/2024 16:00:00,79361,19.32971,59,Isolated Rain Showers,1530,16.58208
+04/27/2024 17:00:00,80624,22.55054,58,Isolated Rain Showers,1587,16.85144
+04/27/2024 18:00:00,81390,24.69745,57,Isolated Rain Showers,1644,19.98457
+04/27/2024 19:00:00,81890,30.30865,54,Cloudy,1709,24.9413
+04/27/2024 20:00:00,82160,33.81297,54,Cloudy,1775,29.19905
+04/27/2024 21:00:00,79520,28.31243,52,Mostly Cloudy,1730,23.99215
+04/27/2024 22:00:00,75660,22.45706,50,Mostly Cloudy,1647,21.18798
+04/27/2024 23:00:00,71878,17.29542,50,Mostly Cloudy,1563,17.21783
+
+Operations Summary in JSON follows: 
+{"links":[{"rel":"self","href":"https://api.pjm.com/api/v1/ops_sum_frcst_peak_rto?RowCount=1&Order=Asc&StartRow=1&IsActiveMetadata=True&Fields=area%2Ccapacity_adjustments%2Cgenerated_at_ept%2Cinternal_scheduled_capacity%2Cload_forecast%2Coperating_reserve%2Cprojected_peak_datetime_ept%2Cprojected_peak_datetime_utc%2Cscheduled_tie_flow_total%2Ctotal_scheduled_capacity%2Cunscheduled_steam_capacity&projected_peak_datetime_ept=2024-04-27T00%3A00%3A00.0000000"},{"rel":"metadata","href":"https://api.pjm.com/api/v1/ops_sum_frcst_peak_rto/metadata"}],"items":[{"projected_peak_datetime_utc":"2024-04-28T00:00:00","projected_peak_datetime_ept":"2024-04-27T20:00:00","generated_at_ept":"2024-04-27T08:00:56","area":"PJM RTO","internal_scheduled_capacity":114605.00,"scheduled_tie_flow_total":-4172.00,"capacity_adjustments":0.00,"total_scheduled_capacity":110433.00,"load_forecast":80473.00,"operating_reserve":29960.00,"unscheduled_steam_capacity":18408.00}],"searchSpecification":{"rowCount":1,"order":"Asc","startRow":1,"isActiveMetadata":true,"fields":["area","capacity_adjustments","generated_at_ept","internal_scheduled_capacity","load_forecast","operating_reserve","projected_peak_datetime_ept","projected_peak_datetime_utc","scheduled_tie_flow_total","total_scheduled_capacity","unscheduled_steam_capacity"],"filters":[{"projected_peak_datetime_ept":"2024-04-27T00:00:00.0000000"}]},"totalRows":1}
+[2024-04-27 15:53:09.996901] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-2-0-0", "message": "Peak Load detected.", "start_date_time": "2024-04-27 19:00:00", "duration_mins": "120", "peak_lmp": "33.81", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2024-04-27 15:53:11.019397] DEBUG: runsink: Peak Load detected.
+[2024-04-27 15:53:11.073282] DEBUG: runsink: Peak Load detected.
+[2024-04-27 15:53:21.762743] DEBUG: runsink: I have re-analyzed the updated time series data, and here are the new summary results:
+
+### Average Values
+- **Load**: 79,060.38 MW
+- **Price**: $24.85 /MWh
+- **Local Load**: 1,648.12 MW
+- **Local Price**: $21.24 /MWh
+
+### Maximum Values
+- **Load**: 82,160 MW
+- **Price**: $33.81 /MWh
+- **Local Load**: 1,775 MW
+- **Local Price**: $29.20 /MWh
+- **Temperature**: 59°F
+
+### Minimum Values
+- **Load**: 71,878 MW
+- **Price**: $17.30 /MWh
+- **Local Load**: 1,530 MW
+- **Local Price**: $16.58 /MWh
+
+The maximum load again occurred at **2024-04-27 20:00:00**, with a price of **$33.81** at that time.
+
+The maximum temperature forecasted has been stored as **59°F**.
+
+Based on the criteria provided:
+- The **game type** remains **"SHEDPOWER"**.
+- The **award level** stays as **"SILVER"** based on the criteria regarding price levels.
+
+**Messages have been sent accordingly:**
+- A **Grid Peak Detected** message has once again been conveyed to **C2Agent**.
+- Additional **Notice** messages have also been dispatched to **CommandCenter** and **ControlPanel** indicating the detected peak load.
+
+The loading predictions and actual observations indicate efficient system monitoring and anticipation of demand. Should there be any further instructions or queries, feel free to mention!

@@ -21,8 +21,9 @@ agent_name = config.agent_name
 #agent_data_file = "./data/LMP_LOAD.csv"
 #
 agent_instructions_file = "./prompts/AgentInstructions.txt"
-agent_model="gpt-4-0125-preview"
-#agent_model="gpt-3.5-turbo-0125"
+#agent_model="gpt-4-0125-preview"
+#agent_model="gpt-4o"
+agent_model="gpt-3.5-turbo-0125"
 #agent_tools=[{"type": "code_interpreter"},{"type":"retrieval"}],
 #agent_tools=[{"type": "retrieval"}]
 #agent_tools=[{"type": "code_interpreter"}]
