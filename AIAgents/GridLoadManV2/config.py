@@ -10,7 +10,7 @@
 
 import logbook
 
-agent_name = "GridLoadMan-1-0-0"
+agent_name = "GridLoadMan-2-0-0"
 # MQTT Broker settings. USE IP or "localhost".
 MQTT_BROKER = "192.168.0.111"
 MQTT_PORT = 1883
