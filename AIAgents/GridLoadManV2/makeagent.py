@@ -195,7 +195,7 @@ logHandler = logbook.TimedRotatingFileHandler(agent_log_file,level=logbook.DEBUG
 log = logbook.Logger("makeagent")
 log.info("Hello From Below: " + agent_name)
 
-client = OpenAI(default_headers={"OpenAI-Beta": "assistants=v2"})
+client = OpenAI()
 
 #-----------------------------------------------------
 # Upload files for Retieval Agent
