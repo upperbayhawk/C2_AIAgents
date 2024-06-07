@@ -29,7 +29,7 @@ agent_model="gpt-4o"
 #agent_tools=[{"type": "code_interpreter"}]
 # code_interpreter with function callbacks
 agent_tools=[{"type": "code_interpreter"},{
-      "type": "function",
+    "type": "function",
     "function": {
       "name": "sendAlarmSignalToNetworkNode",
       "description": "Send an alarm signal to a destination network node.",
@@ -219,14 +219,21 @@ with open(agent_instructions_file, 'r', encoding='utf-8') as instructions_file:
     instructions = instructions_file.read()
 print(instructions)
 
+#agent_tool_resources={
+#  "code_interpreter": {
+#      "file_ids": [file1.id]
+#  },
+#  "file_search": {
+#      "vector_store_ids": [file2.id]
+#  }
+#}
 # Create an assistant
 my_assistant = client.beta.assistants.create(
     instructions=instructions,
     name=agent_name,
     model=agent_model,
     tools=agent_tools,
-    # File IDS here for Retrieval assistant
-    #file_ids=[AgentBase.id,AgentData.id]
+    #tool_resources = agent_tool_resources,
 )
 
 print("New Assistant")

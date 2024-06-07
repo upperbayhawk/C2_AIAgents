@@ -42,6 +42,7 @@ MQTT_PORT = config.MQTT_PORT
 MQTT_TOPIC_TOASSISTANT = config.MQTT_TOPIC_TOASSISTANT
 MQTT_TOPIC_TOCLIENT = config.MQTT_TOPIC_TOCLIENT
 MQTT_TOPIC_DATAFEED = config.MQTT_TOPIC_DATAFEED
+MQTT_TOPIC_OPCUA = config.MQTT_TOPIC_OPCUA
 SEPARATOR = "======================"
 
 #-----------------------------------------------------
@@ -54,6 +55,7 @@ log.debug("Hello From Below: " + agent_name)
 #-----------------------------------------------------
 in_queue = queue.Queue()
 datafeed_queue = queue.Queue()
+opcua_queue = queue.Queue()
 
 clientMQ = mqtt.Client()
 clientAI = openai.OpenAI()
@@ -81,6 +83,11 @@ def on_message(client, userdata, msg):
         print("To DataFeed: " + msg.topic + " " + pipe_input)
         process_datafeed_message(pipe_input)
         pass
+    elif msg.topic == MQTT_TOPIC_OPCUA:
+        log.debug("To OPCUA: " + msg.topic + " " + pipe_input)
+        #print("To OPCUA: " + msg.topic + " " + pipe_input)
+        process_opcua_message(pipe_input)
+        pass
 
 # Asynchronous function to read from stdin
 async def async_input(prompt):
@@ -104,6 +111,10 @@ def process_datafeed_message(message):
     log.trace("Processing DataFeed: " + message)
     datafeed_queue.put(message)
 
+def process_opcua_message(message):
+    log.trace("Processing OPCUA: " + message)
+    opcua_queue.put(message)
+
 def datafeed_worker_thread():
     while True:
         message = datafeed_queue.get()
@@ -116,6 +127,20 @@ def datafeed_worker_thread():
         data_cache_instance.write(tagname, tagvalue,tagstatus)
         value =  data_cache_instance.read(tagname)
         log.debug("value from cache = "  + value)
+
+def opcua_worker_thread():
+    while True:
+        message = opcua_queue.get()
+        if message is None:
+            break
+        data = json.loads(message)
+        payload = data["Payload"]
+        for tagname, tagvalue in payload.items():
+            tagstatus = "OK"
+            data_cache_instance.write(tagname, tagvalue,tagstatus)
+            value =  data_cache_instance.read(tagname)
+            print (tagname + " = " + str(tagvalue) + ":" + value)
+            #log.debug("value from cache = "  + value)
 
 # Main worker thread
 def main_worker_thread():
@@ -172,6 +197,7 @@ async def main():
     clientMQ.subscribe(MQTT_TOPIC_TOCLIENT)
     clientMQ.subscribe(MQTT_TOPIC_TOASSISTANT)
     clientMQ.subscribe(MQTT_TOPIC_DATAFEED)
+    clientMQ.subscribe(MQTT_TOPIC_OPCUA)
 
     with open(agent_output_file, "a", encoding="utf-8") as file:
         file.write("\n" + SEPARATOR + "\n\n")
@@ -190,6 +216,11 @@ async def main():
     my_datafeed_thread = threading.Thread(target=datafeed_worker_thread)
     my_datafeed_thread.daemon = True
     my_datafeed_thread.start()
+
+    # Start worker in separate thread
+    my_opcua_thread = threading.Thread(target=opcua_worker_thread)
+    my_opcua_thread.daemon = True
+    my_opcua_thread.start()
 
     
     try:

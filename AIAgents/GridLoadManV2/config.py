@@ -28,6 +28,7 @@ MQTT_TOPIC_ALERT = mqtt_base_topic + agent_name + "/AlertPanel"
 MQTT_TOPIC_C2AGENT = mqtt_base_topic_c2agent
 #
 MQTT_TOPIC_DATAFEED = mqtt_base_topic + agent_name + "/DataFeed"
+MQTT_TOPIC_OPCUA = "Site_Riverdale/ProcessCell_South/Unit2_Boiler"
 # Logger level DEBUG, INFO
 logging_level = logbook.DEBUG
 
