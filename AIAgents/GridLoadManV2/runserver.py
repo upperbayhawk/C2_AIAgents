@@ -139,7 +139,7 @@ def opcua_worker_thread():
             tagstatus = "OK"
             data_cache_instance.write(tagname, tagvalue,tagstatus)
             value =  data_cache_instance.read(tagname)
-            print (tagname + " = " + str(tagvalue) + ":" + value)
+            #print (tagname + " = " + str(tagvalue) + ":" + value)
             #log.debug("value from cache = "  + value)
 
 # Main worker thread

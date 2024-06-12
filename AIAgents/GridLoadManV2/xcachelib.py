@@ -33,6 +33,7 @@ class ThreadSafeJSONCache:
         """
         with self.lock:  # Ensuring thread safety with a context manager
             time_stamp = datetime.now().isoformat()
+            self.cache.pop(name, None)
             self.cache[name] = json.dumps({"time": time_stamp, "value": value, "status": status})
 
     def read(self, name):
