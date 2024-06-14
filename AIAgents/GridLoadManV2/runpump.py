@@ -133,15 +133,15 @@ def main_run_thread():
         # Do some work then sleep
         #---------------------
         print("Pump Running...")
-        #xthing = XThingspeak()
-        #xthing.get_thingspeak_data()
-        #create_full_prompt()
-        #send_full_prompt_to_brain()
-
-        xtemp = XWeather()
-        xtemp.get_weather_data()
+        xthing = XThingspeak()
+        xthing.get_thingspeak_data()
         create_full_prompt()
         send_full_prompt_to_brain()
+
+       """  xtemp = XWeather()
+        xtemp.get_weather_data()
+        create_full_prompt()
+        send_full_prompt_to_brain() """
 
         #---------------------
         end_time = arrow.now()

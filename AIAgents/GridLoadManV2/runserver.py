@@ -79,12 +79,12 @@ def on_message(client, userdata, msg):
         process_outgoing_message(pipe_input)
         pass
     elif msg.topic == MQTT_TOPIC_DATAFEED:
-        log.debug("To DataFeed: " + msg.topic + " " + pipe_input)
-        print("To DataFeed: " + msg.topic + " " + pipe_input)
+        #log.debug("To DataFeed: " + msg.topic + " " + pipe_input)
+        #print("To DataFeed: " + msg.topic + " " + pipe_input)
         process_datafeed_message(pipe_input)
         pass
     elif msg.topic == MQTT_TOPIC_OPCUA:
-        log.debug("To OPCUA: " + msg.topic + " " + pipe_input)
+        #log.debug("To OPCUA: " + msg.topic + " " + pipe_input)
         #print("To OPCUA: " + msg.topic + " " + pipe_input)
         process_opcua_message(pipe_input)
         pass
@@ -126,7 +126,7 @@ def datafeed_worker_thread():
         tagstatus = data["status"]
         data_cache_instance.write(tagname, tagvalue,tagstatus)
         value =  data_cache_instance.read(tagname)
-        log.debug("value from cache = "  + value)
+        #log.debug("value from cache = "  + value)
 
 def opcua_worker_thread():
     while True:

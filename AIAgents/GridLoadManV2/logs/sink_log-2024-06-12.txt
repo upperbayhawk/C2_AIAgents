@@ -1,1 +1,0 @@
-[2024-06-12 00:19:47.056990] DEBUG: runsink: Connected with result code 0
