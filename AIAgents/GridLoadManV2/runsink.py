@@ -325,7 +325,7 @@ def main_run_thread():
         start_time = arrow.now()
         # Do some work then sleep
         #---------------------
-        print("Running...")
+        print("Sink Running...")
         #---------------------
         end_time = arrow.now()
         # Calculate the time difference in seconds

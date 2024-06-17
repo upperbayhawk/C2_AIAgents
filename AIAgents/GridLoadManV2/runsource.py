@@ -301,7 +301,7 @@ def main_run_thread():
         start_time = arrow.now()
         # Do some work then sleep
         #---------------------
-        print("Running...")
+        print("Source Running...")
         xfunc = XFunction()
         
         number = random.random()
