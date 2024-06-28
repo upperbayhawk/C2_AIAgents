@@ -80,6 +80,8 @@ clientMQ = mqtt.Client()
 
 clientAI = openai.OpenAI()
 
+pygame.init()
+pygame.mixer.init()
 #-----------------------------------------------------
 
 # MQTT Callbacks
@@ -307,8 +309,8 @@ def speak_message(message):
         )
         response.write_to_file(speech_file_path)
 
-        pygame.init()
-        pygame.mixer.init()
+        #pygame.init()
+        #pygame.mixer.init()
         pygame.mixer.music.load(speech_file_path)
         pygame.mixer.music.play()
         while pygame.mixer.music.get_busy():
