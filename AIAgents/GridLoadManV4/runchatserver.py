@@ -149,6 +149,7 @@ def main_worker_thread():
             message = in_queue.get()
             if message is not None:
                 if len(message) > 2:
+                    openaichatlib_instance.initialize(agent_name,agent_init_prompt_file,agent_init_instructions_file,agent_output_file)
                     msg_return = openaichatlib_instance.run(message)
                     if msg_return == "OK":
                         last_message = openaichatlib_instance.last_message
@@ -232,12 +233,7 @@ async def main():
     try:
         speak_message("Hello. The server agent is starting")
         while True:
-            try:
-                openaichatlib_instance.initialize(agent_name,agent_init_prompt_file,agent_init_instructions_file,agent_output_file)
-            except Exception as ex:
-                log.error("Exception openaichatlib_instance.initialize: " + str(ex))
-                print ("Exception openaichatlib_instance.initialize: " + str(ex))
-                
+            
             user_input = await async_input("Enter message (or type 'x' to quit): ")
             if user_input.lower() == 'x':
                 break

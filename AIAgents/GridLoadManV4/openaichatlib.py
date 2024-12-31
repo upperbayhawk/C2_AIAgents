@@ -21,6 +21,8 @@ class OpenAIChatLib:
    
     def __init__(self):
         self.is_initialized = False
+        self.log = logbook.Logger("openaichatlib", 0)
+        self.log.debug("Initializing OpenAIChatLib...")
         self.model = "gpt-4o"
         self.client = OpenAI()
         #self.model = "o1-mini"
@@ -473,13 +475,15 @@ class OpenAIChatLib:
     def initialize(self,agent_name,agent_init_prompt_file,agent_init_instructions_file,agent_output_file):
         # Add initialization code
 
-        self.log = logbook.Logger("openaichatlib", 0)
-        self.log.debug("Initializing OpenAIChatLib...")
-
         self.agent_name = agent_name
         self.agent_init_prompt_file = agent_init_prompt_file
         self.agent_init_instructions_file = agent_init_instructions_file
         self.agent_output_file = agent_output_file
+
+        try:
+            del self.messages
+        except Exception as e:
+            pass
 
         with open(self.agent_output_file, "a", encoding="utf-8") as file:
             file.write("\n" + self.SEPARATOR + "\n\n")
@@ -498,29 +502,27 @@ class OpenAIChatLib:
             self.instruct__file_contents = instruction_file.read()
 
         self.messages.append({"role": "user", "content": self.instruct__file_contents})
-
+        print("Chat Initialized")
 
 
     def run(self, input_message):
             #print("Running OpenChatAILib...")
             # Add code to execute AI-related tasks here
-            #print ("processing")
+            
             self.log.debug ("Input Message: " + input_message + "\n")
             self.last_message = "NULL"
 
             self.messages.append({"role": "user", "content": input_message})
-
+            
             # 3) Call the ChatCompletion with the conversation and functions
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=self.messages,
-                tools=self.tools,
-                tool_choice= "required"
+                tools=self.tools
+                #tool_choice= "required"
             )
-            
             assistant_message = response.choices[0].message.tool_calls
             print(assistant_message)
-            print("processing functions")
             # 4) If there's a function call, handle it
             for funk in assistant_message:
                 print(funk)
@@ -544,9 +546,8 @@ class OpenAIChatLib:
                 model=self.model,
                 messages=self.messages
             )
-
             final_answer = followup_response.choices[0].message
-            print(f"Assistant: {final_answer}")
+            print(f"\nAssistant: {final_answer}\n")
             self.log.debug(f"Assistant: {final_answer}")
             self.messages.append({"role": "assistant", "content": final_answer})
             self.last_message = str(final_answer)
@@ -555,6 +556,7 @@ class OpenAIChatLib:
                 file.write(str(input_message + "\n"))
                 file.write(str(self.last_message + "\n"))
            
+            
             return("OK")
 
    
