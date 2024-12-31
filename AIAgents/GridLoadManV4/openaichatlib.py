@@ -12,44 +12,53 @@ import logbook
 import json
 import time
 
-import openai
-
 import config
 from xfunctionlib import XFunction
+
+from openai import OpenAI
 
 class OpenAIChatLib:
    
     def __init__(self):
         self.is_initialized = False
         self.model = "gpt-4o"
-        #self.model = "o1"
+        self.client = OpenAI()
+        #self.model = "o1-mini"
         self.SEPARATOR = "======================="
-        self.functions = [
-            {
-            "name": "sendAlarmSignalToNetworkNode",
-            "description": "Send an alarm signal to a destination network node.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                "network_node": {"type": "string", "description": "The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter."},
-                "message": {"type": "string", "description": "The contents of the alarm signal message."},
-                },
-                "required": ["network_node", "message"]
+        self.tools=[
+        {
+            "type": "function",
+            "function": {
+                "name": "sendAlarmSignalToNetworkNode",
+                "description": "Send an alarm signal to a destination network node.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "network_node": {"type": "string", "description": "The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter."},
+                        "message": {"type": "string", "description": "The contents of the alarm signal message."},
+                    },
+                    "required": ["network_node", "message"]
+                }
             }
         }, 
         {
-            "name": "sendControlSignalToNetworkNode",
-            "description": "Send a control signal to a destination network node.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                "network_node": {"type": "string", "description": "The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter."},
-                "message": {"type": "string", "description": "The contents of the control signal message."},
-                },
-                "required": ["network_node", "message"]
-            }
+            "type": "function",
+            "function": {
+                "name": "sendControlSignalToNetworkNode",
+                "description": "Send a control signal to a destination network node.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "network_node": {"type": "string", "description": "The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter."},
+                        "message": {"type": "string", "description": "The contents of the control signal message."},
+                    },
+                    "required": ["network_node", "message"]
+                }
+            } 
         },
         {
+            "type": "function",
+            "function": {
             "name": "sendNoticeSignalToNetworkNode",
             "description": "Send a notice signal to a destination network node.",
             "parameters": {
@@ -60,8 +69,10 @@ class OpenAIChatLib:
                 },
                 "required": ["network_node", "message"]
             }
-        },
-        {
+            } 
+        },{
+            "type": "function",
+            "function": {
             "name": "sendCommandSignalToNetworkNode",
             "description": "Send a command signal to a destination network node.",
             "parameters": {
@@ -72,8 +83,10 @@ class OpenAIChatLib:
                 },
                 "required": ["network_node", "message"]
             }
-        },
-        {
+            } 
+        },{
+            "type": "function",
+            "function": {
             "name": "sendAlertSignalToNetworkNode",
             "description": "Send an alert signal to a destination network node.",
             "parameters": {
@@ -84,8 +97,10 @@ class OpenAIChatLib:
                 },
                 "required": ["network_node", "message"]
             }
-        },
-        {
+            } 
+        },{
+            "type": "function",
+            "function": {
             "name": "getNickname",
             "description": "Get the nickname of a city",
             "parameters": {
@@ -95,8 +110,10 @@ class OpenAIChatLib:
                 },
                 "required": ["location"]
             }
-        },
-        {
+            } 
+        },{
+            "type": "function",
+            "function": {
             "name": "getMagicNumber",
             "description": "This number is magical.",
             "parameters": {
@@ -106,8 +123,10 @@ class OpenAIChatLib:
                 },
                 "required": ["tagname"]
             }
-        },
-        {
+            } 
+        },{
+            "type": "function",
+            "function": {
             "name": "getSensorValuebyName",
             "description": "Get the value of a sensor by its name. The value is NOTFOUND if the sensor is not available",
             "parameters": {
@@ -117,8 +136,10 @@ class OpenAIChatLib:
                 },
                 "required": ["tagname"]
             }
-        },
-        {
+            } 
+        },{
+            "type": "function",
+            "function": {
             "name": "putSensorValuebyName",
             "description": "Put the value of a sensor into the cache using its name.",
             "parameters": {
@@ -129,8 +150,10 @@ class OpenAIChatLib:
                 },
                 "required": ["tagname","value"]
             }
-        },
-        {
+            } 
+        },{
+            "type": "function",
+            "function": {
             "name": "sendGridPeakDetected",
             "description": "Send a grid peak detected to a destination network node.",
             "parameters": {
@@ -147,8 +170,10 @@ class OpenAIChatLib:
                 },
                 "required": ["network_node", "message","start_date_time","duration_mins","peak_lmp","grid_node","award_level","game_type"]
             }
-        },
-        {
+            } 
+        },{
+            "type": "function",
+            "function": {
             "name": "getNickname3",
             "description": "Get the nickname of a city",
             "parameters": {
@@ -158,10 +183,10 @@ class OpenAIChatLib:
                 },
                 "required": ["location"]
             }
-        } 
-    ]
+            } 
+        }]
 
-    def run_functions (self,function_name,arguments):
+    def run_function (self,function_name,arguments):
 
         if function_name == "sendAlarmSignalToNetworkNode":
             try:
@@ -483,58 +508,49 @@ class OpenAIChatLib:
             self.log.debug ("Input Message: " + input_message + "\n")
             self.last_message = "NULL"
 
-            self.messages.append = ({"role": "user", "content": input_message})
+            self.messages.append({"role": "user", "content": input_message})
 
             # 3) Call the ChatCompletion with the conversation and functions
-            response = openai.ChatCompletion.create(
+            response = self.client.chat.completions.create(
                 model=self.model,
                 messages=self.messages,
-                functions=self.functions
+                tools=self.tools,
+                tool_choice= "required"
             )
             
-            assistant_message = response["choices"][0]["message"]
-
+            assistant_message = response.choices[0].message.tool_calls
+            print(assistant_message)
+            print("processing functions")
             # 4) If there's a function call, handle it
-            if assistant_message.get("function_call"):
-                function_name = assistant_message["function_call"]["name"]
-                arguments_str = assistant_message["function_call"]["arguments"]
-                try:
-                    args = json.loads(arguments_str)
-                except json.JSONDecodeError:
-                    # If there's an error decoding JSON, handle it gracefully
-                    args = {}
-                
+            for funk in assistant_message:
+                print(funk)
+                args = funk.function.arguments
+                function_name = funk.function.name
                 result = self.run_function(function_name, args)
 
                 # Create a function role message with the result
                 function_response_message = {
                     "role": "function",
                     "name": function_name,
-                    "content": result
+                    "content": result,
+                    "tool_call_id": funk.id
                 }
 
-                # Append the function call + response to the conversation
-                self.messages.append(assistant_message)
+                
                 self.messages.append(function_response_message)
 
-                # Make a follow-up call so GPT can finalize a user-facing answer
-                followup_response = openai.ChatCompletion.create(
-                    model=self.model,
-                    messages=self.messages
-                )
-                final_answer = followup_response["choices"][0]["message"]["content"]
-                print(f"Assistant: {final_answer}")
-                self.log.debug(f"Assistant: {final_answer}")
-                self.messages.append({"role": "assistant", "content": final_answer})
-                self.last_message = str(final_answer)
-            else:
-                # If the model didn't call a function, just print the content
-                answer_text = assistant_message["content"]
-                print(f"Assistant: {answer_text}")
-                self.log.debug(f"Assistant: {answer_text}")
-                self.messages.append({"role": "assistant", "content": answer_text})
-                self.last_message = str(answer_text)
+            # Make a follow-up call so GPT can finalize a user-facing answer
+            followup_response = self.client.chat.completions.create(
+                model=self.model,
+                messages=self.messages
+            )
 
+            final_answer = followup_response.choices[0].message
+            print(f"Assistant: {final_answer}")
+            self.log.debug(f"Assistant: {final_answer}")
+            self.messages.append({"role": "assistant", "content": final_answer})
+            self.last_message = str(final_answer)
+                
             with open(self.agent_output_file, "a", encoding="utf-8") as file:
                 file.write(str(input_message + "\n"))
                 file.write(str(self.last_message + "\n"))
