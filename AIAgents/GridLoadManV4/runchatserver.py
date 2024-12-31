@@ -223,15 +223,21 @@ async def main():
     my_opcua_thread.start()
 
     
-    try:
-        openaichatlib_instance.initialize(agent_name,agent_init_prompt_file,agent_init_instructions_file,agent_output_file)
-    except Exception as ex:
-        log.error("Exception openaichatlib_instance.initialize: " + str(ex))
-        print ("Exception openaichatlib_instance.initialize: " + str(ex))
+    #try:
+    #    openaichatlib_instance.initialize(agent_name,agent_init_prompt_file,agent_init_instructions_file,agent_output_file)
+    #except Exception as ex:
+    #    log.error("Exception openaichatlib_instance.initialize: " + str(ex))
+    #    print ("Exception openaichatlib_instance.initialize: " + str(ex))
    
     try:
         speak_message("Hello. The server agent is starting")
         while True:
+            try:
+                openaichatlib_instance.initialize(agent_name,agent_init_prompt_file,agent_init_instructions_file,agent_output_file)
+            except Exception as ex:
+                log.error("Exception openaichatlib_instance.initialize: " + str(ex))
+                print ("Exception openaichatlib_instance.initialize: " + str(ex))
+                
             user_input = await async_input("Enter message (or type 'x' to quit): ")
             if user_input.lower() == 'x':
                 break
