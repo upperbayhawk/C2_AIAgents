@@ -543,8 +543,6 @@ class OpenAIChatLib:
                     # Create a function role message with the result
                     function_response_message = {
                         "role": "tool",
-                        #"role": "function",
-                        #"name": function_name,
                         "content": result,
                         "tool_call_id": funk.id
                     }
