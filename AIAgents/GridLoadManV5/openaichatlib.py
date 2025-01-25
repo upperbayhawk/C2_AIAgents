@@ -24,8 +24,8 @@ class OpenAIChatLib:
         self.log = logbook.Logger("openaichatlib", 0)
         self.log.debug("Initializing OpenAIChatLib...")
         #
-        self.model = "gpt-4o"
-        #self.model = "o1"
+        #self.model = "gpt-4o"
+        self.model = "o1"
         #
         self.client = OpenAI()
         self.SEPARATOR = "======================="
@@ -508,61 +508,67 @@ class OpenAIChatLib:
 
 
     def run(self, input_message):
-            #print("Running OpenChatAILib...")
-            # Add code to execute AI-related tasks here
-            
-            self.log.debug ("Input Message: " + input_message + "\n")
-            self.last_message = "NULL"
-
-            self.messages.append({"role": "user", "content": input_message})
-            
-            # 3) Call the ChatCompletion with the conversation and functions
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=self.messages,
-                tools=self.tools
-                #reasoning_effort="low"
-                #store=true
-                #tool_choice= "required"
-            )
-            assistant_message = response.choices[0].message.tool_calls
-            print(assistant_message)
+        #print("Running OpenChatAILib...")
+        # Add code to execute AI-related tasks here
+        
+        self.log.debug ("Input Message: " + input_message + "\n")
+        self.last_message = "NULL"
+        self.messages.append({"role": "user", "content": input_message})
+        
+        # 3) Call the ChatCompletion with the conversation and functions
+        
+        response = self.client.chat.completions.create(
+            model=self.model,
+            messages=self.messages,
+            tools=self.tools
+            #reasoning_effort="low"
+            #store=true
+            #tool_choice= "auto"
+        )
+       
+        finished = False
+        while finished == False:
+            toolcall_response = response.choices[0].message.tool_calls
+            message_response = response.choices[0].message
             # 4) If there's a function call, handle it
-            for funk in assistant_message:
-                print(funk)
-                args = funk.function.arguments
-                function_name = funk.function.name
-                result = self.run_function(function_name, args)
-
-                # Create a function role message with the result
-                function_response_message = {
-                    #"role": "tool",
-                    "role": "function",
-                    "name": function_name,
-                    "content": result,
-                    "tool_call_id": funk.id
-                }
-
-                
-                self.messages.append(function_response_message)
-
-            # Make a follow-up call so GPT can finalize a user-facing answer
-            followup_response = self.client.chat.completions.create(
-                model=self.model,
-                messages=self.messages
-            )
-            final_answer = followup_response.choices[0].message
-            print(f"\nAssistant: {final_answer}\n")
-            self.log.debug(f"Assistant: {final_answer}")
-            self.messages.append({"role": "assistant", "content": final_answer})
-            self.last_message = str(final_answer)
-                
-            with open(self.agent_output_file, "a", encoding="utf-8") as file:
-                file.write(str(input_message + "\n"))
-                file.write(str(self.last_message + "\n"))
-           
             
-            return("OK")
+            if toolcall_response != None:
+                #print(toolcall_response)
+                for funk in toolcall_response:
+                    print(funk)
+                    args = funk.function.arguments
+                    function_name = funk.function.name
+                    result = self.run_function(function_name, args)
+
+                    # Create a function role message with the result
+                    function_response_message = {
+                        "role": "tool",
+                        #"role": "function",
+                        #"name": function_name,
+                        "content": result,
+                        "tool_call_id": funk.id
+                    }
+                    self.messages.append(message_response)
+                    self.messages.append(function_response_message)
+                    # Make a follow-up call so GPT can finalize a user-facing answer
+                    response = self.client.chat.completions.create(
+                        model=self.model,
+                        messages=self.messages
+                    )
+            else:
+                final_answer = response.choices[0].message
+                print(f"\nAssistant: {final_answer}\n")
+                self.log.debug(f"Assistant: {final_answer}")
+                self.messages.append({"role": "assistant", "content": final_answer})
+                self.last_message = str(final_answer)
+                finished = True
+                
+        with open(self.agent_output_file, "a", encoding="utf-8") as file:
+            file.write(str(input_message + "\n"))
+            file.write(str(self.last_message + "\n"))
+        
+            
+        return("OK")
 
    
 
