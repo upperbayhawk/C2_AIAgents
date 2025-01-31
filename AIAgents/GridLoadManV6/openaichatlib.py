@@ -25,13 +25,14 @@ class OpenAIChatLib:
         self.log.debug("Initializing OpenAIChatLib...")
         #
         #self.model = "gpt-4o"
-        self.model = "o3-mini"
         #self.model = "o1"
-        #self.model = "qwen2.5-3b-instruct:2"
+        self.model = "deepseek-chat"
+        #self.model = "llama-3.2-1b-instruct"
         #
-        self.client = OpenAI()
-        #self.client = OpenAI(api_key="",base_url="https://api.deepseek.com")
-        #self.client = OpenAI(api_key="",base_url="http://localhost:1234/v1/")
+        #self.client = OpenAI()
+        self.client = OpenAI(base_url="https://api.deepseek.com/")
+        #self.client = OpenAI(api_key="",base_url="https://api.deepseek.com/")
+        #self.client = OpenAI(base_url="http://127.0.0.1:1234/v1/")
         self.SEPARATOR = "======================="
         self.tools=[
         {
