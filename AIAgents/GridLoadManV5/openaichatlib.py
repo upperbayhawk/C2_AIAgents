@@ -26,6 +26,7 @@ class OpenAIChatLib:
         #
         #self.model = "gpt-4o"
         self.model = "o3-mini"
+        #self.model = "o3-mini-high"
         #self.model = "o1"
         #self.model = "qwen2.5-3b-instruct:2"
         #
