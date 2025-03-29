@@ -1,0 +1,70 @@
+[2025-02-27 09:30:12.587304] DEBUG: runserver: Received message 'Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+02/27/2025 10:00:00,92943,34.11265,57,Rain Showers Likely,1832,37.38863
+02/27/2025 11:00:00,91646,30.537,59,Rain Showers,1762,33.34964
+02/27/2025 12:00:00,90523,29.8824,60,Rain Showers,1729,32.30972
+02/27/2025 13:00:00,89438,28.29339,61,Rain Showers,1714,30.61839
+02/27/2025 14:00:00,88712,27.52271,63,Rain Showers Likely,1738,30.34482
+02/27/2025 15:00:00,88678,27.03133,62,Rain Showers Likely,1778,29.91253
+02/27/2025 16:00:00,90161,28.73312,61,Rain Showers Likely,1882,32.19225
+02/27/2025 17:00:00,93112,34.69211,60,Chance Rain Showers,2017,38.91637
+02/27/2025 18:00:00,95233,48.13774,57,Slight Chance Rain Showers,2079,52.46988
+02/27/2025 19:00:00,95275,47.32389,54,Mostly Cloudy,2060,49.25754
+02/27/2025 20:00:00,94196,44.37948,52,Mostly Cloudy,2027,45.21381
+02/27/2025 21:00:00,91929,42.953,49,Mostly Cloudy,1952,42.32653
+02/27/2025 22:00:00,88121,32.82105,47,Mostly Cloudy,1852,34.59218
+02/27/2025 23:00:00,84372,29.65167,45,Partly Cloudy,1749,31.30841
+' on topic 'openai/assistant/GridLoadMan-2-0-0/ToAssistant'
+[2025-02-27 09:30:12.590856] DEBUG: runserver: To Assistant Inbound: openai/assistant/GridLoadMan-2-0-0/ToAssistant Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+02/27/2025 10:00:00,92943,34.11265,57,Rain Showers Likely,1832,37.38863
+02/27/2025 11:00:00,91646,30.537,59,Rain Showers,1762,33.34964
+02/27/2025 12:00:00,90523,29.8824,60,Rain Showers,1729,32.30972
+02/27/2025 13:00:00,89438,28.29339,61,Rain Showers,1714,30.61839
+02/27/2025 14:00:00,88712,27.52271,63,Rain Showers Likely,1738,30.34482
+02/27/2025 15:00:00,88678,27.03133,62,Rain Showers Likely,1778,29.91253
+02/27/2025 16:00:00,90161,28.73312,61,Rain Showers Likely,1882,32.19225
+02/27/2025 17:00:00,93112,34.69211,60,Chance Rain Showers,2017,38.91637
+02/27/2025 18:00:00,95233,48.13774,57,Slight Chance Rain Showers,2079,52.46988
+02/27/2025 19:00:00,95275,47.32389,54,Mostly Cloudy,2060,49.25754
+02/27/2025 20:00:00,94196,44.37948,52,Mostly Cloudy,2027,45.21381
+02/27/2025 21:00:00,91929,42.953,49,Mostly Cloudy,1952,42.32653
+02/27/2025 22:00:00,88121,32.82105,47,Mostly Cloudy,1852,34.59218
+02/27/2025 23:00:00,84372,29.65167,45,Partly Cloudy,1749,31.30841
+
+[2025-02-27 09:30:12.599863] DEBUG: openaichatlib: Hello. My name is Dave. What is your name?
+[2025-02-27 09:30:12.607040] DEBUG: openaichatlib: Input Message: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+02/27/2025 10:00:00,92943,34.11265,57,Rain Showers Likely,1832,37.38863
+02/27/2025 11:00:00,91646,30.537,59,Rain Showers,1762,33.34964
+02/27/2025 12:00:00,90523,29.8824,60,Rain Showers,1729,32.30972
+02/27/2025 13:00:00,89438,28.29339,61,Rain Showers,1714,30.61839
+02/27/2025 14:00:00,88712,27.52271,63,Rain Showers Likely,1738,30.34482
+02/27/2025 15:00:00,88678,27.03133,62,Rain Showers Likely,1778,29.91253
+02/27/2025 16:00:00,90161,28.73312,61,Rain Showers Likely,1882,32.19225
+02/27/2025 17:00:00,93112,34.69211,60,Chance Rain Showers,2017,38.91637
+02/27/2025 18:00:00,95233,48.13774,57,Slight Chance Rain Showers,2079,52.46988
+02/27/2025 19:00:00,95275,47.32389,54,Mostly Cloudy,2060,49.25754
+02/27/2025 20:00:00,94196,44.37948,52,Mostly Cloudy,2027,45.21381
+02/27/2025 21:00:00,91929,42.953,49,Mostly Cloudy,1952,42.32653
+02/27/2025 22:00:00,88121,32.82105,47,Mostly Cloudy,1852,34.59218
+02/27/2025 23:00:00,84372,29.65167,45,Partly Cloudy,1749,31.30841
+
+
+[2025-02-27 09:30:31.702376] DEBUG: xfunction: Hello From Below
+[2025-02-27 09:30:31.725024] DEBUG: XNetwork: Connected to MQTT broker
+[2025-02-27 09:30:32.726463] DEBUG: xfunction: sendGridPeakedDetected: SHEDPOWER SILVER award detected to C2Agent
+[2025-02-27 09:30:32.729364] DEBUG: xfunction: Hello From Below
+[2025-02-27 09:30:32.752611] DEBUG: XNetwork: Connected to MQTT broker
+[2025-02-27 09:30:32.753049] DEBUG: xfunction: sendNoticeSignalToNetworkNode: GridPeakDetected: SHEDPOWER SILVER award detected at 18:00 with LMP 48.14 to openai/assistant/GridLoadMan-2-0-0/CommandCenter
+[2025-02-27 09:30:32.753049] DEBUG: xfunction: Hello From Below
+[2025-02-27 09:30:32.772959] DEBUG: XNetwork: Connected to MQTT broker
+[2025-02-27 09:30:32.773962] DEBUG: xfunction: sendNoticeSignalToNetworkNode: GridPeakDetected: SHEDPOWER SILVER award detected at 18:00 with LMP 48.14 to openai/assistant/GridLoadMan-2-0-0/ControlPanel
+[2025-02-27 09:30:35.660243] DEBUG: openaichatlib: Assistant: ChatCompletionMessage(content='The statistics have been calculated and the relevant GridPeakDetected message has been sent to C2Agent. Notices have also been successfully sent to the CommandCenter and ControlPanel.\n\nIf you have more data or further requests, feel free to provide them!', refusal=None, role='assistant', function_call=None, tool_calls=None)
+[2025-02-27 09:30:35.660243] DEBUG: runserver: Finished and publishing results to client: ChatCompletionMessage(content='The statistics have been calculated and the relevant GridPeakDetected message has been sent to C2Agent. Notices have also been successfully sent to the CommandCenter and ControlPanel.\n\nIf you have more data or further requests, feel free to provide them!', refusal=None, role='assistant', function_call=None, tool_calls=None)
+[2025-02-27 09:30:35.660243] DEBUG: runserver: last_message: ChatCompletionMessage(content='The statistics have been calculated and the relevant GridPeakDetected message has been sent to C2Agent. Notices have also been successfully sent to the CommandCenter and ControlPanel.\n\nIf you have more data or further requests, feel free to provide them!', refusal=None, role='assistant', function_call=None, tool_calls=None)
+[2025-02-27 09:30:35.666583] DEBUG: runserver: Received message 'ChatCompletionMessage(content='The statistics have been calculated and the relevant GridPeakDetected message has been sent to C2Agent. Notices have also been successfully sent to the CommandCenter and ControlPanel.\n\nIf you have more data or further requests, feel free to provide them!', refusal=None, role='assistant', function_call=None, tool_calls=None)' on topic 'openai/assistant/GridLoadMan-2-0-0/ToClient'
+[2025-02-27 09:30:35.666583] DEBUG: runserver: To Client Outbound: openai/assistant/GridLoadMan-2-0-0/ToClient ChatCompletionMessage(content='The statistics have been calculated and the relevant GridPeakDetected message has been sent to C2Agent. Notices have also been successfully sent to the CommandCenter and ControlPanel.\n\nIf you have more data or further requests, feel free to provide them!', refusal=None, role='assistant', function_call=None, tool_calls=None)

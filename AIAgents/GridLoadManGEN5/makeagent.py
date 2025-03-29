@@ -25,14 +25,17 @@ agent_instructions_file = "./prompts/AgentInstructions.txt"
 #agent_model="o1-preview-2024-09-12"
 #agent_model="o1-mini-2024-09-12"
 #agent_model="gpt-4o"
-agent_model="gpt-4o-2024-08-06"
+#agent_model="gpt-4o-2024-08-06"
+agent_model=config.AI_MODEL
 #agent_model="gpt-3.5-turbo-0125"
 #agent_model="gpt-4-0125-preview"
 #agent_tools=[{"type": "code_interpreter"},{"type":"file_search"}],
 #agent_tools=[{"type": "file_search"}]
 #agent_tools=[{"type": "code_interpreter"}]
 # code_interpreter with function callbacks
-agent_tools=[{"type": "code_interpreter"},{
+
+#agent_tools=[{"type": "code_interpreter"},{
+agent_tools=[{
     "type": "function",
     "function": {
       "name": "sendAlarmSignalToNetworkNode",
