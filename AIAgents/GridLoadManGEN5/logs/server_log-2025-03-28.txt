@@ -54,3 +54,17 @@ Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
 03/28/2025 23:00:00,76550,26.9026,55,Slight Chance Rain Showers,1648,26.42452
 
 
+[2025-03-28 09:31:03.262042] DEBUG: xfunction: Hello From Below
+[2025-03-28 09:31:03.282311] DEBUG: XNetwork: Connected to MQTT broker
+[2025-03-28 09:31:03.282311] DEBUG: xfunction: sendGridPeakedDetected: SHEDPOWER game at SILVER level detected. to C2Agent
+[2025-03-28 09:31:03.283198] DEBUG: xfunction: Hello From Below
+[2025-03-28 09:31:03.303578] DEBUG: XNetwork: Connected to MQTT broker
+[2025-03-28 09:31:03.303578] DEBUG: xfunction: sendNoticeSignalToNetworkNode: SHEDPOWER game at SILVER level detected at 03/28/2025 19:00:00 with LMP of 41.15. to openai/assistant/GridLoadMan-2-0-0/CommandCenter
+[2025-03-28 09:31:03.304634] DEBUG: xfunction: Hello From Below
+[2025-03-28 09:31:03.328393] DEBUG: XNetwork: Connected to MQTT broker
+[2025-03-28 09:31:03.328588] DEBUG: xfunction: sendNoticeSignalToNetworkNode: SHEDPOWER game at SILVER level detected at 03/28/2025 19:00:00 with LMP of 41.15. to openai/assistant/GridLoadMan-2-0-0/ControlPanel
+[2025-03-28 09:31:04.538202] DEBUG: openaichatlib: Assistant: ChatCompletionMessage(content='All GridPeakDetected notifications have been successfully sent to the C2Agent, CommandCenter, and ControlPanel. If there are any further data updates or queries, feel free to provide them!', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None)
+[2025-03-28 09:31:04.538512] DEBUG: runserver: Finished and publishing results to client: ChatCompletionMessage(content='All GridPeakDetected notifications have been successfully sent to the C2Agent, CommandCenter, and ControlPanel. If there are any further data updates or queries, feel free to provide them!', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None)
+[2025-03-28 09:31:04.538512] DEBUG: runserver: last_message: ChatCompletionMessage(content='All GridPeakDetected notifications have been successfully sent to the C2Agent, CommandCenter, and ControlPanel. If there are any further data updates or queries, feel free to provide them!', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None)
+[2025-03-28 09:31:04.542164] DEBUG: runserver: Received message 'ChatCompletionMessage(content='All GridPeakDetected notifications have been successfully sent to the C2Agent, CommandCenter, and ControlPanel. If there are any further data updates or queries, feel free to provide them!', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None)' on topic 'openai/assistant/GridLoadMan-2-0-0/ToClient'
+[2025-03-28 09:31:04.542164] DEBUG: runserver: To Client Outbound: openai/assistant/GridLoadMan-2-0-0/ToClient ChatCompletionMessage(content='All GridPeakDetected notifications have been successfully sent to the C2Agent, CommandCenter, and ControlPanel. If there are any further data updates or queries, feel free to provide them!', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None)
