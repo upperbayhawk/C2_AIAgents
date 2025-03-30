@@ -14,9 +14,9 @@ agent_name = "GridLoadMan-2-0-0"
 
 # AI model and endpoint
 
-AI_MODEL = "gpt-4o"
-AI_KEY = "VOID"
-AI_URL = "VOID"
+# AI_MODEL = "gpt-4o"
+# AI_KEY = "VOID"
+# AI_URL = "VOID"
 #
 # AI_MODEL = "qwen/qwq-32b"
 # AI_KEY = "VOID"
@@ -54,9 +54,9 @@ AI_URL = "VOID"
 # AI_URL = "http://192.168.0.198:1234/v1/"
 
 
-# AI_MODEL = "grok-2-latest"
-# AI_KEY = "xai-Yw68IGWkwUeLRBQEdJZ6mbDr2JfrppFPfGgABruoY0ffwCgwsNLiGCLZ5QK1r45PjUlUBCsmVgHcm2er"
-# AI_URL = "https://api.x.ai/v1"
+AI_MODEL = "grok-2-latest"
+AI_KEY = " "
+AI_URL = "https://api.x.ai/v1"
 
 # AI_MODEL = "deepseek-r1-distill-qwen-7b"
 # AI_KEY = "VOID"
