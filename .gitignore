@@ -13,3 +13,4 @@ AIAgents/OmniBus/logs/source_log.txt
 AIAgents/OmniBus/logs/sink_log.txt
 AIAgents/OmniBus/logs/pump_log.txt
 AIAgents/OmniBus/logs/client_log.txt
+AIAgents/GridLoadManGEN5/config.py
