@@ -19,24 +19,27 @@ agent_name = "GridLoadMan-2-0-0"
 # AI_URL = "VOID"
 
 # AI_MODEL = "grok-3-mini-beta"
-# AI_KEY = "xai-Yw68IGWkwUeLRBQEdJZ6mbDr2JfrppFPfGgABruoY0ffwCgwsNLiGCLZ5QK1r45PjUlUBCsmVgHcm2er"
+C# AI_KEY = ""
 # AI_URL = "https://api.x.ai/v1"
 ##
 # AI_MODEL = "grok-3-beta"
-# AI_KEY = "xai-Yw68IGWkwUeLRBQEdJZ6mbDr2JfrppFPfGgABruoY0ffwCgwsNLiGCLZ5QK1r45PjUlUBCsmVgHcm2er"
+# AI_KEY = 
 # AI_URL = "https://api.x.ai/v1"
 #
 AI_MODEL = "gemini-2.5-pro-exp-03-25"
-AI_KEY = "AIzaSyDNhUaDTdoSQaDy3UpNp31P0c52Hsupp1Y"
+AI_KEY = 
+
 AI_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 
 
 # AI_MODEL = "gemini-2.5-pro-preview-03-25"
-# AI_KEY = "AIzaSyDNhUaDTdoSQaDy3UpNp31P0c52Hsupp1Y"
+# AI_KEY = 
+
 # AI_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 #---------------------------------------------------
 # AI_MODEL = "grok-2-latest"
-# AI_KEY = "xai-Yw68IGWkwUeLRBQEdJZ6mbDr2JfrppFPfGgABruoY0ffwCgwsNLiGCLZ5QK1r45PjUlUBCsmVgHcm2er"
+# AI_KEY = "
+
 # AI_URL = "https://api.x.ai/v1"
 
 # AI_MODEL = "qwen/qwq-32b"
